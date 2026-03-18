@@ -121,11 +121,11 @@ export default function DatesExplosion() {
 
     <section
       ref={sectionRef}
-      className="relative h-[1800px] bg-[#f5efe6]"
+      className="relative h-[2500px] bg-[#f5efe6]"
     >
 
       {/* ✅ STICKY WRAPPER (REPLACES PIN) */}
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+      <div className="sticky top-15 h-screen flex items-center justify-center overflow-hidden">
 
         <div className="max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-15">
 
