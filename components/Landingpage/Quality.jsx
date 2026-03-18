@@ -1,0 +1,274 @@
+"use client"
+
+"use client"
+
+import { useEffect, useRef } from "react"
+import Image from "next/image"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
+
+export default function Hero() {
+
+
+const leftDates = useRef(null)
+const rightDates = useRef(null)
+
+
+useEffect(() => {
+
+  gsap.set([leftDates.current, rightDates.current], {
+    force3D: true,
+    willChange: "transform"
+  })
+
+  const tl = gsap.timeline({ repeat: -1, yoyo: true })
+
+  tl.to(leftDates.current,{
+    y:-35,
+    x:15,
+    rotation:-3,
+    duration:4,
+    ease:"sine.inOut"
+  })
+
+  tl.to(rightDates.current,{
+    y:-45,
+    x:-20,
+    rotation:4,
+    duration:4,
+    ease:"sine.inOut"
+  },"<")
+
+},[])
+
+
+
+
+
+  return (
+    <>
+    
+      {/* HERO SECTION */}
+      <section className="relative w-full h-[90vh] overflow-visible">
+
+        {/* GREEN BACKGROUND */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2f9b86] to-[#6fb3a1]" />
+
+        {/* PALM TREE */}
+        <Image
+          src="/dessert-palm.png"
+          alt=""
+          fill
+          priority
+          className="object-cover opacity-25"
+        />
+
+        {/* TEXT CONTENT */}
+        <div className="relative z-30 max-w-[1400px] mx-auto h-full flex items-center px-20">
+
+          <div className="text-white max-w-[600px]">
+
+            <h2 className="text-[56px] leading-[64px] font-semibold">
+              Your Trusted Partner in Premium Dates & Dry Fruits
+            </h2>
+
+            <p className="text-lg mt-6 leading-[30px] text-white">
+              Looking for a reliable supplier of premium dates, dry fruits, and coconuts?
+              Partner with <strong>Vishal Enterprise</strong> today. We deliver superior
+              quality products, consistent freshness, and dependable service you can trust.
+              Let us support your wholesale and retail needs with excellence.
+            </p>
+
+            <button className="mt-8 bg-white text-[#2f9b86] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
+              Request a Callback
+            </button>
+
+          </div>
+
+        </div>
+
+        {/* PAINT STROKE */}
+      <Image
+  ref={leftDates}
+  src="/dateside.png"
+  alt=""
+  width={500}
+  height={300}
+  className="absolute -bottom-80 left-0 z-20"
+/>
+
+        {/* LOOSE DATES */}
+     <Image
+  ref={rightDates}
+  src="/dateside2.png"
+  alt=""
+  width={450}
+  height={160}
+  className="absolute -bottom-50 right-[20px] z-30"
+/>
+
+        {/* WHITE SECTION */}
+        <div className="absolute bottom-10 left-0 w-full h-[370px] z-10 flex justify-center items-start">
+          <Image
+            src="/zigzag.png"
+            alt=""
+            fill
+            className="mt-8 w-full"
+          />
+        </div>
+
+      </section>
+
+
+      {/* QUALITY PROCESS SECTION */}
+
+    <section className="py-24 bg-[#f7f7f7]">
+
+  <div className="max-w-[1300px] mx-auto px-8">
+
+    {/* Heading */}
+    <div className="text-center max-w-[700px] mx-auto">
+
+      <h2 className="text-4xl font-semibold text-[#2f9b86]">
+        Quality Process – How We Ensure Freshness
+      </h2>
+
+      <p className="mt-6 text-gray-600 leading-[28px]">
+        At Vishal Enterprise, maintaining the highest standards of quality
+        and freshness is at the core of our operations. Our streamlined
+        process ensures that every product delivered meets strict quality
+        expectations, especially for our B2B and bulk buyers.
+      </p>
+
+    </div>
+
+
+    {/* Process Steps */}
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mt-16">
+
+      {/* Sourcing */}
+      <div className="relative overflow-hidden rounded-xl shadow-sm">
+
+        <Image
+          src="/quality/1.webp"
+          alt=""
+          fill
+          className="object-cover opacity-55"
+        />
+
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        <div className="relative z-10 p-8 text-white">
+
+          <h3 className="text-xl md:text-3xl font-semibold">
+            Sourcing
+          </h3>
+
+          <p className="mt-4 text-white leading-[26px]">
+            We procure our coconuts, dates, and dry fruits from trusted farms
+            and reliable suppliers, ensuring premium-grade raw products with
+            consistent quality and freshness.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      {/* Sorting */}
+      <div className="relative overflow-hidden rounded-xl shadow-sm">
+
+        <Image
+          src="/quality/2.webp"
+          alt=""
+          fill
+          className="object-cover opacity-55"
+        />
+
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        <div className="relative z-10 p-8 text-white">
+
+          <h3 className="text-xl md:text-3xl font-semibold">
+            Sorting
+          </h3>
+
+          <p className="mt-4 text-white leading-[26px]">
+            Each batch undergoes careful inspection, grading, and sorting
+            based on size, texture, moisture level, and overall quality
+            to maintain uniform standards.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      {/* Packaging */}
+      <div className="relative overflow-hidden rounded-xl shadow-sm">
+
+        <Image
+          src="/quality/3.webp"
+          alt=""
+          fill
+          className="object-cover opacity-55"
+        />
+
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        <div className="relative z-10 p-8 text-white">
+
+          <h3 className="text-xl md:text-3xl font-semibold">
+            Packaging
+          </h3>
+
+          <p className="mt-4 text-white leading-[26px]">
+            We use secure and hygienic packaging solutions designed for
+            both bulk and retail requirements, preserving freshness,
+            preventing contamination, and ensuring safe transportation.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      {/* Storage */}
+      <div className="relative overflow-hidden rounded-xl shadow-sm">
+
+        <Image
+          src="/quality/4.webp"
+          alt=""
+          fill
+          className="object-cover opacity-55"
+        />
+
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        <div className="relative z-10 p-8 text-white">
+
+          <h3 className="text-xl md:text-3xl font-semibold">
+            Storage
+          </h3>
+
+          <p className="mt-4 text-white leading-[26px]">
+            Our well-maintained storage facilities help retain natural
+            taste, nutritional value, and shelf life by protecting
+            products from moisture, heat, and external damage.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+    </>
+  )
+}
