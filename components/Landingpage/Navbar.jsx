@@ -44,8 +44,8 @@ export default function Navbar() {
     { name: "HOME", link: "/" },
     { name: "ABOUT US", link: "/about" },
     { name: "PRODUCTS", link: "/" },
-    { name: "GIFTINGS", link: "/" },
-    { name: "CONTACT", link: "/" },
+    { name: "BLOGS", link: "/" },
+    { name: "CONTACT US", link: "/contact" },
   ];
 
   const cart = useCartStore((state) => state.cart);

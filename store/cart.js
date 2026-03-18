@@ -11,31 +11,42 @@ export const useCartStore = create(
       openCart: () => set({ cartOpen: true }),
       closeCart: () => set({ cartOpen: false }),
 
-      addToCart: (product, quantity = 1) => {
+   addToCart: (product, quantity = 1, image) => {
 
-        const cart = get().cart
-        const existing = cart.find((item) => item.name === product.name)
+  const cart = get().cart
+  const existing = cart.find((item) => item.name === product.name)
 
-        if (existing) {
+  if (existing) {
 
-          const updated = cart.map((item) =>
-            item.name === product.name
-              ? { ...item, quantity: item.quantity + quantity }
-              : item
-          )
+    const updated = cart.map((item) =>
+      item.name === product.name
+        ? { 
+            ...item, 
+            quantity: item.quantity + quantity,
+            image: image || item.image // ✅ keep/update image
+          }
+        : item
+    )
 
-          set({ cart: updated })
+    set({ cart: updated })
 
-        } else {
+  } else {
 
-          set({
-            cart: [...cart, { ...product, quantity }]
-          })
-
+    set({
+      cart: [
+        ...cart,
+        { 
+          ...product, 
+          quantity,
+          image // ✅ store image here
         }
+      ]
+    })
 
-        set({ cartOpen: true })
-      },
+  }
+
+  set({ cartOpen: true })
+},
 
       removeItem: (name) => {
         set({
@@ -47,7 +58,7 @@ export const useCartStore = create(
 
         const updated = get().cart.map((item) =>
           item.name === name
-            ? { ...item, quantity: qty }
+            ? { ...item, quantity: Math.max(1, qty)  }
             : item
         )
 

@@ -23,9 +23,10 @@ export default function ProductPage({ params }) {
 
   const addItem = useCartStore((state) => state.addToCart);
 
-  const addToCart = () => {
-    addItem(product, quantity);
-  };
+const addToCart = () => {
+  const image = activeImage.src;
+  addItem(product, quantity, image);
+};
 
   if (!product) return <h2>Product not found</h2>;
 
@@ -64,7 +65,7 @@ const reviews = [
       </Head>
 
       <section className="bg-[#FFF8F3] py-10 px-4 md:px-8">
-        <div className="w-full mt-23 mx-auto grid md:grid-cols-2 gap-15">
+        <div className="w-full mt-27 mx-auto grid md:grid-cols-2 gap-15">
 
           {/* LEFT IMAGE */}
        {/* LEFT IMAGE */}

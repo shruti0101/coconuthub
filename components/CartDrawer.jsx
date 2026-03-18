@@ -3,7 +3,7 @@
 import { useCartStore } from "@/store/cart"
 import Link from "next/link"
 import { X, Plus, Minus, ShoppingBag } from "lucide-react"
-
+import Image from "next/image"
 export default function CartDrawer() {
 
   const { cart, cartOpen, closeCart, removeItem, updateQty, totalPrice } =
@@ -70,6 +70,13 @@ export default function CartDrawer() {
            
               <div className="flex-1">
 
+              <Image
+  src={item.image}
+  width={80}
+  height={80}
+  alt={item.name}
+/>
+
                 <h3 className="font-medium text-sm">
                   {item.name}
                 </h3>
@@ -94,6 +101,9 @@ export default function CartDrawer() {
                     {item.quantity}
                   </span>
 
+
+    
+
                   <button
                     onClick={() =>
                       updateQty(item.name, item.quantity + 1)
@@ -102,6 +112,8 @@ export default function CartDrawer() {
                   >
                     <Plus size={14}/>
                   </button>
+
+
 
                 </div>
 
