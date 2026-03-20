@@ -14,7 +14,7 @@ export default function Navbar() {
   const [productsOpen, setProductsOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-const pathname = usePathname();
+  const pathname = usePathname();
 
 
 
@@ -50,12 +50,12 @@ const pathname = usePathname();
   ];
 
 
-const cart = useCartStore((state) => state.cart)
-const openCart = useCartStore((state) => state.openCart)
+  const cart = useCartStore((state) => state.cart)
+  const openCart = useCartStore((state) => state.openCart)
 
   return (
     <header className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${scroll ? "bg-black/50" : "bg-transparent"}`}>
-      
+
       <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 py-1">
 
         {/* LOGO */}
@@ -72,11 +72,9 @@ const openCart = useCartStore((state) => state.openCart)
         {/* NAV LINKS */}
         <nav className="hidden lg:flex text-white text-lg items-center gap-10 font-bold">
           {navItems.map((item) => {
-
             if (item.name === "PRODUCTS") {
               return (
                 <div key={item.name} className="relative text-white" ref={dropdownRef}>
-                  
                   <button
                     onClick={() => setProductsOpen(!productsOpen)}
                     className="flex items-center gap-1 hover:text-[#d8b066]"
@@ -84,43 +82,21 @@ const openCart = useCartStore((state) => state.openCart)
                     PRODUCTS
                     <ChevronDown size={16} />
                   </button>
-
                   {productsOpen && (
-            
-                    <div className="absolute top-8 left-0 bg-white text-black shadow-xl rounded-lg w-52 p-4 space-y-2 z-50">
-{
-  categories.map((cat)=>(
-   <Link
-                      key={cat.id}
-                      href={`/categories/${cat.id}`}
-                      onClick={() => {
-                        setMobileOpen(false);
-                        setMobileCategoryOpen(false);
-                      }}
-                      className="text-gray-700 hover:text-emerald-600"
-                    >
-                      {cat.name}
-                    </Link>
-  )
-
-  )
-}
-                      <Link href="/products/dry-fruits" className="block hover:text-[#c79b47]">
-                        Dry Fruits
-                      </Link>
-
-                      <Link href="/products/chocolates" className="block hover:text-[#c79b47]">
-                        Chocolates
-                      </Link>
-
-                      <Link href="/products/sweets" className="block hover:text-[#c79b47]">
-                        Sweets
-                      </Link>
-
-                      <Link href="/products/gift-boxes" className="block hover:text-[#c79b47]">
-                        Gift Boxes
-                      </Link>
-
+                    <div className="h-70 overflow-auto absolute flex flex-col top-8 -left-12 bg-white text-black shadow-xl rounded-lg w-56 p-4 space-y-2 z-50">
+                      {categories.map((cat) => (
+                        <Link
+                          key={cat.id}
+                          href={`/categories/${cat.id}`}
+                          onClick={() => {
+                            setMobileOpen(false);
+                            // setMobileCategoryOpen(false);
+                          }}
+                          className="text-gray-700 hover:text-emerald-600"
+                        >
+                          {cat.name}
+                        </Link>
+                      ))}
                     </div>
                   )}
                 </div>
@@ -132,11 +108,10 @@ const openCart = useCartStore((state) => state.openCart)
                 key={item.name}
                 href={item.link}
                 onClick={() => setActive(item.name)}
-                className={`transition ${
-                  active === item.name
-                    ? "bg-[#d8b066] text-black px-4 py-2 rounded-full font-semibold"
-                    : "hover:text-[#d8b066]"
-                }`}
+                className={`transition ${active === item.name
+                  ? "bg-[#d8b066] text-black px-4 py-2 rounded-full font-semibold"
+                  : "hover:text-[#d8b066]"
+                  }`}
               >
                 {item.name}
               </Link>
@@ -152,13 +127,13 @@ const openCart = useCartStore((state) => state.openCart)
           </button>
 
 
-{/* cart */}
- <button onClick={openCart} className="relative hidden lg:flex">
-    <ShoppingCart size={22} />
-    <span className="absolute -top-2 -right-2 bg-teal-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-      ({cart.length})
-    </span>
-  </button>
+          {/* cart */}
+          <button onClick={openCart} className="relative hidden lg:flex">
+            <ShoppingCart size={22} />
+            <span className="absolute -top-2 -right-2 bg-teal-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+              ({cart.length})
+            </span>
+          </button>
           <Link
             href="/contact"
             className="bg-[#D8B066] px-4 py-2 rounded"

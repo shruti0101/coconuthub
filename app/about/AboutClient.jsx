@@ -161,7 +161,7 @@ const page = () => {
         </h2>
 
         <p className="text-white mt-4 text-lg">
-       With over 30 years of experience, Vishal Enterprise has earned a strong reputation as a reliable dates wholesaler and dry fruits supplier, known for quality and consistency.
+       With over 10 years of experience, Vishal Enterprise has earned a strong reputation as a reliable dates wholesaler and dry fruits supplier, known for quality and consistency.
         </p>
 
         {/* Cards */}
