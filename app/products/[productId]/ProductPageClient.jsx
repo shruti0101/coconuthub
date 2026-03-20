@@ -23,9 +23,10 @@ export default function ProductPage({ params }) {
 
   const addItem = useCartStore((state) => state.addToCart);
 
-  const addToCart = () => {
-    addItem(product, quantity);
-  };
+const addToCart = () => {
+  const image = activeImage.src;
+  addItem(product, quantity, image);
+};
 
   if (!product) return <h2>Product not found</h2>;
 
@@ -64,7 +65,7 @@ const reviews = [
       </Head>
 
       <section className="bg-[#FFF8F3] py-10 px-4 md:px-8">
-        <div className="w-full mt-23 mx-auto grid md:grid-cols-2 gap-15">
+        <div className="w-full mt-27 mx-auto grid md:grid-cols-2 gap-15">
 
           {/* LEFT IMAGE */}
        {/* LEFT IMAGE */}
@@ -104,132 +105,129 @@ const reviews = [
 
 </div>
 
-          {/* RIGHT DETAILS */}
-          <div className="space-y-5">
+       {/* RIGHT DETAILS */}
+<div className="space-y-6">
 
-            {/* TAG + REVIEWS */}
-            <div className="flex items-center gap-3">
-              <span className="bg-[#C2ED8D] text-green-700 text-xs px-3 py-1 rounded-full">
-                PREMIUM HARVEST
-              </span>
+  {/* TOP META */}
+  <div className="space-y-3">
+    <div className="flex items-center gap-3 flex-wrap">
+      <span className="bg-[#C2ED8D] text-green-700 text-xs px-3 py-1 rounded-full">
+        PREMIUM HARVEST
+      </span>
 
-              <div className="flex items-center gap-1 text-[#b45309]">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={14} fill="#b45309" />
-                ))}
-                <span className="text-gray-600 text-sm">(48 Reviews)</span>
-              </div>
-            </div>
+      <div className="flex items-center gap-1 text-[#b45309]">
+        {[...Array(5)].map((_, i) => (
+          <Star key={i} size={14} fill="#b45309" />
+        ))}
+        <span className="text-gray-600 text-sm ml-1">(48 Reviews)</span>
+      </div>
+    </div>
 
-            {/* TITLE */}
-            <h1 className="text-3xl md:text-6xl font-serif font-semibold">
-              {product.name}
-            </h1>
-
-            {/* PRICE */}
-            <div className="flex items-center gap-3">
-              <span className="text-2xl text-[#b45309] font-semibold">
-                ₹{product.price}
-              </span>
-              <span className="line-through text-gray-400">
-                ₹{product.oldPrice || product.price + 200}
-              </span>
-              <span className="text-sm text-gray-500">/ KG PACKAGE</span>
-            </div>
-
-            {/* DESCRIPTION */}
-            <p className="text-black   leading-relaxed">
-              {product.shortDescription ||
-                "Naturally sweet, rich in fiber, and premium quality dates sourced from the finest farms."}
-            </p>
-
-            {/* QUANTITY */}
-          {/* QUANTITY */}
-<div className="flex items-center gap-4">
-  <div className="flex items-center border rounded-lg overflow-hidden">
-    <button
-      onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-      className="px-4 py-2 bg-gray-100"
-    >
-      -
-    </button>
-    <span className="px-4">{quantity}</span>
-    <button
-      onClick={() => setQuantity((q) => q + 1)}
-      className="px-4 py-2 bg-gray-100"
-    >
-      +
-    </button>
+    {/* TITLE */}
+    <h1 className="text-3xl md:text-5xl font-serif font-semibold leading-tight">
+      {product.name}
+    </h1>
   </div>
 
-  <button
-    onClick={addToCart}
-    className="flex-1 bg-[#b45309] text-white px-6 py-3 rounded-lg shadow hover:bg-[#92400e] transition"
-  >
-    Add to Cart
-  </button>
-</div>
+  {/* PRICE BLOCK */}
+  <div className="flex items-end gap-3">
+    <span className="text-3xl text-[#b45309] font-semibold">
+      ₹{product.price}
+    </span>
+    <span className="line-through text-gray-400 text-lg">
+      ₹{product.oldPrice || product.price + 200}
+    </span>
+    <span className="text-sm text-gray-500 mb-1">/ KG</span>
+  </div>
 
-{/* ACTION BUTTONS */}
-<div className="flex flex-col sm:flex-row gap-3 mt-4">
-  
-  {/* Enquire Now */}
-  <button
-    onClick={() => window.location.href = "/contact"}
-    className="flex-1 border border-[#b45309] text-[#b45309] px-6 py-3 rounded-lg hover:bg-[#b45309] hover:text-white transition"
-  >
-    Enquire Now
-  </button>
-
-  {/* WhatsApp Now */}
-  <a
-    href="https://wa.me/919999999999?text=Hi,%20I%20want%20to%20enquire%20about%20this%20product"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg text-center hover:bg-green-700 transition"
-  >
-    WhatsApp Now
-  </a>
-
-</div>
-
-        
-          {/* ACCORDIONS */}
-{/* NUTRITION / SPECS */}
-<div className="border-t pt-6">
-
-  <h3 className="text-lg font-semibold text-[#3b2f2f] mb-3">
-    Nutritional Information
-  </h3>
-
-  {/* intro */}
-  <p className="text-sm text-black mb-4">
-    Rich in fiber, antioxidants, and essential nutrients that support a healthy lifestyle.
+  {/* DESCRIPTION */}
+  <p className="text-black leading-relaxed max-w-xl">
+    {product.shortDescription ||
+      "Naturally sweet, rich in fiber, and premium quality dates sourced from the finest farms."}
   </p>
 
-  {/* SPECS TABLE */}
-  <div className="overflow-hidden rounded-xl border">
-    <table className="w-full text-sm">
-      <tbody>
-        {product.specs?.map((spec, i) => (
-          <tr
-            key={i}
-            className={`${i % 2 === 0 ? "bg-[#fffaf5]" : "bg-white"} border-b`}
-          >
-            <td className="px-4 py-3 font-medium text-[#3b2f2f] w-1/2">
-              {spec.label}
-            </td>
-            <td className="px-4 py-3 text-black text-md">
-              {spec.value}
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+  {/* ACTION CARD */}
+  <div className="border rounded-xl p-4 space-y-4 bg-[#fffaf5]">
+
+    {/* QUANTITY + CART */}
+    <div className="flex items-center gap-3">
+      <div className="flex items-center border rounded-lg overflow-hidden">
+        <button
+          onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+          className="px-4 py-2 bg-gray-100"
+        >
+          -
+        </button>
+        <span className="px-4">{quantity}</span>
+        <button
+          onClick={() => setQuantity((q) => q + 1)}
+          className="px-4 py-2 bg-gray-100"
+        >
+          +
+        </button>
+      </div>
+
+      <button
+        onClick={addToCart}
+        className="flex-1 bg-[#b45309] text-white px-6 py-3 rounded-lg shadow hover:bg-[#92400e] transition"
+      >
+        Add to Cart
+      </button>
+    </div>
+
+    {/* SECONDARY ACTIONS */}
+    <div className="flex gap-3">
+      <button
+        onClick={() => window.location.href = "/contact"}
+        className="flex-1 border border-[#b45309] text-[#b45309] px-6 py-3 rounded-lg hover:bg-[#b45309] hover:text-white transition"
+      >
+        Enquire
+      </button>
+
+      <a
+        href="https://wa.me/919999999999?text=Hi,%20I%20want%20to%20enquire%20about%20this%20product"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg text-center hover:bg-green-700 transition"
+      >
+        WhatsApp
+      </a>
+    </div>
+
+  </div>
+
+  {/* SPECS */}
+  <div className="border-t pt-6 space-y-4">
+    <h3 className="text-lg font-semibold text-[#3b2f2f]">
+      Nutritional Information
+    </h3>
+
+    <p className="text-sm text-black">
+      Rich in fiber, antioxidants, and essential nutrients that support a healthy lifestyle.
+    </p>
+
+    <div className="overflow-hidden rounded-xl border">
+      <table className="w-full text-sm">
+        <tbody>
+          {product.specs?.map((spec, i) => (
+            <tr
+              key={i}
+              className={`${i % 2 === 0 ? "bg-[#fffaf5]" : "bg-white"} border-b`}
+            >
+              <td className="px-4 py-3 font-medium text-[#3b2f2f] w-1/2">
+                {spec.label}
+              </td>
+              <td className="px-4 py-3 text-black">
+                {spec.value}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   </div>
 
 </div>
-          </div>
         </div>
       </section>
 

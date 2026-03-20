@@ -1,262 +1,195 @@
 "use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin } from "lucide-react";
 
-
-
-import { Phone, Mail } from "lucide-react";
-
-import React, { useState } from "react";
-import axios from "axios";
-
-
-
-
-
-export default function Page() {
-  const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState(null); // null, 'success', 'error'
-
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [city, setCity] = useState("");
-  const [requirement, setRequirement] = useState("");
-  const [message, setMessage] = useState("");
-
- const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setStatus("");
-
-    try {
-      const formData = {
-        platform: "SBS Machinery Contact Form",
-        platformEmail: "machinerysbs@gmail.com",
-        name,
-        phone,
-        email,
-        city,
-        product: requirement,
-        message,
-        place: city || "N/A",
-      };
-
-      const { data } = await axios.post(
-        "https://brandbnalo.com/api/form/add",
-        formData
-      );
-
-      if (data?.success) {
-        setStatus("success");
-
-        const whatsappText = `Hi, I am ${name}.
-Email: ${email}
-Product: ${requirement}
-City: ${city}
-Message: ${message}
-Contact: ${phone}`;
-
-        setTimeout(() => {
-          window.open(
-            `https://wa.me/917042039777?text=${encodeURIComponent(
-              whatsappText
-            )}`,
-            "_blank"
-          );
-        }, 1000);
-
-        setName("");
-        setPhone("");
-        setEmail("");
-        setCity("");
-        setRequirement("");
-        setMessage("");
-      } else {
-        setStatus("error");
-      }
-    } catch (error) {
-      console.error(error);
-      setStatus("error");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-
+const ContactPage = () => {
   return (
-    <div>
-    
+    <div className="bg-[#FBF7F1] text-[#2B1B12]">
 
- <section
-  style={{ backgroundImage: "url('/contactbg.webp')" }}
-  className="w-full h-[50vh] md:h-[75vh] relative bg-cover bg-center"
->
-  {/* Overlay (optional for readability) */}
-  {/* <div className="absolute inset-0 bg-black/30"></div> */}
+      {/* ================= HERO ================= */}
+      <section style={{backgroundImage:"url(/xx.png)"}} className="relative py-35 text-center bg-center bg-cover text-white overflow-hidden">
 
- 
-</section>
-
-
-      <section className="bg-white py-10 px-6 md:px-20 ">
-        {/* Contact Info */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-          <div className="flex bg-[#1CBC9A] text-white p-6 rounded-md shadow-md flex-col items-center justify-center">
-            <div className="flex items-center space-x-2 mb-2">
-              <span className="text-2xl">
-                <Phone />
-              </span>
-              <h3 className="font-bold text-lg">Phone Number</h3>
-            </div>
-            <p className="text-lg">+91-7042039777</p>
-            <p className="text-lg">+91-9953547117</p>
-            <p className="text-lg">+91-8527877798</p>
-          </div>
-
-          <div className="bg-white border-2 border-[#1CBC9A] text-center p-6 rounded-md shadow-md">
-            <div className="flex items-center justify-center space-x-2 mb-2 text-[#0196E3]">
-              <span className="text-2xl text-[#1CBC9A]">
-                <Mail />
-              </span>
-              <h3 className="font-bold text-lg text-[#1CBC9A]">Email Address</h3>
-            </div>
-            <p className="text-gray-800 text-lg">
-          
-machinerysbs@gmail.com
-            </p>
-          </div>
-
-          <div className="bg-[#1CBC9A] text-white p-6 rounded-md shadow-md flex flex-col items-center justify-center">
-            <div className="flex items-center space-x-2 mb-2">
-              <span className="text-2xl">📍</span>
-              <h3 className="font-bold text-lg">Address</h3>
-            </div>
-            <p className="text-center">
-              Plot number 1A 31/19/1 Gali no- 4 gemini park najafgarh delhi pin code 110043 <br />Near  by:- 
-              metro station Nangli Sakrawati exit gate number 1
-              <br /> Dwarka, New Delhi – 110059
-            </p>
-          </div>
-        </div>
-
-
-
-        {/* Form + Map */}
-        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-        <div>
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">
-        Get in Touch with Us
-      </h2>
-      <form className="space-y-4" onSubmit={handleSubmit}>
-        <div className="grid grid-cols-2 gap-4">
-          <input
-            type="text"
-            name="name"
-            required
-            placeholder="Name"
-            className="border rounded-md px-4 py-2 w-full"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            disabled={loading}
-          />
-          <input
-            type="tel"
-            name="phone"
-            required
-            maxLength={10}
-            pattern="[0-9]{10}"
-            placeholder="Phone No."
-            className="border rounded-md px-4 py-2 w-full"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            disabled={loading}
-          />
-        </div>
-
-        <div className="grid grid-cols-2 gap-4">
-          <input
-            type="text"
-            name="city"
-            placeholder="City / Location"
-            className="border rounded-md px-4 py-2 w-full"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-            disabled={loading}
-          />
-          <select
-            name="requirement"
-            className="border rounded-md px-4 py-2 w-full bg-[#1CBC9A] text-white font-semibold"
-            value={requirement}
-            onChange={(e) => setRequirement(e.target.value)}
-            disabled={loading}
-          >
-            <option value="">Select Machine</option>
-            <option value="Paper Cup Making Machine">Paper Cup Making Machine</option>
-            <option value="Paper Die Cutting Machine">Paper Die Cutting Machine</option>
-            <option value="Paper Plate Making Machine">Paper Plate Making Machine</option>
-            <option value="Bio-degradable Bag Making Machine">Bio-degradable Bag Making Machine</option>
-            <option value="Flexoprinting Machine">Flexoprinting Machine</option>
-            <option value="Non Woven Bag Making Machines">Non Woven Bag Making Machines</option>
-            <option value="Offset Bag Printing Machine">Offset Bag Printing Machine</option>
-          </select>
-        </div>
-
-        <input
-          type="email"
-          name="email"
-          required
-          placeholder="Email Address"
-          className="border rounded-md px-4 py-2 w-full"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          disabled={loading}
-        />
-        <textarea
-          name="message"
-          placeholder="Message for us.."
-          rows={4}
-          className="border rounded-md px-4 py-2 w-full"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          disabled={loading}
-        />
-
-        <button
-          type="submit"
-          disabled={loading}
-          className="bg-[#1CBC9A] text-white px-6 py-3 rounded-md font-semibold w-full"
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-3xl mx-auto px-6"
         >
-          {loading ? "Sending..." : "Send"}
-        </button>
+          <h1 className="text-4xl md:text-7xl font-semibold mb-6">
+            Let's Start a Conversation
+          </h1>
 
-        {status === "success" && (
-          <p className="text-green-600 font-semibold mt-2">
-            Thank you! Your message has been sent.
+          <p className="text-lg text-white">
+            Whether you're looking for premium dates, wholesale supply,
+            corporate gifting or partnerships — our team is ready to assist you.
           </p>
-        )}
-        {status === "error" && (
-          <p className="text-red-600 font-semibold mt-2">
-            Oops! Something went wrong. Please try again.
-          </p>
-        )}
-      </form>
-    </div>
+        </motion.div>
 
-          <div className=" h-[400px]">
-         <iframe
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d301208.02472141205!2d77.005206!3d28.617205!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0f0063ca2143%3A0x983944fd10dfb00e!2sSBS%20Machinery%20Private%20Limited%20%E2%80%93%20Paper%20Cup%20%26%20Paper%20Plate%20Making%20Machine%20Manufacturer%20in%20Delhi%20NCR!5e1!3m2!1sen!2sus!4v1758178730140!5m2!1sen!2sus"
-    width="600px"
-    height="450px"
-    style={{ border: 0 }}
-    allowFullScreen=""
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-    className="rounded-md w-full h-full"
-  ></iframe>
+      </section>
+
+      {/* ================= CONTACT SECTION ================= */}
+      <section className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-start">
+
+        {/* ================= CONTACT INFO ================= */}
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
+
+          <h2 className="text-4xl font-semibold mb-6">
+            Contact Information
+          </h2>
+
+          <p className="text-lg text-[#444] leading-relaxed mb-12">
+            Our team is always available to help you with product enquiries,
+            wholesale orders, corporate gifting and retail partnerships.
+            Reach out to us anytime and we will respond quickly.
+          </p>
+
+          <div className="space-y-6">
+
+            <div className="flex items-center gap-5 p-6 bg-white rounded-2xl shadow-lg">
+              <Phone className="text-[#6B091D]" />
+              <div>
+                <p className="font-semibold">Phone</p>
+                <p className="text-gray-700">+91 7065650411</p>
+                <p className="text-gray-700">+91 9773999082</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-5 p-6 bg-white rounded-2xl shadow-lg">
+              <Mail className="text-[#6B091D]" />
+              <div>
+                <p className="font-semibold">Email</p>
+                <p className="text-gray-700">customercare@mrdates.in</p>
+                <p className="text-gray-700">sales@mrdates.in</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-5 p-6 bg-white rounded-2xl shadow-lg">
+              <MapPin className="text-[#6B091D]" />
+              <div>
+                <p className="font-semibold">Location</p>
+                <p className="text-gray-700">
+                  C-62, New Sabzi Mandi, Block C, Azadpur <br />
+                  Delhi – 110033
+                </p>
+              </div>
+            </div>
+
           </div>
+        </motion.div>
+
+
+        {/* ================= FORM ================= */}
+        <motion.div
+          initial={{ opacity: 0, x: 60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
+
+          <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-[30px] shadow-[0_40px_120px_rgba(0,0,0,0.15)] p-10">
+
+            <h3 className="text-2xl font-semibold mb-8">
+              Send Us a Message
+            </h3>
+
+            <form className="space-y-6">
+
+              {/* NAME */}
+              <div className="relative">
+                <input
+                  type="text"
+                  required
+                  className="peer w-full border-b border-gray-400 bg-transparent py-3 outline-none focus:border-[#6B091D]"
+                />
+                <label className="absolute left-0 top-3 text-gray-500 text-sm transition-all 
+                peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#6B091D] 
+                peer-valid:-top-3 peer-valid:text-xs">
+                  Your Name
+                </label>
+              </div>
+
+              {/* EMAIL */}
+              <div className="relative">
+                <input
+                  type="email"
+                  required
+                  className="peer w-full border-b border-gray-400 bg-transparent py-3 outline-none focus:border-[#6B091D]"
+                />
+                <label className="absolute left-0 top-3 text-gray-500 text-sm transition-all 
+                peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#6B091D]
+                peer-valid:-top-3 peer-valid:text-xs">
+                  Email Address
+                </label>
+              </div>
+
+              {/* PHONE */}
+              <div className="relative">
+                <input
+                  type="tel"
+                  required
+                  className="peer w-full border-b border-gray-400 bg-transparent py-3 outline-none focus:border-[#6B091D]"
+                />
+                <label className="absolute left-0 top-3 text-gray-500 text-sm transition-all 
+                peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#6B091D]
+                peer-valid:-top-3 peer-valid:text-xs">
+                  Phone Number
+                </label>
+              </div>
+
+              {/* MESSAGE */}
+              <div className="relative">
+                <textarea
+                  rows="4"
+                  required
+                  className="peer w-full border-b border-gray-400 bg-transparent py-3 outline-none focus:border-[#6B091D]"
+                />
+                <label className="absolute left-0 top-3 text-gray-500 text-sm transition-all 
+                peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#6B091D]
+                peer-valid:-top-3 peer-valid:text-xs">
+                  Your Message
+                </label>
+              </div>
+
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full bg-[#6B091D] text-white py-4 rounded-full font-medium tracking-wide hover:bg-[#540715] transition"
+              >
+                Send Message
+              </motion.button>
+
+            </form>
+
+          </div>
+
+        </motion.div>
+
+      </section>
+
+
+      {/* ================= MAP ================= */}
+      <section className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto rounded-[30px] overflow-hidden shadow-2xl">
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.0136353497383!2d77.1712696!3d28.714073999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d01beb907eaf7%3A0x5089b5634f28242e!2sMr%20Dates!5e1!3m2!1sen!2sin!4v1770445719419!5m2!1sen!2sin"
+            className="w-full h-[70vh] border-0"
+            loading="lazy"
+            allowFullScreen
+            title="Mr Dates Location"
+          />
+
         </div>
       </section>
 
-  
     </div>
   );
-}
+};
+
+export default ContactPage;

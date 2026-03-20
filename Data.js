@@ -22,6 +22,7 @@ export const categories = [
   "price":900,
   "metaTitle": "Ajwa Dates Premium Quality | Vishal Enterprise",
   "metaDescription": "Premium Ajwa Dates with seed packed in tray. Naturally sweet, nutritious and high-quality dates supplied by Vishal Enterprise.",
+"shortDescription":"hur",
   "description": [
     { "type": "h2", "text": "Product Overview – Ajwa Dates" },
     {
