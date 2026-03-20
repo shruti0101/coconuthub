@@ -1474,7 +1474,7 @@ export const categories = [
 
   "image": [
     {
-      "src": "/product/jarFard.webp",
+      "src": "/product/jarfard.webp",
       "alt": "Fard Dates Jar Barari 6kg Carton Pack"
     }
   ]
