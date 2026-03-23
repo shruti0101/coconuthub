@@ -73,8 +73,7 @@ export default function Navbar() {
         </Link>
 
         {/* NAV */}
-        <nav
-          className={`hidden lg:flex items-center gap-8 font-semibold font-poppins mr-20 ${textColor}`}
+        <nav className={`hidden xl:flex items-center gap-8 font-semibold font-poppins ${textColor}`}
         >
           {navItems.map((item) => {
             if (item.name === "PRODUCTS") {
@@ -139,7 +138,7 @@ export default function Navbar() {
             />
           </div>
 
-          <button onClick={openCart} className="relative hidden lg:flex">
+          <button onClick={openCart} className="relative flex">
             <ShoppingCart size={20} />
             <span className="absolute -top-2 -right-2 bg-teal-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
               {cart.length}
@@ -148,7 +147,7 @@ export default function Navbar() {
 
           <Link
             href="/contact"
-            className="relative inline-flex items-center justify-center px-6 py-2.5 font-semibold text-black rounded-full overflow-hidden group"
+            className="relative lg:inline-flex hidden items-center justify-center px-6 py-2.5 font-semibold text-black rounded-full overflow-hidden group"
           >
             {/* Gradient background */}
             <span className="absolute inset-0 bg-gradient-to-r from-[#d8b066] via-[#e6c98f] to-[#c79b47] transition-all duration-500 group-hover:scale-105"></span>
@@ -166,7 +165,7 @@ export default function Navbar() {
           </Link>
 
           <button
-            className="lg:hidden"
+            className="xl:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X /> : <Menu />}
@@ -175,38 +174,34 @@ export default function Navbar() {
       </div>
 
       {/* SEARCH */}
-      {
-        searchOpen && (
-          <div className="fixed inset-0 bg-black/40 flex items-start justify-center pt-40 z-50">
-            <div className="bg-white p-6 rounded-xl w-[500px] flex gap-3">
-              <input
-                autoFocus
-                placeholder="Search products..."
-                className="flex-1 outline-none border p-3 rounded-md text-black"
-              />
-              <button
-                onClick={() => setSearchOpen(false)}
-                className="px-4 bg-black text-white rounded-md"
-              >
-                Close
-              </button>
-            </div>
+      {searchOpen && (
+        <div className="fixed inset-0 bg-black/40 flex items-start justify-center pt-40 z-50">
+          <div className="bg-white p-6 rounded-xl w-[500px] flex gap-3">
+            <input
+              autoFocus
+              placeholder="Search products..."
+              className="flex-1 outline-none border p-3 rounded-md text-black"
+            />
+            <button
+              onClick={() => setSearchOpen(false)}
+              className="px-4 bg-black text-white rounded-md"
+            >
+              Close
+            </button>
           </div>
-        )
-      }
+        </div>
+      )}
 
       {/* MOBILE */}
-      {
-        mobileOpen && (
-          <div className="lg:hidden bg-white text-black border-t p-6 space-y-4">
-            {navItems.map((item) => (
-              <Link key={item.name} href={item.link} className="block">
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        )
-      }
+      {mobileOpen && (
+        <div className="xl:hidden bg-white text-black border-t p-6 space-y-4">
+          {navItems.map((item) => (
+            <Link key={item.name} href={item.link} className="block">
+              {item.name}
+            </Link>
+          ))}
+        </div>
+      )}
     </header>
   );
 }

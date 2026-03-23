@@ -20,7 +20,7 @@ const Footer = () => {
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/40"></div>
 
-      <div className="relative z-10 container mx-auto px-6 py-25 grid grid-cols-1 md:grid-cols-5 gap-10">
+      <div className="relative z-10 container mx-auto px-6 py-25 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10">
 
         {/* ABOUT */}
         <div>
