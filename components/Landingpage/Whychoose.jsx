@@ -121,7 +121,7 @@ export default function DatesExplosion() {
 
     <section
       ref={sectionRef}
-      className="relative h-[2500px] bg-[#f5efe6]"
+      className="relative h-[2500px] bg-[#f5efe6] lg:block hidden"
     >
 
       {/* ✅ STICKY WRAPPER (REPLACES PIN) */}

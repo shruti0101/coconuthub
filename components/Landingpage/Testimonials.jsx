@@ -38,133 +38,118 @@ const testimonials = [
 
 export default function TestimonialSection() {
 
-  const [index,setIndex] = useState(0)
+  const [index, setIndex] = useState(0)
 
-  const nextSlide = ()=>{
-    setIndex((prev)=>(prev+1)%testimonials.length)
+  const nextSlide = () => {
+    setIndex((prev) => (prev + 1) % testimonials.length)
   }
 
-  const prevSlide = ()=>{
-    setIndex((prev)=>(prev-1+testimonials.length)%testimonials.length)
+  const prevSlide = () => {
+    setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
   }
 
-  useEffect(()=>{
-    const autoSlide = setInterval(()=>{
+  useEffect(() => {
+    const autoSlide = setInterval(() => {
       nextSlide()
-    },5000)
+    }, 5000)
 
-    return ()=> clearInterval(autoSlide)
-  },[])
+    return () => clearInterval(autoSlide)
+  }, [])
 
   return (
 
-<section className="relative w-full py-24 px-8 lg:px-20 bg-[#faf7f2]">
+  <section className="relative w-full py-16 lg:py-24 px-4 lg:px-20 bg-[#faf7f2]">
 
+  {/* ZIGZAG (hide on small screens to avoid overlap) */}
+  <div className="hidden lg:flex absolute bottom-6 left-0 w-full h-[130px] z-10 justify-center items-start">
+    <Image
+      src="/zigzag2.png"
+      alt=""
+      fill
+      className="mt-8 w-full object-cover"
+    />
+  </div>
 
- {/* WHITE SECTION */}
-        <div className="absolute bottom-6 left-0 w-full h-[130px] z-10 flex justify-center items-start">
-          <Image
-            src="/zigzag2.png"
-            alt=""
-            fill
-            className="mt-8 w-full"
-          />
+  <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+    {/* VIDEO */}
+    <div className="relative w-full h-[220px] sm:h-[300px] lg:h-[700px] rounded-[10px] overflow-hidden">
+      <video
+        src="/video.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-full h-full object-cover"
+      />
+    </div>
+
+    {/* TESTIMONIALS */}
+    <div>
+
+      <p className="text-xs tracking-[0.35em] uppercase text-gray-500 mb-3 text-center lg:text-left">
+        Testimonials
+      </p>
+
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl md:text-5xl font-semibold mb-6 lg:mb-10 text-center lg:text-left">
+        What Our Clients Say
+      </h2>
+
+      <div className="relative overflow-hidden">
+
+        <div
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${index * 100}%)` }}
+        >
+
+          {testimonials.map((item) => (
+            <div key={item.id} className="min-w-full">
+
+              <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-xl lg:rounded-2xl shadow-lg">
+
+                <div className="text-yellow-500 text-base lg:text-lg mb-3">
+                  {"★".repeat(item.rating)}
+                </div>
+
+                <h3 className="font-semibold text-lg lg:text-xl mb-3 lg:mb-4">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                  “{item.text}”
+                </p>
+
+              </div>
+
+            </div>
+          ))}
+
         </div>
 
+        {/* CONTROLS */}
+        <div className="flex gap-3 mt-6 lg:mt-8 justify-center lg:justify-start">
 
-<div className="w-full mx-auto grid lg:grid-cols-2 gap-16 items-center">
+          <button
+            onClick={prevSlide}
+            className="w-10 h-10 lg:w-11 lg:h-11 flex items-center justify-center rounded-full border border-gray-300 hover:bg-black hover:text-white transition"
+          >
+            ←
+          </button>
 
+          <button
+            onClick={nextSlide}
+            className="w-10 h-10 lg:w-11 lg:h-11 flex items-center justify-center rounded-full border border-gray-300 hover:bg-black hover:text-white transition"
+          >
+            →
+          </button>
 
+        </div>
 
+      </div>
 
+    </div>
 
-
-
-
-
-  <div className="relative h-[700px] rounded-[10px] overflow-hidden">
-  <video
-    src="/video.mp4"
-    autoPlay
-    loop
-    muted
-    playsInline
-    className="w-full h-full object-cover"
-  />
-</div>
-
-{/* LEFT SIDE TESTIMONIALS */}
-
-<div>
-
-<p className="text-xs tracking-[0.35em] uppercase text-gray-500 mb-3">
-Testimonials
-</p>
-
-<h2 className="text-4xl md:text-5xl font-semibold mb-10">
-What Our Clients Say
-</h2>
-
-<div className="relative overflow-hidden">
-
-<div
-className="flex transition-transform duration-700 ease-in-out"
-style={{transform:`translateX(-${index*100}%)`}}
->
-
-{testimonials.map((item)=>(
-<div key={item.id} className="min-w-full">
-
-<div className="bg-white p-10 rounded-2xl shadow-lg">
-
-<div className="text-yellow-500 text-lg mb-3">
-{"★".repeat(item.rating)}
-</div>
-
-<h3 className="font-semibold text-xl mb-4">
-{item.title}
-</h3>
-
-<p className="text-gray-600 leading-relaxed">
-“{item.text}”
-</p>
-
-</div>
-
-</div>
-))}
-
-</div>
-
-{/* controls */}
-
-<div className="flex gap-3 mt-8">
-
-<button
-onClick={prevSlide}
-className="w-11 h-11 flex items-center justify-center rounded-full border border-gray-300 hover:bg-black hover:text-white transition"
->
-←
-</button>
-
-<button
-onClick={nextSlide}
-className="w-11 h-11 flex items-center justify-center rounded-full border border-gray-300 hover:bg-black hover:text-white transition"
->
-→
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-{/* RIGHT SIDE IMAGE */}
-
-
-
-</div>
+  </div>
 
 </section>
 

@@ -135,7 +135,7 @@ import React from 'react'
 const Hero = () => {
   return (
     <div>
-    <section className="relative bg-[#F3F1F0] w-full h-[25vh]  -mt-[150px] md:h-[70vh]   xl:h-[125vh] overflow-hidden">
+    <section className="relative bg-[#F3F1F0] w-full h-[31vh] mt-[95px] xl:-mt-[150px] md:h-[70vh]   xl:h-[120vh] overflow-hidden">
       
   
         <video

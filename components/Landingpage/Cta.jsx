@@ -61,7 +61,7 @@ export default function TrustSection() {
     <section
       ref={sectionRef}
       style={{backgroundImage:"url(/bulkdate.jpg)"}}
-      className="relative py-[110px] overflow-visible bg-cover bg-center"
+      className="relative py-[110px] overflow-visible bg-cover bg-center px-4"
     >
       <div className="absolute inset-0 opacity-[0.08] bg-[url('/arabic-pattern.png')] bg-cover bg-center" />
 
@@ -70,7 +70,7 @@ export default function TrustSection() {
           {/* CASHEW */}
           <div
             ref={cashewRef}
-            className="absolute left-1/2 -translate-x-1/2 -top-[340px]"
+            className="lg:block hidden absolute left-1/2 -translate-x-1/2 -top-[340px]"
           >
             <Image
               src="/bowldate2.png"

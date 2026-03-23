@@ -28,7 +28,7 @@ export default function Features() {
 
   return (
     <section
-      className="py-20 text-center bg-cover bg-center "
+      className="py-10 text-center bg-cover bg-center "
       style={{
       backgroundImage:"url(/featureicon/bg.png)"
       }}

@@ -384,7 +384,7 @@ export const categories = [
 
   "image": [
     {
-      "src": "/dates/product/Ajwa Dates 2kg.webp",
+      "src": "/product/ajwaExoticCrates.webp",
       "alt": "Ajwa Dates 2kg Carton Pack"
     }
   ]
