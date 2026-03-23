@@ -5,7 +5,7 @@ const Hero = () => {
     <section className="relative w-full overflow-hidden -mt-[150px]">
 
       {/* VIDEO WRAPPER */}
-      <div className="relative w-full h-[120vh]">
+      <div className="relative w-full lg:h-[110vh] h-[100vh]">
 
         {/* ✅ MOBILE VIDEO */}
         <video
