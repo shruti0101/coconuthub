@@ -17,12 +17,12 @@ export const categories = [
   "metaDescription": "Buy premium quality Ajwa Dates with seed packed in tray. Naturally sweet, nutritious and authentic Ajwa dates supplied by Vishal Enterprise.",
   "products": [
 {
-  "id": "AjwaDates250g",
+  "id": "ajwa-dates-250g",
   "name": "Ajwa Dates",
   "price":900,
   "metaTitle": "Ajwa Dates Premium Quality | Vishal Enterprise",
   "metaDescription": "Premium Ajwa Dates with seed packed in tray. Naturally sweet, nutritious and high-quality dates supplied by Vishal Enterprise.",
-"shortDescription":"hur",
+"shortDescription":"Premium Ajwa Dates with seed packed in tray. Naturally sweet, nutritious and high-quality dates supplied by Vishal Enterprise.",
   "description": [
     { "type": "h2", "text": "Product Overview – Ajwa Dates" },
     {
@@ -118,11 +118,11 @@ export const categories = [
   ]
 },
 {
-  "id": "Ajwa-Dates-3kg-₹900",
+  "id": "ajwa-dates-3kg",
   "name": "Ajwa Dates (₹900 Per Kg)",
   "metaTitle": "Ajwa Dates 3 Kg Pack | Premium Ajwa Dates Supplier | Vishal Enterprise",
   "metaDescription": "Buy premium Ajwa Dates priced at ₹900 per kg in 3 kg carton packaging. Naturally sweet, nutritious and authentic Ajwa dates supplied by Vishal Enterprise.",
-
+"price":900,
   "description": [
     { "type": "h2", "text": "Product Overview – Ajwa Dates (₹900 Per Kg)" },
     {
@@ -210,11 +210,11 @@ export const categories = [
   ]
 },
 {
-  "id": "Ajwa-Dates-250g-Jar",
+  "id": "ajwa-dates-250g-Jar",
   "name": "Ajwa Dates 250gm (Jar) (₹900 Per Kg)",
   "metaTitle": "Ajwa Dates 250gm Jar Pack | Premium Ajwa Dates | Vishal Enterprise",
   "metaDescription": "Buy premium Ajwa Dates packed in 250g jar packaging. Naturally sweet, nutritious and authentic Ajwa dates supplied by Vishal Enterprise.",
-
+"price":900,
   "description": [
     { "type": "h2", "text": "Product Overview – Ajwa Dates 250gm (Jar)" },
     {
@@ -299,11 +299,11 @@ export const categories = [
   ]
 },
 {
-  "id": "Ajwa-Dates-2kg",
+  "id": "ajwa-dates-2kg",
   "name": "Ajwa Dates 2kg {Exoticcrate} (₹800 Per Kg)",
   "metaTitle": "Ajwa Dates 2kg Carton Pack | Premium Ajwa Dates Supplier | Vishal Enterprise",
   "metaDescription": "Buy premium Ajwa Dates packed in 2kg carton packaging. Naturally sweet, nutritious and authentic Ajwa dates supplied by Vishal Enterprise.",
-
+"price":800,
   "description": [
     { "type": "h2", "text": "Product Overview – Ajwa Dates 2kg" },
     {
@@ -390,11 +390,11 @@ export const categories = [
   ]
 },
 {
-  "id": "Ajwa-Dates-3kg-₹850",
+  "id": "ajwa-dates-3kg-carton",
   "name": "Ajwa Dates 3kg (₹850 Per Kg)",
   "metaTitle": "Ajwa Dates 3kg Carton Pack | Premium Ajwa Dates Supplier | Vishal Enterprise",
   "metaDescription": "Buy premium Ajwa Dates packed in 3kg carton packaging. Naturally sweet, nutritious and authentic Ajwa dates supplied by Vishal Enterprise.",
-
+"price":850,
   "description": [
     { "type": "h2", "text": "Product Overview – Ajwa Dates 3kg" },
     {
@@ -481,11 +481,11 @@ export const categories = [
   ]
 },
 {
-  "id": "Ajwa-Dates-500g-Jar",
+  "id": "ajwa-dates-500g-jar",
   "name": "Ajwa Dates 500gm (Jar) (₹900 Per Kg)",
   "metaTitle": "Ajwa Dates 500gm Jar Pack | Premium Ajwa Dates | Vishal Enterprise",
   "metaDescription": "Buy premium Ajwa Dates packed in 500gm jar packaging. Naturally sweet, nutritious and authentic Ajwa dates supplied by Vishal Enterprise.",
-
+"price":900,
   "description": [
     { "type": "h2", "text": "Product Overview – Ajwa Dates 500gm (Jar)" },
     {
@@ -570,11 +570,11 @@ export const categories = [
   ]
 },
 {
-  "id": "Ajwa-Gold-1kg",
+  "id": "ajwa-gold-1kg",
   "name": "Ajwa Gold 1kg (₹800 Per Kg)",
   "metaTitle": "Ajwa Gold 1kg Premium Dates | Vishal Enterprise",
   "metaDescription": "Buy Ajwa Gold Dates 1kg carton pack. Premium quality Ajwa dates with natural sweetness and rich flavor supplied by Vishal Enterprise.",
-
+"price":800,
   "description": [
     { "type": "h2", "text": "Product Overview – Ajwa Gold 1kg" },
     {
@@ -665,11 +665,11 @@ export const categories = [
   ]
 },
 {
-  "id": "Ajwa-Gold-500g",
+  "id": "ajwa-gold-500g",
   "name": "Ajwa Gold 500gm (₹800 Per Kg)",
   "metaTitle": "Ajwa Gold 500gm Premium Dates | Vishal Enterprise",
   "metaDescription": "Buy Ajwa Gold Dates 500gm carton pack. Premium quality Ajwa dates with natural sweetness and rich flavor supplied by Vishal Enterprise.",
-
+"price":800,
   "description": [
     { "type": "h2", "text": "Product Overview – Ajwa Gold 500gm" },
     {
@@ -760,11 +760,11 @@ export const categories = [
   ]
 },
 {
-  "id": "Saudi-Ajwa-Dates-5kg-Jumbo",
+  "id": "saudi-ajwa-dates-5kg-jumbo",
   "name": "Saudi Ajwa Dates 5kg (Jumbo) (₹750 Per Kg)",
   "metaTitle": "Saudi Ajwa Dates 5kg Jumbo Pack | Premium Ajwa Dates | Vishal Enterprise",
   "metaDescription": "Buy premium Saudi Ajwa Dates 5kg jumbo carton pack. Authentic black Ajwa dates known for rich taste, soft texture and high nutritional value supplied by Vishal Enterprise.",
-
+"price":750,
   "description": [
     { "type": "h2", "text": "Product Overview – Saudi Ajwa Dates 5kg (Jumbo)" },
     {
