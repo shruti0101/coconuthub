@@ -111,7 +111,7 @@ const page = () => {
 
           <div className="rounded-[30px] overflow-hidden shadow-xl">
             <Image
-              src="/1000_F_1008535121_sRLrqyDqLSnvACHVfkQmMTc6BezQXvXr.jpg" // 👉 replace with your image
+              src="/aboutImage.webp" // 👉 replace with your image
               width={800}
               height={400}
               alt="Vishal Enterprise"
