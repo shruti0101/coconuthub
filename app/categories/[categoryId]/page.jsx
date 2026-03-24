@@ -1,16 +1,13 @@
 import { categories } from "@/Data";
 import Link from "next/link";
 import Image from "next/image";
-
+import { redirect } from 'next/navigation';
 export async function generateMetadata({ params }) {
   const { categoryId } = params;
   const category = categories.find((c) => c.id === categoryId);
 
   if (!category) {
-    return {
-      title: "Category Not Found | SBS Machinery",
-      description: "The requested category does not exist.",
-    };
+    redirect('/');
   }
 
   return {

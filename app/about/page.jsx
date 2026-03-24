@@ -1,8 +1,8 @@
 import AboutClient from "./AboutClient";
 
 export const metadata = {
-  title: "About SBS Machinery – Best Manufacturer in India",
-  description: "Learn about SBS Machinery, a top manufacturer of paper cup making machines, bag making machines, die cutting machines, flexo printing machines",
+  title: "About Vishal Enterprise | Trusted Dates Supplier",
+  description: "Vishal Enterprise is a reliable dates supplier providing premium khajoor and dates. Learn about our journey, quality standards, and commitment to excellence.",
 };
 
 export default function AboutUsPage() {

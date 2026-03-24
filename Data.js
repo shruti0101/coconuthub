@@ -13,8 +13,8 @@ export const categories = [
 {
   "id": "ajwa-dates",
   "name": "Ajwa Dates ",
-  "metaTitle": "Premium Ajwa Dates Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Ajwa Dates with seed packed in tray. Naturally sweet, nutritious and authentic Ajwa dates supplied by Vishal Enterprise.",
+  "metaTitle": "Ajwa Dates Supplier | Premium Ajwa Khajoor | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise is a trusted Ajwa dates supplier offering premium quality Ajwa khajoor for wholesale and bulk orders with assured freshness and quality.",
   "products": [
 {
   "id": "ajwa-dates-250g",
@@ -857,8 +857,8 @@ export const categories = [
 {
   "id": "fard-dates",
   "name": "Fard Dates",
-  "metaTitle": "Premium Fard Dates Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Fard Dates with seed packed in tray. Naturally sweet, nutritious and authentic Fard Dates supplied by Vishal Enterprise.",
+  "metaTitle": "Fard Dates Supplier | Premium Fard Khajoor | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise is a trusted Fard dates supplier offering premium quality Fard khajoor for wholesale and bulk orders with consistent quality and freshness.",
   "products": [
 {
   "id": "Exotic-crate-Fard-Dates",
@@ -1709,8 +1709,8 @@ export const categories = [
 {
   "id": "fresh-zahidi-dates",
   "name": "Fresh Zahidi Dates",
-  "metaTitle": "Premium Fresh Zahidi Dates Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Fresh Zahidi Dates with seed packed in tray. Naturally sweet, nutritious and authentic Fresh Zahidi Dates supplied by Vishal Enterprise.",
+  "metaTitle": "Fresh Zahidi Dates Supplier | Zahidi Khajoor | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise is a trusted dates supplier offering fresh Zahidi dates and premium Zahidi khajoor for wholesale and bulk orders with assured quality.",
   "products": [
 {
   "id": "Brown-Loose-Zahidi-Dates-10kg",
@@ -2856,8 +2856,8 @@ export const categories = [
 {
   "id": "kalmi-dates",
   "name": "Kalmi Dates",
-  "metaTitle": "Premium Kalmi Dates Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Kalmi Dates with seed packed in tray. Naturally sweet, nutritious and authentic Kalmi Dates supplied by Vishal Enterprise.",
+  "metaTitle": "Kalmi Dates Supplier | Premium Kalmi Khajoor | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise is a trusted dates supplier offering premium quality Kalmi dates and Kalmi khajoor for wholesale and bulk orders with assured freshness.",
   "products": [
 {
   "id": "al-fruit-kalmi-dates-5kg",
@@ -4222,8 +4222,8 @@ export const categories = [
 {
   "id": "kimia-dates",
   "name": "Kimia Dates",
-  "metaTitle": "Premium Kimia Dates Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Kimia Dates with seed packed in tray. Naturally sweet, nutritious and authentic Kimia Dates supplied by Vishal Enterprise.",
+  "metaTitle": "Kimia Dates Supplier | Premium Kimia Khajoor | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise is a trusted dates supplier offering premium Kimia dates and Kimia khajoor for wholesale and bulk orders with rich taste and soft texture.",
   "products": [
 {
   "id": "barari-dates-500gm",
@@ -5277,8 +5277,8 @@ export const categories = [
 {
   "id": "mabroom-dates",
   "name": "Mabroom Dates",
-  "metaTitle": "Premium Mabroom Dates Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Mabroom Dates with seed packed in tray. Naturally sweet, nutritious and authentic Mabroom Dates supplied by Vishal Enterprise.",
+  "metaTitle": "Mabroom Dates Supplier | Premium Mabroom Khajoor | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise is a trusted dates supplier offering premium Mabroom dates and Mabroom khajoor for wholesale and bulk orders with rich taste and firm texture.",
   "products": [
 {
   "id": "al-shaffa-mabroom-dates-3kg",
@@ -5729,8 +5729,8 @@ export const categories = [
 {
   "id": "medjool-dates",
   "name": "Medjool Dates",
-  "metaTitle": "Premium Medjool Dates Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Medjool Dates with seed packed in tray. Naturally sweet, nutritious and authentic Medjool Dates supplied by Vishal Enterprise.",
+  "metaTitle": "Medjool Dates Supplier | Premium Medjool Khajoor | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise is a trusted dates supplier offering premium Medjool dates and Medjool khajoor for wholesale and bulk orders with rich taste and natural sweetness.",
   "products": [
 {
   "id": "barari-medjool-dates-500gm",
@@ -6906,8 +6906,8 @@ export const categories = [
 {
   "id": "rabbi-dates",
   "name": "Rabbi Dates",
-  "metaTitle": "Premium Rabbi Dates Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Rabbi Dates with seed packed in tray. Naturally sweet, nutritious and authentic Rabbi Dates supplied by Vishal Enterprise.",
+  "metaTitle": "Rabbi Dates Supplier | Premium Rabbi Khajoor | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise is a trusted dates supplier offering premium Rabbi dates and Rabbi khajoor for wholesale and bulk orders with natural sweetness and quality.",
   "products": [
 {
   "id": "liberty-rabbi-dates-5kg",
@@ -7639,8 +7639,8 @@ export const categories = [
 {
   "id": "sukkari-dates",
   "name": "Sukkari Dates",
-  "metaTitle": "Premium Sukkari Dates Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Sukkari Dates with seed packed in tray. Naturally sweet, nutritious and authentic Sukkari Dates supplied by Vishal Enterprise.",
+  "metaTitle": "Sukkari Dates Supplier | Premium Sukkari Khajoor | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise is a trusted dates supplier offering premium Sukkari dates and Sukkari khajoor for wholesale and bulk orders with rich sweetness and quality.",
   "products": [
 {
   "id": "sukkari-dates-12kg",
@@ -7955,8 +7955,8 @@ export const categories = [
 {
   "id": "tunisian-dates",
   "name": "Tunisian Dates",
-  "metaTitle": "Premium Tunisian Dates Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Tunisian Dates with seed packed in tray. Naturally sweet, nutritious and authentic Tunisian Dates supplied by Vishal Enterprise.",
+  "metaTitle": "Tunisian Dates Supplier | Premium Tunisian Khajoor | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise is a trusted dates supplier offering premium Tunisian dates and khajoor for wholesale and bulk orders with superior quality and taste.",
   "products": [
 {
   "id": "barari-tunisian-dates-5kg",
@@ -9610,8 +9610,8 @@ export const categories = [
 {
   "id": "wet-dates",
   "name": "Wet Dates",
-  "metaTitle": "Premium Wet Dates Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Wet Dates with seed packed in tray. Naturally sweet, nutritious and authentic Wet Dates supplied by Vishal Enterprise.",
+  "metaTitle": "Wet Dates Supplier | Fresh Wet Khajoor | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise is a trusted dates supplier offering fresh wet dates and wet khajoor for wholesale and bulk orders with natural taste and high quality.",
   "products": [
 {
   "id": "al-fruit-black-fruit-500g",
@@ -10765,8 +10765,8 @@ export const categories = [
 {
   "id": "seedless-dates",
   "name": "Seedless Dates",
-  "metaTitle": "Premium Seedless Dates Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Seedless Dates with seed packed in tray. Naturally sweet, nutritious and authentic Seedless Dates supplied by Vishal Enterprise.",
+  "metaTitle": "Seedless Dates Supplier | Premium Seedless Khajoor | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise is a trusted dates supplier offering premium seedless dates and seedless khajoor for wholesale and bulk orders with convenience and quality.",
   "products": [
 {
   "id": "emperor-seedless-dates-10kg",
@@ -11385,10 +11385,10 @@ export const categories = [
 
 // category 9 Chocolate Dates
 {
-  "id": "chocolate-dates",
+  "id": "chocolates-dates",
   "name": "Chocolate Dates",
-  "metaTitle": "Premium Chocolate Dates Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Chocolate Dates with seed packed in tray. Naturally sweet, nutritious and authentic Chocolate Dates supplied by Vishal Enterprise.",
+  "metaTitle": "Chocolate Dates Supplier | Premium Chocolate Khajoor | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise is a trusted dates supplier offering premium chocolate dates and chocolate khajoor for wholesale and bulk orders with rich taste and quality.",
   "products": [
 {
   "id": "chocolate-dates-alraiqa-5kg",
@@ -11659,8 +11659,8 @@ export const categories = [
 {
   "id": "dried-apricot",
   "name": "Dried Apricot",
-  "metaTitle": "Premium Dried Apricot Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Dried Apricot with seed packed in tray. Naturally sweet, nutritious and authentic Dried Apricot supplied by Vishal Enterprise.",
+  "metaTitle": "Dried Apricot Supplier | Premium Dry Apricots | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise offers premium dried apricots with natural sweetness and quality. Trusted supplier for wholesale and bulk dry fruit supply.",
   "products": [
 {
   "id": "turkel-apricot-200gm",
@@ -11844,8 +11844,8 @@ export const categories = [
 {
   "id": "california-almonds",
   "name": "California Almonds",
-  "metaTitle": "Premium California Almonds Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality California Almonds with seed packed in tray. Naturally sweet, nutritious and authentic California Almonds supplied by Vishal Enterprise.",
+  "metaTitle": "California Almonds Supplier | Premium Badam | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise offers premium California almonds (badam) with superior quality and freshness. Trusted supplier for wholesale and bulk dry fruit supply.",
   "products": [
 {
   "id": "california-almonds-1kg-pouch",
@@ -12684,8 +12684,8 @@ export const categories = [
 {
   "id": "afgan-dry-figs",
   "name": "Afgan Dry Figs",
-  "metaTitle": "Premium Afgan Dry Figs Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Afgan Dry Figs with seed packed in tray. Naturally sweet, nutritious and authentic Afgan Dry Figs supplied by Vishal Enterprise.",
+  "metaTitle": "Afghan Dry Figs Supplier | Premium Anjeer | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise offers premium Afghan dry figs (anjeer) with natural sweetness and rich quality. Trusted supplier for wholesale and bulk dry fruit supply.",
   "products": [
 {
   "id": "afghan-dry-figs-10kg-jumbo",
@@ -13479,8 +13479,8 @@ export const categories = [
 {
   "id": "turkey-dry-figs",
   "name": "Turkey Dry Figs",
-  "metaTitle": "Premium Turkey Dry Figs Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Turkey Dry Figs with seed packed in tray. Naturally sweet, nutritious and authentic Turkey Dry Figs supplied by Vishal Enterprise.",
+  "metaTitle": "Turkey Dry Figs Supplier | Premium Anjeer | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise offers premium Turkey dry figs (anjeer) with natural sweetness and superior quality. Trusted supplier for wholesale and bulk dry fruit supply.",
   "products": [
 {
   "id": "turkey-dry-figs-1kg-pack",
@@ -13924,8 +13924,8 @@ export const categories = [
 {
   "id": "irani-dry-figs",
   "name": "Irani Dry Figs",
-  "metaTitle": "Premium Irani Dry Figs Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Irani Dry Figs with seed packed in tray. Naturally sweet, nutritious and authentic Irani Dry Figs supplied by Vishal Enterprise.",
+  "metaTitle": "Irani Dry Figs Supplier | Premium Anjeer | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise offers premium Irani dry figs (anjeer) with natural sweetness and high quality. Trusted supplier for wholesale and bulk dry fruit supply.",
   "products": [
 {
   "id": "irani-dry-figs-7kg-loose",
@@ -14157,8 +14157,8 @@ export const categories = [
 {
   "id": "semi-husked-coconut",
   "name": "Semi Husked Coconut",
-  "metaTitle": "Premium Semi Husked Coconut Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Semi Husked Coconut with seed packed in tray. Naturally sweet, nutritious and authentic Semi Husked Coconut supplied by Vishal Enterprise.",
+  "metaTitle": "Semi Husked Coconut Supplier | Fresh Coconut | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise offers fresh semi husked coconut with high quality and natural freshness. Trusted supplier for wholesale and bulk coconut supply.",
   "products": [
 {
   "id": "semi-husked-coconut-120-count",
@@ -14720,8 +14720,8 @@ export const categories = [
 {
   "id": "husked-coconut",
   "name":  "Husked Coconut",
-  "metaTitle": "Premium Husked Coconut Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Husked Coconut with seed packed in tray. Naturally sweet, nutritious and authentic Husked Coconut supplied by Vishal Enterprise.",
+  "metaTitle": "Husked Coconut Supplier | Fresh Coconut | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise offers fresh husked coconut with superior quality and natural freshness. Trusted supplier for wholesale and bulk coconut supply.",
   "products": [
 {
   "id": "husked-coconut-100-count",
@@ -14938,8 +14938,8 @@ export const categories = [
 {
   "id": "cashew-nuts",
   "name":  "Cashew Nuts",
-  "metaTitle": "Premium Cashew Nuts Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Cashew Nuts with seed packed in tray. Naturally sweet, nutritious and authentic Cashew Nuts supplied by Vishal Enterprise.",
+  "metaTitle": "Cashew Nuts Supplier | Premium Kaju | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise offers premium cashew nuts (kaju) with rich taste and quality. Trusted supplier for wholesale and bulk dry fruit supply.",
   "products": [
 {
   "id": "cashew-nut-w320-250g",
@@ -16527,8 +16527,8 @@ export const categories = [
 {
   "id": "mix-trail",
   "name":  "Mix Trail",
-  "metaTitle": "Premium Mix Trail Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Mix Trail with seed packed in tray. Naturally sweet, nutritious and authentic Mix Trail supplied by Vishal Enterprise.",
+  "metaTitle": "Trail Mix Supplier | Premium Mix Dry Fruits | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise offers premium trail mix with a blend of dry fruits and nuts. Trusted supplier for wholesale and bulk healthy snack supply.",
   "products": [
 {
   "id": "breakfast-mix-trail-12kg",
@@ -16927,8 +16927,8 @@ export const categories = [
 {
   "id": "walnuts",
   "name":  "Walnuts",
-  "metaTitle": "Premium Walnuts Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Walnuts with seed packed in tray. Naturally sweet, nutritious and authentic Walnuts supplied by Vishal Enterprise.",
+  "metaTitle": "Walnuts Supplier | Premium Akhrot | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise offers premium walnuts (akhrot) with rich taste and quality. Trusted supplier for wholesale and bulk dry fruit supply.",
   "products": [
   {
     "id": "pecan-walnuts-10kg",
@@ -17119,8 +17119,8 @@ export const categories = [
 {
   "id": "pistachio",
   "name":  "Pistachio",
-  "metaTitle": "Premium Pistachio Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Pistachio with seed packed in tray. Naturally sweet, nutritious and authentic Pistachio supplied by Vishal Enterprise.",
+  "metaTitle": "Pistachio Supplier | Premium Pista | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise offers premium pistachios (pista) with rich taste and quality. Trusted supplier for wholesale and bulk dry fruit supply.",
   "products": [
 {
   "id": "pista-american-10kg",
@@ -17404,8 +17404,8 @@ export const categories = [
 {
   "id": "deglet-nour-dates",
   "name":  "Deglet Nour Dates",
-  "metaTitle": "Premium Deglet Nour Dates Supplier | Vishal Enterprise",
-  "metaDescription": "Buy premium quality Deglet Nour Dates with seed packed in tray. Naturally sweet, nutritious and authentic Deglet Nour Dates supplied by Vishal Enterprise.",
+  "metaTitle": "Deglet Nour Dates Supplier | Premium Khajoor | Vishal Enterprise",
+  "metaDescription": "Vishal Enterprise is a trusted dates supplier offering premium Deglet Nour dates and khajoor for wholesale and bulk orders with natural sweetness and quality.",
   "products": [
 {
   "id": "deglet-nour-razan-5kg",

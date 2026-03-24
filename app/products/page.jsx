@@ -1,8 +1,8 @@
 import ProductClient from "./ProductClient";
 
 export const metadata = {
-  title: "#1 New Delhi Best Paper Cup Making Machine Supplier in India",
-  description: "Explore a wide range of high-quality printing machines by SBS Machinery. Leading manufacturer & supplier of advanced printing solutions in India.",
+  title: "Our Products | Dates & Khajoor Supplier | Vishal Enterprise",
+  description: "Explore our range of premium dates and khajoor. Vishal Enterprise is a trusted dates supplier offering high-quality products for wholesale and bulk needs.",
 };
 
 export default function AboutUsPage() {

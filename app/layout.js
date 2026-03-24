@@ -28,11 +28,11 @@ const notoSerif = Noto_Serif({
 });
 
 export const metadata = {
-  title: " Paper Cup Making Machines Manufacturer |  Paper Cup Production Machines",
+  title: "Dates Supplier | Khajoor Supplier | Vishal Enterprise",
   description:
-    "Leading manufacturer of paper cup making machines in India. Offering durable, high-performance, and fully automatic machines for paper cup production. Contact us for bulk orders and customization.",
+    "Vishal Enterprise is a trusted dates supplier and khajoor supplier offering premium quality fresh and dry dates for wholesale and bulk orders.",
   icons: {
-    icon: "/logo.webp",
+    icon: "/loggo.jpeg",
   },
 };
 
