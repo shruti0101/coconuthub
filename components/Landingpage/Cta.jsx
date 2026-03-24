@@ -60,7 +60,7 @@ export default function TrustSection() {
   return (
     <section
       ref={sectionRef}
-      style={{backgroundImage:"url(/bulkdate.jpg)"}}
+      style={{backgroundImage:"url(/banner.webp)"}}
       className="relative py-[110px] overflow-visible bg-cover bg-center px-4"
     >
       <div className="absolute inset-0 opacity-[0.08] bg-[url('/arabic-pattern.png')] bg-cover bg-center" />

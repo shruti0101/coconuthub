@@ -14,7 +14,7 @@ const Footer = () => {
 
   return (
     <footer
-      style={{ backgroundImage: "url(/1000_F_1637645870_I0kykWMoBAIaUPCpUHB0R5rKyR2hzR9a.jpg)" }}
+      style={{ backgroundImage: "url(/banner2.webp)" }}
       className="relative text-white overflow-hidden bg-center bg-cover"
     >
       {/* DARK OVERLAY */}
