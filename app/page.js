@@ -15,6 +15,7 @@ import CityPage from "../components/City";
 import Quality from "@/components/Landingpage/Quality";
 import Bestseller from "@/components/Landingpage/Bestseller";
 import HealthBenefits from "@/components/Landingpage/Benefits";
+import Citeskeyword from "@/components/Citieskeyword";
 
 
 export default function Home() {
@@ -40,6 +41,7 @@ export default function Home() {
       <HealthBenefits></HealthBenefits>
        <Cta></Cta>
       <TestimonialSlider></TestimonialSlider>
+      <Citeskeyword/>
     </>
   );
 }

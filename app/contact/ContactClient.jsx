@@ -8,7 +8,7 @@ const ContactPage = () => {
     <div className="bg-[#FBF7F1] text-[#2B1B12]">
 
       {/* ================= HERO ================= */}
-      <section style={{backgroundImage:"url(/xx.png)"}} className="relative py-35 text-center bg-center bg-cover text-white overflow-hidden">
+      <section style={{ backgroundImage: "url(/xx.png)" }} className="relative py-35 text-center bg-center bg-cover text-white overflow-hidden">
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -74,7 +74,7 @@ const ContactPage = () => {
               <div>
                 <p className="font-semibold">Location</p>
                 <p className="text-gray-700">
-                  C-62, New Sabzi Mandi, Block C, Azadpur <br />
+                  Ground Floor, Azadpur Block-B 133, New Sabzi Mandi,<br />
                   Delhi – 110033
                 </p>
               </div>
@@ -177,12 +177,11 @@ const ContactPage = () => {
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto rounded-[30px] overflow-hidden shadow-2xl">
 
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.0136353497383!2d77.1712696!3d28.714073999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d01beb907eaf7%3A0x5089b5634f28242e!2sMr%20Dates!5e1!3m2!1sen!2sin!4v1770445719419!5m2!1sen!2sin"
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.175959106896!2d77.172091!3d28.714287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d021fdf9f2583%3A0x3fd6abc7701b4d50!2sVishal%20Enterprise!5e0!3m2!1sen!2sin!4v1774511220598!5m2!1sen!2sin"
             className="w-full h-[70vh] border-0"
             loading="lazy"
             allowFullScreen
-            title="Mr Dates Location"
+            title="Location"
           />
 
         </div>

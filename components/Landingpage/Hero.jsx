@@ -9,7 +9,7 @@ const Hero = () => {
 
         {/* ✅ MOBILE VIDEO */}
         <video
-          src="/datesvideo1.mp4"
+          src={"https://res.cloudinary.com/dqllcskwa/video/upload/v1774518039/datesvideo1_vxoyqi.mp4"}
           autoPlay
           muted
           loop
@@ -20,7 +20,7 @@ const Hero = () => {
 
         {/* ✅ DESKTOP VIDEO */}
         <video
-          src="/datesvideo.mp4"
+          src={"https://res.cloudinary.com/dqllcskwa/video/upload/v1774516217/datesvideo_ct7mgs.mp4"}
           autoPlay
           muted
           loop

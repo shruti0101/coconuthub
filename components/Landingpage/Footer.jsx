@@ -97,9 +97,9 @@ const Footer = () => {
           </p>
 
           <div className="flex gap-3">
-            <a className="p-2 bg-white/10 rounded hover:bg-red-600"><FaYoutube/></a>
-            <a className="p-2 bg-white/10 rounded hover:bg-blue-600"><FaFacebookF/></a>
-            <a className="p-2 bg-white/10 rounded hover:bg-pink-500"><FaInstagram/></a>
+            <a className="p-2 bg-white/10 rounded hover:bg-red-600"><FaYoutube /></a>
+            <a className="p-2 bg-white/10 rounded hover:bg-blue-600"><FaFacebookF /></a>
+            <a className="p-2 bg-white/10 rounded hover:bg-pink-500"><FaInstagram /></a>
           </div>
         </div>
 
@@ -110,10 +110,7 @@ const Footer = () => {
           </h3>
 
           <p className="text-sm text-white mb-4">
-            We are proud to present the TrustElite Certificate of Excellence to
-            Vishal Enterprises, recognizing their commitment to exceptional
-            customer service, outstanding business practices, and dedication
-            to building trust with customers.
+            We are proud to present the TrustElite Certificate of Excellence to Vishal Enterprise, recognizing their commitment to exceptional customer service, outstanding business practices, and a dedication to building trust with their customers.
           </p>
 
           <img
@@ -143,16 +140,20 @@ const Footer = () => {
 
       {/* MODAL */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50" onClick={() => setIsModalOpen(false)}>
+          <div
+            className="relative"
+            onClick={(e) => e.stopPropagation()}
+          ></div>
           <div className="relative">
             <button
-              className="absolute -top-4 -right-4 text-white text-2xl"
+              className="absolute top-4 right-4 text-white text-2xl"
               onClick={() => setIsModalOpen(false)}
             >
               ✕
             </button>
             <img
-              src="/cert.webp"
+              src="/TrustElite.webp"
               className="max-w-[90vw] max-h-[90vh] rounded-lg"
             />
           </div>

@@ -1,323 +1,558 @@
-// "use client";
+"use client";
+import Image from "next/image";
+import { useParams } from "next/navigation";
+import React, { useState } from "react";
+import Citeskeyword from "@/components/Citieskeyword";
+import Link from "next/link";
+import {
+  Leaf,
+  PackageCheck,
+  ShieldCheck,
+  Truck,
+  BadgeDollarSign,
+  Headphones, Phone, Mail, MessageCircle,
+  Settings,
+  Hotel,
+  UtensilsCrossed,
+  PartyPopper,
+  Store,
+  ChevronDown,
+} from "lucide-react";
 
-// import {
-//   cardDataLandingPage,
-//   InquiryWhyChooseUs,
-//   ourProductLandingPage,
-// } from "@/Data";
-// import { BadgeCheck, ChevronDown } from "lucide-react";
-// import Image from "next/image";
-// import { useParams } from "next/navigation";
-// import React, { useState } from "react";
-// import { faqData } from "../../Data";
-// import CityPage from "@/components/City";
+const Location = () => {
+  const params = useParams();
 
-// const Location = () => {
-//   const params = useParams();
+  const cityRaw = params?.location?.includes("-in-")
+    ? params.location.split("-in-")[1]
+    : "india";
 
-//   const city = params?.location?.includes("-in-")
-//     ? params.location.split("-in-")[1]
-//     : "India";
+  const city = cityRaw.charAt(0).toUpperCase() + cityRaw.slice(1);
 
-//   const [openFaq, setOpenFaq] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null);
 
-//   return (
-//     <>
-//       <div className="mt-[20vh] ">
-//         <section
-//           style={{
-//             backgroundImage: "url('/sbsImage/PaperCupsBG.webp')",
-//             backgroundSize: "cover",
-//             objectPosition: "center",
-//           }}
-//           className="py-20 relative z-10"
-//         >
-//           <div className="absolute inset-0 bg-gray-900/60" />
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
-//           <h1 className="text-center font-serif leading-snug relative font-bold text-white text-2xl px-5 md:py-14 capitalize md:text-6xl">
-//             Paper Cup Making Machine Manufacturer in {city}
-//           </h1>
-//         </section>
+  const products = [
+    { name: "Semi Husked Coconut 100 Count", img: "/product/coconut100.webp", },
+    { name: "Semi Husked Coconut 120 Count", img: "/product/coconut120.webp", },
+    { name: "Semi Husked Coconut 150 Count", img: "/product/coconut150.webp", },
+    { name: "Semi Husked Coconut 175 Count", img: "/product/coconut175.webp", },
+    { name: "Husked Coconut 100 Count", img: "/product/coconut100Husked.webp", },
+    { name: "Husked Coconut 120 Count", img: "/product/coconut120Husked.webp", },
+  ]
 
-//         {/* SECOND SECTION */}
-//         <section className="relative py-10 px-6 md:px-10 bg-gray-50">
-//           <div className="max-w-6xl mx-auto text-center">
-//             <h2 className="text-3xl md:text-4xl capitalize font-extrabold text-gray-900 leading-tight">
-//               Elevate Your Production with{" "}
-//               <span className="text-[#008CA3]">SBS Machinery’s</span>
-//               <br className="hidden md:block" />
-//               Paper Cup Making Machines in {city}
-//             </h2>
+  const features = [
+    {
+      title: "Freshness Guaranteed",
+      desc: "We source only the freshest coconuts from trusted farms, ensuring natural flavor and quality.",
+      icon: Leaf,
+    },
+    {
+      title: "Reliable Bulk Supply",
+      desc: "Consistent bulk supply for restaurants, hotels, wholesalers, and caterers.",
+      icon: PackageCheck,
+    },
+    {
+      title: "Hygienically Handled Products",
+      desc: "Strict hygiene standards maintained from storage to delivery.",
+      icon: ShieldCheck,
+    },
+    {
+      title: `Timely Delivery Across ${city}`,
+      desc: `Fast and reliable delivery across all areas of ${city}.`,
+      icon: Truck,
+    },
+    {
+      title: "Competitive Pricing",
+      desc: "Affordable pricing with premium quality products.",
+      icon: BadgeDollarSign,
+    },
+    {
+      title: "Dedicated Customer Support",
+      desc: "Friendly support team ready to assist with orders and queries.",
+      icon: Headphones,
+    },
+  ];
 
-//             <div className="w-24 h-1 bg-[#008CA3] mt-4 mx-auto rounded-full"></div>
+  const whyChoose = [
+    {
+      title: "Fresh & Premium Quality",
+      desc: "We source only the finest coconuts ensuring freshness, flavor, and long shelf life.",
+      icon: Leaf,
+    },
+    {
+      title: "Reliable Bulk Supply",
+      desc: `From small shops to large hotels, we handle orders of any size across ${city}.`,
+      icon: PackageCheck,
+    },
+    {
+      title: "Hygienically Handled",
+      desc: "Strict hygiene standards maintained during processing and storage.",
+      icon: ShieldCheck,
+    },
+    {
+      title: "Timely Delivery",
+      desc: "Our logistics team ensures fast and on-time delivery every time.",
+      icon: Truck,
+    },
+    {
+      title: "Competitive Pricing",
+      desc: "Premium quality coconuts at affordable rates for all businesses.",
+      icon: BadgeDollarSign,
+    },
+    {
+      title: "Customized Solutions",
+      desc: "Flexible supply tailored for restaurants, cafes, and wholesalers.",
+      icon: Settings,
+    },
+  ];
 
-//             <p className="text-lg mt-5 md:text-xl text-gray-700 max-w-4xl mx-auto">
-//               Choose <span className="font-bold text-gray-900">SBS Machinery</span> for
-//               industry-leading paper cup, bag-making, and printing solutions.
-//               With a deep commitment to quality, customization, and customer
-//               satisfaction, we deliver excellence at every step.
-//             </p>
+  const industries = [
+    {
+      title: "Hotels & Resorts",
+      desc: "We supply fresh coconuts in bulk to hotels and resorts.",
+      icon: Hotel,
+      iconBg: "bg-amber-100 text-amber-600 group-hover:bg-amber-500 group-hover:text-white",
+    },
+    {
+      title: "Restaurants & Cafes",
+      desc: "Fresh coconuts for menu enhancement.",
+      icon: UtensilsCrossed,
+      iconBg: "bg-green-100 text-green-600 group-hover:bg-green-600 group-hover:text-white",
+    },
+    {
+      title: "Event Caterers",
+      desc: "Bulk supply for weddings and events.",
+      icon: PartyPopper,
+      iconBg: "bg-pink-100 text-pink-600 group-hover:bg-pink-500 group-hover:text-white",
+    },
+    {
+      title: "Retailers & Wholesalers",
+      desc: "Consistent coconut supply for retail.",
+      icon: Store,
+      iconBg: "bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white",
+    },
+  ];
 
-//             <div className="mt-7 grid gap-2">
-//               <div className="bg-white shadow-md rounded-2xl p-8 text-lg text-black leading-relaxed hover:shadow-xl transition-shadow duration-300">
-//                 SBS Machinery has gained recognition as the top paper cup making
-//                 machine manufacturer in India. Our continuous efforts in
-//                 expanding production across multiple sectors are driven by
-//                 innovation and a strong focus on quality.
-//               </div>
+  const faqs = [
+    {
+      q: `Do you deliver coconuts across ${city}?`,
+      a: `Yes! Vishal Enterprise offers timely delivery across all areas of ${city}, ensuring fresh coconuts every time.`,
+    },
+    {
+      q: "Can I place bulk orders for my business?",
+      a: "Absolutely. We cater to restaurants, hotels, caterers, wholesalers, and retailers with customized bulk supply solutions.",
+    },
+    {
+      q: "How do you ensure the coconuts are fresh?",
+      a: "We source coconuts from trusted suppliers and inspect every batch carefully. All products are handled hygienically to maintain freshness.",
+    },
+    {
+      q: "Are your coconuts safe and hygienically handled?",
+      a: "Yes. Our coconuts are stored, packed, and transported under strict hygiene standards.",
+    },
+    {
+      q: "What is the minimum order quantity?",
+      a: "We accommodate orders of all sizes, whether small or bulk.",
+    },
+    {
+      q: `How long does delivery take in ${city}?`,
+      a: "Delivery time depends on location, but we aim for same-day or next-day delivery.",
+    },
+    {
+      q: "How can I place an order with Vishal Enterprise?",
+      a: "You can place orders via phone, WhatsApp, email, or our online form for quick processing.",
+    },
+  ];
 
-//               <div className="bg-white shadow-md rounded-2xl p-8 text-lg text-black leading-relaxed hover:shadow-xl transition-shadow duration-300">
-//                 Organizations worldwide rely on us to simplify and elevate their
-//                 production operations with high-quality, performance-focused machines.
-//               </div>
+  return (
+    <>
+      <div className="">
+        <section
+          style={{
+            backgroundImage: "url('/CtaBackground.webp')",
+            backgroundSize: "cover",
+            objectPosition: "center",
+          }}
+          className="pt-35 pb-30 relative z-10"
+        >
+          <div className="absolute inset-0 bg-gray-900/60" />
 
-//               <div className="bg-white shadow-md rounded-2xl p-8 text-lg text-black leading-relaxed hover:shadow-xl transition-shadow duration-300">
-//                 Over <span className="font-semibold">250+ high-performance machines</span>{" "}
-//                 from SBS Machinery are actively running across India — trusted
-//                 for durability and long-term reliability.
-//               </div>
-//             </div>
-//           </div>
-//         </section>
+          <h1 className="text-center font-serif leading-snug relative font-bold text-white text-2xl px-5 md:py-20 capitalize md:text-6xl">
+            Coconut Supplier in {city}
+          </h1>
+        </section>
 
-//         {/* CARDS SECTION */}
-//         <section className="grid grid-cols-1 gap-5 md:grid-cols-2 md:py-3 md:px-8 lg:grid-cols-3 lg:px-14">
-//           {cardDataLandingPage.map(({ title, icon, desc }, idx) => (
-//             <div
-//               key={idx}
-//               className={`${
-//                 idx % 2 === 0
-//                   ? "bg-[#1CBC9A] text-white"
-//                   : "bg-transparent text-[#1CBC9A]"
-//               } border px-3 py-5 flex flex-col items-center gap-3 hover:rounded-3xl shadow-xl hover:shadow-2xl hover:duration-300`}
-//             >
-//               <div>{icon}</div>
-//               <p className="text-2xl font-bold text-center">{title}</p>
-//               <p>{desc}</p>
-//             </div>
-//           ))}
-//         </section>
+        {/* SECOND SECTION */}
+        <section className="bg-blue-50 py-10 px-4 md:px-16">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h1 className="text-3xl md:text-4xl font-bold text-black mb-4">
+                Reliable Coconut Supplier in {city}
+              </h1>
 
-//         {/* PARAGRAPHS */}
-//         <section className="mt-10 px-5 text-center lg:px-32">
-//           <p className="text-2xl font-bold my-5 md:text-4xl capitalize">
-//             Paper Cup Making Machine Manufacturer in {city}
-//           </p>
+              <p className="text-gray-900 mb-4 leading-relaxed">
+                Vishal Enterprise is a trusted coconut supplier in {city}, delivering
+                fresh coconuts to businesses across the city. We source our coconuts
+                carefully to ensure consistent freshness and quality.
+              </p>
 
-//           <p className="py-3 text-md md:text-lg">
-//             Are you planning to start or expand your disposable paper product
-//             business? Looking for dependable machinery offering the perfect
-//             balance between speed and quality? SBS Machinery is among the most
-//             reliable{" "}
-//             <span className="font-bold capitalize">
-//               Paper Cup Making Machine Manufacturers in {city}
-//             </span>
-//             .
-//           </p>
+              <p className="text-gray-900 mb-6 leading-relaxed">
+                Are you looking for a steady supply of fresh coconuts in {city}?
+                Vishal Enterprise will be your dependable coconut vendor!
+              </p>
 
-//           <p className="py-3 text-md md:text-lg">
-//             Our eco-friendly packaging solutions are built with innovation,
-//             customization, and high performance to support today’s fast-growing
-//             food service industries.
-//           </p>
+              <div className="flex md:flex-row flex-col gap-5 justify-between items-center px-10">
+                <Link href={"/products"} className="bg-green-700 text-white px-6 py-3 rounded-full font-medium hover:bg-green-800 transition">
+                  Discover our Products
+                </Link>
 
-//           <ul className="md:text-left">
-//             <li>Paper Cup Making Machines (60 to 130 cups/min)</li>
-//             <li>Paper Plate and Die Cutting Machines</li>
-//             <li>Non-Woven Bag Making Machines</li>
-//             <li>Biodegradable Bag Making Units</li>
-//             <li>Flexo and Offset Printing Machines</li>
-//           </ul>
+                <a href="tel:+919818059818" className="cursor-pointer bg-amber-500 text-white px-6 py-3 rounded-full font-medium hover:bg-amber-600 transition">
+                  +91 9818059818
+                </a>
+              </div>
+            </div>
 
-//           <p className="py-3 text-md md:text-lg">
-//             Each machine is built using premium-grade materials under strict
-//             manufacturing standards to ensure unmatched durability and
-//             long-term efficiency.
-//           </p>
-//         </section>
+            {/* RIGHT CONTENT */}
+            <div className="space-y-8">
+              <div className="flex items-start gap-4">
+                <span className="text-4xl font-bold text-gray-800">1</span>
+                <div>
+                  <h3 className="text-xl font-semibold text-black">
+                    Products
+                  </h3>
+                  <p className="text-gray-900">
+                    We supply fresh coconuts, tender coconuts, grated coconut, and
+                    desiccated coconut across {city}.
+                  </p>
+                </div>
+              </div>
 
-//         {/* PRODUCTS */}
-//         <section className="mb-10 px-3 py-10 flex flex-col gap-10 overflow-hidden lg:gap-5">
-//           {ourProductLandingPage.map(
-//             ({ subTitle, title, desc, tabel, link, image }, idx) => (
-//               <div
-//                 key={idx}
-//                 className="flex flex-col items-center md:flex-row md:gap-10 md:px-10 lg:px-32 md:py-14 lg:items-center lg:gap-8 lg:py-8"
-//               >
-//                 <div className="md:w-1/2">
-//                   <Image
-//                     src={image}
-//                     alt={title}
-//                     width={500}
-//                     height={500}
-//                     className="lg:h-[50vh] lg:w-auto"
-//                   />
-//                 </div>
+              <div className="flex items-start gap-4">
+                <span className="text-4xl font-bold text-gray-800">2</span>
+                <div>
+                  <h3 className="text-xl font-semibold text-black">
+                    Services
+                  </h3>
+                  <p className="text-gray-700">
+                    We cater to bulk coconut supply for hotels, restaurants,
+                    retailers, and events.
+                  </p>
+                </div>
+              </div>
 
-//                 <div className="md:w-1/2">
-//                   <div className="bg-[#008CA3] h-4 w-24 mb-3" />
+              <div className="flex items-start gap-4">
+                <span className="text-4xl font-bold text-gray-800">3</span>
+                <div>
+                  <h3 className="text-xl font-semibold text-black">
+                    Logistics
+                  </h3>
+                  <p className="text-gray-700">
+                    We deliver fresh coconuts directly to your doorstep anywhere in {city}.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-//                   <p className="text-[#20BD9B] font-medium">{subTitle}</p>
-//                   <p className="font-bold text-3xl my-2 md:text-xl lg:text-2xl">
-//                     {title}
-//                   </p>
-//                   <p className="my-2 text-sm text-gray-700">{desc}</p>
+        {/* Products */}
+        <section className="py-10 px-4 md:px-16 bg-white">
+          <div className="mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-2">
+                Our Products
+              </h2>
+              <p className="text-gray-800 max-w-5xl mx-auto">
+                As a trusted coconut supplier in {city}, Vishal Enterprise provides a wide
+                range of premium coconut products to meet the needs of businesses,
+                restaurants, hotels, and wholesalers. Every product is carefully sourced
+                to ensure freshness and quality.
+              </p>
+            </div>
 
-//                   <table className="w-full text-left border-collapse text-sm">
-//                     <thead className="bg-[#008CA3] text-white">
-//                       <tr>
-//                         <th className="border p-2 font-bold">Specification</th>
-//                         <th className="border p-2 font-bold">Details</th>
-//                       </tr>
-//                     </thead>
-//                     <tbody>
-//                       {Object.entries(tabel).map(([key, value]) => (
-//                         <tr key={key} className="border-b">
-//                           <td className="border p-2 font-semibold">{key}</td>
-//                           <td className="border p-2">{value}</td>
-//                         </tr>
-//                       ))}
-//                     </tbody>
-//                   </table>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+              {products.map((product, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition overflow-hidden"
+                >
+                  {/* IMAGE */}
+                  <div className="h-60 w-full overflow-hidden">
+                    <img
+                      src={product.img}
+                      alt={product.name}
+                      className="w-full h-full object-cover hover:scale-105 transition duration-300"
+                    />
+                  </div>
 
-//                   <a
-//                     href={link}
-//                     className="bg-[#14b2ca] block my-3 text-center px-5 w-full py-2 rounded-lg text-white font-semibold hover:bg-[#008CA3]"
-//                   >
-//                     Learn More
-//                   </a>
-//                 </div>
-//               </div>
-//             )
-//           )}
-//         </section>
+                  {/* CONTENT */}
+                  <div className="p-4">
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      {product.name}
+                    </h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-//         {/* CONNECT SECTION */}
-//         <section
-//           className="flex flex-col items-center px-5 py-8 space-y-5"
-//           style={{
-//             backgroundImage: "url('/ctabg.webp')",
-//             backgroundSize: "cover",
-//             objectPosition: "center",
-//           }}
-//         >
-//           <p className="text-center text-2xl font-bold">
-//             #Largest Paper Cup Making Machines Manufacturer in India
-//           </p>
-//           <p className="text-center text-2xl font-bold">+91 7042039777</p>
+        {/* Key Features */}
+        <section className="bg-gray-100 py-10 px-4 md:px-16">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-2">
+                Key Features – Your Trusted Coconut Supplier in {city}
+              </h2>
+              <p className="text-gray-800 max-w-5xl mx-auto">
+                Vishal Enterprise provides fresh, high-quality coconuts with reliable
+                service across {city}. Here’s why businesses trust us.
+              </p>
+            </div>
 
-//           <a
-//             href="https://wa.me/+917042039777?text=Hi%20I%20want%20to%20know%20more%20about%20Paper%20Cup%20Making%20Machines"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             className="bg-green-600 text-white py-2 px-5 rounded-lg inline-block"
-//           >
-//             Get Connect
-//           </a>
-//         </section>
+            {/* GRID */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <div key={index}
+                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition hover:-translate-y-1"
+                  >
+                    {/* ICON */}
+                    <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-green-100 text-green-700 mb-4">
+                      <Icon size={24} />
+                    </div>
 
-//         {/* WHY CHOOSE US */}
-//         <section className="mb-10 px-4 py-8 md:px-10 lg:py-14">
-//           <h3 className="text-3xl font-bold mb-3 lg:text-center">Why Choose Us</h3>
+                    {/* TITLE */}
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                      {item.title}
+                    </h3>
 
-//           <div className="flex flex-col md:flex-row md:items-center lg:px-10 lg:gap-10">
-//             <div>
-//               <p className="text-xl font-bold mb-3 md:text-2xl">
-//                 100%{" "}
-//                 <span className="text-[#008CA3]">
-//                   GUARANTEED MANUFACTURING PERFORMANCE
-//                 </span>
-//               </p>
+                    {/* DESC */}
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>);
+              })}
+            </div>
+          </div>
+        </section>
 
-//               <p className="text-sm mb-3 md:text-xl">
-//                 You might be thinking — “Every machine manufacturer makes big
-//                 claims. Why should I trust SBS Machinery?”
-//               </p>
+        {/* CTA */}
+        <section className="bg-amber-500 py-10 px-4 md:px-16 text-white">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Get Fresh Coconuts Delivered in {city} Today
+            </h2>
+            <p className="mb-8 text-white/90 max-w-3xl mx-auto">
+              Looking for a reliable coconut supplier in {city}? Vishal Enterprise
+              delivers fresh, high-quality coconuts directly to your business or
+              doorstep anywhere in {city}. Whether you need coconuts for restaurants,
+              hotels, cafes, caterers, or retail, we have you covered.
+            </p>
 
-//               <p className="text-sm font-bold mb-5 md:text-xl">
-//                 Here’s what sets us apart — We don’t just promise performance…
-//                 We deliver 100% Guaranteed Results.
-//               </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href="tel:+919818059818"
+                className="flex items-center justify-center gap-2 bg-white text-amber-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
+              >
+                <Phone size={18} />
+                Call Us Today
+              </a>
 
-//               <ul className="space-y-3 md:text-xl">
-//                 <li className="flex gap-2 items-start text-sm">
-//                   <BadgeCheck /> High-Speed Paper Cup Machines – 100% Output Accuracy
-//                 </li>
-//                 <li className="flex gap-2 items-start text-sm">
-//                   <BadgeCheck /> Custom-Built Solutions – For Every Scale
-//                 </li>
-//                 <li className="flex gap-2 items-start text-sm">
-//                   <BadgeCheck /> Dedicated Support Team – Installation to Maintenance
-//                 </li>
-//                 <li className="flex gap-2 items-start text-sm">
-//                   <BadgeCheck /> Transparent Pricing – No Hidden Costs
-//                 </li>
-//                 <li className="flex gap-2 items-start text-sm">
-//                   <BadgeCheck /> Helping Startups Scale Hassle-Free
-//                 </li>
-//               </ul>
-//             </div>
+              <a
+                href="mailto:support@vishalenterprises.com"
+                className="flex items-center justify-center gap-2 bg-amber-600 border border-white px-6 py-3 rounded-full font-semibold hover:bg-amber-700 transition"
+              >
+                <Mail size={18} />
+                Email Us
+              </a>
 
-//             <div className="grid grid-cols-2 gap-3 mt-5">
-//               {InquiryWhyChooseUs.map(({ image, num, desc, bg }, idx) => (
-//                 <div
-//                   key={idx}
-//                   className={`${bg} flex flex-col items-center gap-3 border rounded-xl px-2 py-5`}
-//                 >
-//                   <Image
-//                     src={image}
-//                     width={500}
-//                     height={500}
-//                     alt={desc}
-//                     className="h-20 w-auto"
-//                   />
-//                   <p className="text-green-700 text-2xl font-bold">{num}</p>
-//                   <p className="text-center text-sm">{desc}</p>
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-//         </section>
+              <a
+                href="https://wa.me/919818059818"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-green-600 px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition"
+              >
+                <MessageCircle size={18} />
+                WhatsApp Order
+              </a>
+            </div>
+          </div>
+        </section>
 
-//         {/* FAQ SECTION */}
-//         <section className="py-10 px-5 md:px-20 lg:px-32 bg-blue-100">
-//           <h2 className="text-3xl font-bold mb-6 text-center md:text-4xl">
-//             Paper Cup Making Machine Manufacturer in {city} – FAQs
-//           </h2>
+        {/* Why Choose */}
+        <section className="py-10 px-4 md:px-16 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+                Why Choose Vishal Enterprise
+              </h2>
+              <p className="text-gray-800 max-w-4xl mx-auto">
+                Looking for a reliable coconut supplier in {city}? Vishal Enterprise
+                delivers fresh, high-quality coconuts across the city. Here’s why
+                businesses trust us.
+              </p>
+            </div>
 
-//           <div className="space-y-4">
-//             {faqData.map((faq, index) => (
-//               <div key={index} className="border-b pb-4">
-//                 <button
-//                   onClick={() =>
-//                     setOpenFaq(openFaq === index ? null : index)
-//                   }
-//                   className="w-full flex justify-between items-center text-left"
-//                 >
-//                   <p className="font-bold text-lg">
-//                     {index + 1}. {faq.question}
-//                   </p>
-//                   <ChevronDown
-//                     className={`transform transition-transform duration-300 ${
-//                       openFaq === index ? "rotate-180" : ""
-//                     }`}
-//                   />
-//                 </button>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {whyChoose.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={index}
+                    className="min-w-[300px] bg-gray-50 rounded-xl p-6 shadow-sm hover:shadow-md transition flex-shrink-0"
+                  >
+                    {/* ICON */}
+                    <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-amber-100 text-amber-600 mb-4">
+                      <Icon size={24} />
+                    </div>
 
-//                 {openFaq === index && (
-//                   <div className="mt-2">
-//                     <p>{faq.answer}</p>
-//                   </div>
-//                 )}
-//               </div>
-//             ))}
-//           </div>
-//         </section>
+                    {/* TITLE */}
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                      {item.title}
+                    </h3>
 
-//         <CityPage />
-//       </div>
-//     </>
-//   );
-// };
+                    {/* DESC */}
+                    <p className="text-gray-600 text-sm">
+                      {item.desc}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
-// export default Location;
+        {/* Industries */}
+        <section className="py-10 px-4 md:px-16 bg-gray-100">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+                Industries We Serve
+              </h2>
+              <p className="text-gray-800 max-w-5xl mx-auto">
+                As a trusted coconut supplier in {city}, Vishal Enterprise caters to
+                a wide range of industries with high-quality coconuts and reliable supply.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {industries.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <div key={index} className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition duration-300">
+                    <div
+                      className={`w-14 h-14 flex items-center justify-center rounded-lg mb-4 transition ${item.iconBg}`}
+                    >
+                      <Icon size={26} />
+                    </div>
+
+                    <h3 className="text-lg font-semibold mb-2 text-gray-800">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-sm text-gray-600">
+                      {item.desc}
+                    </p>
+                  </div>);
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="relative py-6 px-4 md:px-16 bg-cover bg-center"
+          style={{ backgroundImage: "url('/CtaBackground.webp')" }} // your background image
+        >
+          <div className="absolute inset-0 bg-black/65"></div>
+          <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+            <div className="flex justify-center">
+              <img
+                src="/CtaCoconut.webp" // your coconut image
+                alt="Coconut"
+                className="w-72 md:w-102 object-contain drop-shadow-lg"
+              />
+            </div>
+
+            <div className="text-white">
+              <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+                {city}’s #1 Coconut Supplier
+              </h2>
+
+              <p className="text-lg md:text-2xl mb-3 text-white/90">
+                Fresh Coconuts & Premium Coconut Products.
+              </p>
+
+              <p className="mb-6 text-white/80">
+                Vishal Enterprise – Your one-stop supplier for all things coconut in {city}!
+              </p>
+
+              {/* WHATSAPP BUTTON */}
+              <a
+                href="https://wa.me/919818059818"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition"
+              >
+                <MessageCircle size={20} />
+                WhatsApp Now
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-10 px-4 md:px-16 bg-gray-100">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-2">
+                FAQs – Coconut Supplier in {city}
+              </h2>
+              <p className="text-gray-800">
+                Find answers to common questions about our coconut supply, delivery, and services.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {faqs.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-sm border border-gray-100"
+                >
+                  {/* QUESTION */}
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    className="w-full flex justify-between items-center p-5 text-left"
+                  >
+                    <span className="font-semibold text-gray-800">
+                      {item.q}
+                    </span>
+                    <ChevronDown
+                      className={`transition-transform ${openIndex === index ? "rotate-180 text-amber-500" : ""
+                        }`}
+                    />
+                  </button>
+
+                  {/* ANSWER */}
+                  {openIndex === index && (
+                    <div className="px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                      {item.a}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <Citeskeyword />
+      </div>
+    </>
+  );
+};
+
+export default Location;
