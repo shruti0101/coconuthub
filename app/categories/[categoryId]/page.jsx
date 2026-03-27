@@ -2,6 +2,7 @@ import { categories } from "@/Data";
 import Link from "next/link";
 import Image from "next/image";
 import { redirect } from 'next/navigation';
+import CategoryCitySection from "@/components/CategoryCitySection";
 export async function generateMetadata({ params }) {
   const { categoryId } = params;
   const category = categories.find((c) => c.id === categoryId);
@@ -66,6 +67,8 @@ export default function CategoryPage({ params }) {
           ))}
         </div>
       </div>
+
+      <CategoryCitySection/>
     </>
   );
 }

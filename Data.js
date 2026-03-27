@@ -17648,4 +17648,57 @@ export const serviceLocations = [
     label: "Jaipur",
     id: 10,
   },
+];
+
+export const CatCites = [
+  {
+    href: "/dates-supplier-in-mumbai",
+    label: "Mumbai",
+    id: 1,
+  },
+  {
+    href: "/dates-supplier-in-delhi",
+    label: "Delhi",
+    id: 2,
+  },
+  {
+    href: "/dates-supplier-in-bengaluru",
+    label: "Bengaluru",
+    id: 3,
+  },
+  {
+    href: "/dates-supplier-in-chennai",
+    label: "Chennai",
+    id: 4,
+  },
+  {
+    href: "/dates-supplier-in-kolkata",
+    label: "Kolkata",
+    id: 5,
+  },
+  {
+    href: "/dates-supplier-in-pune",
+    label: "Pune",
+    id: 6,
+  },
+  {
+    href: "/dates-supplier-in-hyderabad",
+    label: "Hyderabad",
+    id: 7,
+  },
+  {
+    href: "/dates-supplier-in-ahmedabad ",
+    label: "Ahmedabad ",
+    id: 8,
+  },
+  {
+    href: "/dates-supplier-in-surat",
+    label: "Surat",
+    id: 9,
+  },
+  {
+    href: "/dates-supplier-in-jaipur",
+    label: "Jaipur",
+    id: 10,
+  },
 ]
