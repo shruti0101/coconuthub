@@ -113,7 +113,7 @@ export default function CategoryCityPage({ categoryName, cityName, content }) {
                 </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                 {content?.Details(cityName)?.sections.map((section, i) => (
                     <div
                         key={i}

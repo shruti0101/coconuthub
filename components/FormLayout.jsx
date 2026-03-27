@@ -69,7 +69,7 @@ export default function FormLayout() {
                     </form>
                 </div>
             </div>
-            <div className="w-160 h-120">
+            <div className="md:w-160 md:h-120">
                 <img
                     src={"/aboutdateside.png"}
                     alt="Key Features"
