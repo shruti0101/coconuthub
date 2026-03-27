@@ -5,6 +5,7 @@ import Navbar from "@/components/Landingpage/Navbar";
 import Footer from "@/components/Landingpage/Footer";
 import CartDrawer from "@/components/CartDrawer";
 import { Toaster } from "react-hot-toast";
+import StickyFooter from "./StickyFooter";
 
 export default function LayoutWrapper({ children }) {
   const pathname = usePathname();
@@ -27,6 +28,7 @@ export default function LayoutWrapper({ children }) {
     }}
   />
       {children}
+      <StickyFooter/>
          <CartDrawer />
       {!hideLayout && <Footer />}
     </>
