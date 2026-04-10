@@ -1,13 +1,58 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
+import axios from "axios";
 
 const ContactPage = () => {
+   const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = {
+      platform: "Coconuthub Website Contact Us",
+      platformEmail: "support@datesuppliers.com",
+      name: formData.get("contactPerson"),
+      email: formData.get("email"),
+      company: "",
+      phone: formData.get("phone"),
+      product: "Premium Dates Enquiry",
+      place: "Delhi",
+      message: formData.get("message"),
+    };
+
+    if (!data.phone || data.phone.length < 10)
+      return toast.error("Enter Valid Phone Number");
+
+    try {
+      setLoading(true);
+      const res = await axios.post("https://brandbnalo.com/api/form/add", data,
+        { validateStatus: (status) => status >= 200 && status < 500 }
+      );
+
+      if (res.status >= 200 && res.status < 300) {
+        setSubmitted(true);
+        setTimeout(() => {
+          e.target.reset();      // reset after UI change
+        }, 100);
+
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 3000);
+      }
+
+    } catch (err) {
+      console.log("ERROR:", err?.response || err.message);
+      toast.error("Something went wrong");
+    }
+    finally {
+      setLoading(false);
+    }
+  };
   return (
     <div className="bg-[#FBF7F1] text-[#2B1B12]">
-
-      {/* ================= HERO ================= */}
       <section style={{ backgroundImage: "url(/xx.png)" }} className="relative py-35 text-center bg-center bg-cover text-white overflow-hidden">
 
         <motion.div
@@ -28,10 +73,7 @@ const ContactPage = () => {
 
       </section>
 
-      {/* ================= CONTACT SECTION ================= */}
       <section className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-start">
-
-        {/* ================= CONTACT INFO ================= */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -55,8 +97,7 @@ const ContactPage = () => {
               <Phone className="text-[#6B091D]" />
               <div>
                 <p className="font-semibold">Phone</p>
-                <p className="text-gray-700">+91 7065650411</p>
-                <p className="text-gray-700">+91 9773999082</p>
+                <p className="text-gray-700">+91 9818059818</p>
               </div>
             </div>
 
@@ -64,8 +105,7 @@ const ContactPage = () => {
               <Mail className="text-[#6B091D]" />
               <div>
                 <p className="font-semibold">Email</p>
-                <p className="text-gray-700">customercare@mrdates.in</p>
-                <p className="text-gray-700">sales@mrdates.in</p>
+                <p className="text-gray-700">support@datesuppliers.com</p>
               </div>
             </div>
 
@@ -74,8 +114,8 @@ const ContactPage = () => {
               <div>
                 <p className="font-semibold">Location</p>
                 <p className="text-gray-700">
-                  Ground Floor, Azadpur Block-B 133, New Sabzi Mandi,<br />
-                  Delhi – 110033
+                  Ground Floor, Shop No 133 , Block-B, New Subzi Mandi, <br />
+                  Azadpur, New Delhi 110033
                 </p>
               </div>
             </div>
@@ -83,97 +123,75 @@ const ContactPage = () => {
           </div>
         </motion.div>
 
-
-        {/* ================= FORM ================= */}
-        <motion.div
+        <motion.div  className="bg-white rounded-[32px] p-10 shadow-lg"
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-
-          <div className="bg-white/60 backdrop-blur-lg border border-white/40 rounded-[30px] shadow-[0_40px_120px_rgba(0,0,0,0.15)] p-10">
-
-            <h3 className="text-2xl font-semibold mb-8">
-              Send Us a Message
-            </h3>
-
-            <form className="space-y-6">
-
-              {/* NAME */}
-              <div className="relative">
-                <input
-                  type="text"
-                  required
-                  className="peer w-full border-b border-gray-400 bg-transparent py-3 outline-none focus:border-[#6B091D]"
-                />
-                <label className="absolute left-0 top-3 text-gray-500 text-sm transition-all 
-                peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#6B091D] 
-                peer-valid:-top-3 peer-valid:text-xs">
-                  Your Name
-                </label>
+         {submitted ? (
+              <div className="text-center py-10">
+                <h2 className="text-2xl font-bold text-green-600">
+                  🎉 Thank You!
+                </h2>
+                <p className="text-gray-600 mt-2">
+                  Your enquiry has been submitted successfully.
+                </p>
+                <p className="text-gray-500 text-sm mt-1">
+                  Our team will contact you shortly.
+                </p>
               </div>
+            ) : (
+              <>
+                <h3 className="font-serif text-2xl text-center font-semibold mb-6 text-[#111]">
+                  Send Us a Message
+                </h3>
 
-              {/* EMAIL */}
-              <div className="relative">
-                <input
-                  type="email"
-                  required
-                  className="peer w-full border-b border-gray-400 bg-transparent py-3 outline-none focus:border-[#6B091D]"
-                />
-                <label className="absolute left-0 top-3 text-gray-500 text-sm transition-all 
-                peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#6B091D]
-                peer-valid:-top-3 peer-valid:text-xs">
-                  Email Address
-                </label>
-              </div>
+                <form className="space-y-4" onSubmit={handleSubmit}>
+                  <input
+                    type="text"
+                    name="contactPerson"
+                    required
+                    placeholder="Your Name"
+                    className="w-full px-5 py-4 rounded-xl border border-[#6B091D] focus:outline-none focus:border-[#6B091D]"
+                  />
 
-              {/* PHONE */}
-              <div className="relative">
-                <input
-                  type="tel"
-                  required
-                  className="peer w-full border-b border-gray-400 bg-transparent py-3 outline-none focus:border-[#6B091D]"
-                />
-                <label className="absolute left-0 top-3 text-gray-500 text-sm transition-all 
-                peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#6B091D]
-                peer-valid:-top-3 peer-valid:text-xs">
-                  Phone Number
-                </label>
-              </div>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Email Address"
+                    className="w-full px-5 py-4 rounded-xl border border-[#6B091D] focus:outline-none focus:border-[#6B091D]"
+                  />
 
-              {/* MESSAGE */}
-              <div className="relative">
-                <textarea
-                  rows="4"
-                  required
-                  className="peer w-full border-b border-gray-400 bg-transparent py-3 outline-none focus:border-[#6B091D]"
-                />
-                <label className="absolute left-0 top-3 text-gray-500 text-sm transition-all 
-                peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#6B091D]
-                peer-valid:-top-3 peer-valid:text-xs">
-                  Your Message
-                </label>
-              </div>
+                  <input
+                    type="tel"
+                    name="phone"
+                    required
+                    placeholder="Phone Number"
+                    className="w-full px-5 py-4 rounded-xl border border-[#6B091D] focus:outline-none focus:border-[#6B091D]"
+                  />
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full bg-[#6B091D] text-white py-4 rounded-full font-medium tracking-wide hover:bg-[#540715] transition"
-              >
-                Send Message
-              </motion.button>
+                  <textarea
+                    rows="4"
+                    name="message"
+                    placeholder="Your Message"
+                    className="w-full px-5 py-4 rounded-xl border border-[#6B091D] focus:outline-none focus:border-[#6B091D]"
+                  />
 
-            </form>
-
-          </div>
-
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    disabled={loading}
+                    className="w-full bg-amber-500 text-white py-4 rounded-full font-medium tracking-wide hover:bg-amber-600 transition"
+                  >
+                    {loading ? "Submitting..." : "Submit Enquiry"}
+                  </motion.button>
+                </form>
+              </>)}
         </motion.div>
-
       </section>
 
-
-      {/* ================= MAP ================= */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto rounded-[30px] overflow-hidden shadow-2xl">
 
@@ -186,7 +204,6 @@ const ContactPage = () => {
 
         </div>
       </section>
-
     </div>
   );
 };
