@@ -364,7 +364,7 @@ const Location = () => {
               </a>
 
               <a
-                href="mailto:support@vishalenterprises.com"
+                href="mailto:support@datesuppliers.com"
                 className="flex items-center justify-center gap-2 bg-amber-600 border border-white px-6 py-3 rounded-full font-semibold hover:bg-amber-700 transition"
               >
                 <Mail size={18} />

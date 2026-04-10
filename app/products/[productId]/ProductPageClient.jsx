@@ -181,7 +181,7 @@ export default function ProductPage({ params }) {
                 </button>
 
                 <a
-                  href="https://wa.me/919999999999?text=Hi,%20I%20want%20to%20enquire%20about%20this%20product"
+                  href="https://wa.me/919818059818?text=Hi,%20I%20want%20to%20enquire%20about%20this%20product"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg text-center hover:bg-green-700 transition"

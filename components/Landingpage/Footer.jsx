@@ -93,13 +93,13 @@ const Footer = () => {
           </p>
 
           <p className="text-sm flex items-center gap-2 mb-4">
-            <FaEnvelope className="text-yellow-400" /> support@vishalenterprises.com
+            <FaEnvelope className="text-yellow-400" /> support@datesuppliers.com
           </p>
 
           <div className="flex gap-3">
-            <a className="p-2 bg-white/10 rounded hover:bg-red-600"><FaYoutube /></a>
-            <a className="p-2 bg-white/10 rounded hover:bg-blue-600"><FaFacebookF /></a>
-            <a className="p-2 bg-white/10 rounded hover:bg-pink-500"><FaInstagram /></a>
+            <a href="https://www.youtube.com/@VExoticdaily" target="blank" className="p-2 bg-white/10 rounded hover:bg-red-600"><FaYoutube /></a>
+            <a href="https://www.facebook.com/exooticcrate/" target="blank" className="p-2 bg-white/10 rounded hover:bg-blue-600"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/exoticcrate/" target="blank" className="p-2 bg-white/10 rounded hover:bg-pink-500"><FaInstagram /></a>
           </div>
         </div>
 
