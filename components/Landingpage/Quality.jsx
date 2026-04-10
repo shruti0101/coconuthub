@@ -1,20 +1,15 @@
 "use client"
-
-"use client"
-
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-
+import Popup from "../Enquiry"
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Hero() {
-
-
+  const [showPopup, setShowPopup] = useState(false)
   const leftDates = useRef(null)
   const rightDates = useRef(null)
-
 
   useEffect(() => {
 
@@ -44,15 +39,10 @@ export default function Hero() {
   }, [])
 
 
-
-
-
   return (
     <>
-
       {/* HERO SECTION */}
       <section className="relative w-full lg:h-[90vh] overflow-">
-
         {/* GREEN BACKGROUND */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#2f9b86] to-[#6fb3a1]" />
 
@@ -81,7 +71,7 @@ export default function Hero() {
               Let us support your wholesale and retail needs with excellence.
             </p>
 
-            <button className="mt-8 bg-white text-[#2f9b86] px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
+            <button onClick={() => setShowPopup(true)} className="mt-8 bg-white text-[#2f9b86] px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
               Request a Callback
             </button>
 
@@ -268,6 +258,7 @@ export default function Hero() {
 
       </section>
 
+      <Popup setShowPopup={setShowPopup} showPopup={showPopup} />
     </>
   )
 }

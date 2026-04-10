@@ -96,12 +96,11 @@ const page = () => {
          
 
           {/* CTA */}
-          <div className="">
-            <button className="bg-[#137a74] text-white px-8 py-4 rounded-xl text-lg hover:bg-[#0f5f5a] transition">
+          <div className="mt-auto">
+            <Link href={"/products"} className="bg-[#137a74] text-white px-8 py-4 rounded-xl text-lg hover:bg-[#0f5f5a] transition">
               Explore Our Products
-            </button>
+            </Link>
           </div>
-
         </div>
 
 

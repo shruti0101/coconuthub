@@ -1,183 +1,133 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
+import toast from "react-hot-toast";
 
-export default function ContactForm() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [successMessage, setSuccessMessage] = useState("");
+export default function Popup({ showPopup, setShowPopup }) {
+  if (!showPopup) return null;
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsOpen(true), 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!isOpen) return null;
-
-  const handleClose = () => setIsOpen(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const form = e.target;
-
-    const name = form.name.value;
-    const phone = form.phone.value;
-    const email = form.email.value;
-    const product = form.products.value;
-    const message = form.message.value;
-
-    setLoading(true);
-    setSuccessMessage("Sending...");
+    const formData = new FormData(e.target);
+    const data = {
+      platform: "Coconuthub Popup Form",
+      platformEmail: "support@vishalenterprises.com",
+      name: formData.get("contactPerson"),
+      email: formData.get("email"),
+      company: 'NA',
+      phone: formData.get("phone"),
+      product: "Bar Bending Machine",
+      place: "Delhi",
+      message: formData.get("message"),
+    };
+    if (!data.phone || data.phone.length < 10)
+      return alert("Enter Valid Phone Number");
 
     try {
-      const { data } = await axios.post(
-        "https://brandbnalo.com/api/form/add",
-        {
-          platform: "SBS Machinery Popup Form",
-          platformEmail: "machinerysbs@gmail.com",
-          name,
-          phone,
-          email,
-          place: "N/A",
-          product,
-          message,
-        }
+      setLoading(true);
+      const res = await axios.post("https://brandbnalo.com/api/form/add", data,
+        { validateStatus: (status) => status >= 200 && status < 500 }
       );
-
-      if (data?.success) {
+      if (res.status >= 200 && res.status < 300) {
         setSubmitted(true);
-        setSuccessMessage("✅ Your enquiry has been submitted successfully!");
-
-        const whatsappText = `Hi, I am ${name}.
-Email: ${email}
-Product: ${product}
-Message: ${message}
-Contact: ${phone}`;
-
         setTimeout(() => {
-          window.open(
-            `https://wa.me/919818059818?text=${encodeURIComponent(
-              whatsappText
-            )}`,
-            "_blank"
-          );
-        }, 1000);
-
-        form.reset();
-
+          e.target.reset();      // reset after UI change
+        }, 100);
         setTimeout(() => {
           setSubmitted(false);
-          setIsOpen(false);
-        }, 4000);
-      } else {
-        setSuccessMessage("❌ Failed to send. Please try again.");
+        }, 3000);
       }
-    } catch (error) {
-      console.error(error);
-      setSuccessMessage("❌ Server error. Try again later.");
-    } finally {
+    } catch (err) {
+      console.log("ERROR:", err?.response || err.message);
+      // toast.error("Something went wrong");
+    }
+    finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/70 z-50">
-      <div
-        className="relative rounded-3xl shadow-2xl p-10 w-[350px] md:w-[570px] text-white bg-cover bg-center"
-        style={{ backgroundImage: "url(/home/eco3-1024x745.webp)" }}
-      >
-        <div className="absolute inset-0 bg-black/10 rounded-3xl"></div>
+    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-4"
+      onClick={() => setShowPopup(false)}>
+      <div className="bg-white rounded-2xl overflow-hidden w-full max-w-4xl shadow-2xl flex flex-col md:flex-row animate-fadeIn"
+        onClick={(e) => e.stopPropagation()}>
+        <div className="md:w-1/2 bg-gradient-to-br from-amber-400 to-amber-600 text-white p-8 hidden md:flex flex-col justify-between">
+          <div>
+            <h2 className="text-3xl font-bold mb-3">Get Your Quote</h2>
+            <p className="text-sm opacity-90">
+              Tell us your requirements and we’ll get back with the best solution tailored for you.
+            </p>
+          </div>
 
-        <div className="relative z-10">
+          <img
+            src="/bowldate2.png"
+            alt="Quote"
+            className="mt-4 rounded-lg object-contain h-70 w-full"
+          />
+        </div>
+
+        <div className="md:w-1/2 p-6 relative">
           <button
-            className="absolute cursor-pointer top-4 right-4 text-white hover:text-red-500 text-xl"
-            onClick={handleClose}
+            onClick={() => setShowPopup(false)}
+            className="absolute top-3 right-4 text-gray-500 hover:text-black text-xl"
           >
             ✕
           </button>
 
-          <h2 className="text-center text-white text-xl md:text-3xl font-semibold">
-            Get In Touch With Us
-          </h2>
-          <div className="w-28 h-[4px] bg-cyan-600 mx-auto mt-3 mb-8 rounded-full"></div>
+          {submitted ? (
+            <div className="text-center py-10">
+              <h2 className="text-2xl font-bold text-amber-600">
+                🎉 Thank You!
+              </h2>
+              <p className="text-gray-800 mt-2">
+                Your enquiry has been submitted successfully.
+              </p>
+              <p className="text-gray-700 text-sm mt-1">
+                Our team will contact you shortly.
+              </p>
+            </div>
+          ) : (
+            <>
+              <h3 className="text-2xl font-semibold mb-4 text-amber-500 text-center">
+                Fill the details
+                <div className="w-20 h-1 bg-[#3C2012] mx-auto mt-1 rounded"></div>
+              </h3>
 
-          {!submitted ? (
-            <form className="space-y-4" onSubmit={handleSubmit}>
-              <div className="flex gap-3">
+              <form className="flex flex-col gap-3 text-black" onSubmit={handleSubmit}>
                 <input
                   type="text"
-                  name="name"
+                  name="contactPerson"
+                  required
                   placeholder="Your Name"
-                  required
-                  disabled={loading}
-                  className="w-1/2 p-3 placeholder-white rounded-md text-white border-2 border-white bg-transparent focus:outline-none"
+                  className="border border-amber-200 p-2 rounded-md focus:outline-none focus:ring-1 focus:ring-amber-400"
                 />
-
-                <select
-                  name="products"
+                <input
+                  type="email"
+                  name="email"
                   required
-                  disabled={loading}
-                  defaultValue=""
-                  className="w-1/2 p-3 rounded-md text-black text-sm border-2 focus:outline-none bg-blue-50"
-                >
-                  <option value="">Select Machine</option>
-                  <option value="Paper Cup Making Machine">Paper Cup Making Machine</option>
-                  <option value="Paper Die Cutting Machine">Paper Die Cutting Machine</option>
-                  <option value="Paper Plate Making Machine">Paper Plate Making Machine</option>
-                  <option value="Bio-degradable Bag Making Machine">Bio-degradable Bag Making Machine</option>
-                  <option value="Flexoprinting Machine">Flexoprinting Machine</option>
-                  <option value="Non Woven Bag Making Machines">Non Woven Bag Making Machines</option>
-                  <option value="Offset Bag Printing Machine">Offset Bag Printing Machine</option>
-                  <option value="Momo Making Machine">Momo Making Machine</option>
-                  <option value="Noodle Making Machine">Noodle Making Machine</option>
-                </select>
-              </div>
-
-              <div className="flex items-center rounded-md border-2 border-white overflow-hidden">
-                <img src="/flag.webp" className="w-6 ml-2" />
-                <span className="ml-1">🇮🇳</span>
+                  placeholder="Your Email"
+                  className="border border-amber-200 p-2 rounded-md focus:outline-none focus:ring-1 focus:ring-amber-400"
+                />
                 <input
                   type="tel"
                   name="phone"
-                  maxLength={10}
-                  minLength={10}
-                  required
-                  disabled={loading}
-                  placeholder="08123456789"
-                  className="w-full p-3 bg-transparent text-white focus:outline-none"
+                  placeholder="Phone Number"
+                  className="border border-amber-200 p-2 rounded-md focus:outline-none focus:ring-1 focus:ring-amber-400"
                 />
-              </div>
+                <textarea
+                  rows={4}
+                  name="message"
+                  placeholder="Your Requirement"
+                  className="border border-amber-200 p-2 rounded-md focus:outline-none focus:ring-1 focus:ring-amber-400"
+                ></textarea>
 
-              <input
-                type="email"
-                name="email"
-                required
-                disabled={loading}
-                placeholder="Email"
-                className="w-full p-3 rounded-md border-2 border-white bg-transparent text-white focus:outline-none"
-              />
-
-              <textarea
-                name="message"
-                required
-                disabled={loading}
-                placeholder="Message"
-                className="w-full p-3 rounded-md border-2 border-white bg-transparent text-white h-28 resize-none"
-              ></textarea>
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full py-3 bg-gradient-to-r from-[#0077e6] to-[#005bb5] rounded-md font-semibold text-white shadow-md"
-              >
-                {loading ? "Sending..." : "Send Message"}
-              </button>
-            </form>
-          ) : (
-            <p className="text-center text-white font-semibold text-lg">
-              {successMessage}
-            </p>
+                <button type="submit" disabled={loading} className="bg-amber-500 text-white py-3 rounded-lg hover:bg-amber-600 transition font-medium">
+                  {loading ? "Submitting..." : "Submit Inquiry"}
+                </button>
+              </form>
+            </>
           )}
         </div>
       </div>
