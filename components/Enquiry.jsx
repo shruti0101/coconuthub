@@ -18,7 +18,7 @@ export default function Popup({ showPopup, setShowPopup }) {
       email: formData.get("email"),
       company: 'NA',
       phone: formData.get("phone"),
-      product: "Bar Bending Machine",
+      product: "Premium Dates Inquiry",
       place: "Delhi",
       message: formData.get("message"),
     };
