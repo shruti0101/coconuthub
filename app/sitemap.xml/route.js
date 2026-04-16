@@ -13,7 +13,7 @@ async function getAllBlogs() {
 }
 
 export async function GET() {
-  const baseUrl = "https://coconuthub.in/";
+  const baseUrl = "https://coconuthub.in";
 
   // Flatten all products
   const allProducts = categories.flatMap((c) => c.products);
