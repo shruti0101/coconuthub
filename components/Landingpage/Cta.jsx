@@ -63,7 +63,6 @@ export default function TrustSection() {
       style={{ backgroundImage: "url(/banner.webp)" }}
       className="relative py-[110px] overflow-visible bg-cover bg-center px-4"
     >
-      <div className="absolute inset-0 opacity-[0.08] bg-[url('/arabic-pattern.png')] bg-cover bg-center" />
 
       <div className="relative max-w-[1100px] mx-auto">
         <div className="relative bg-[#d4a43a] rounded-[36px] px-[80px] py-[60px] text-center shadow-xl overflow-visible">

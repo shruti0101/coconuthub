@@ -16,6 +16,9 @@ import Quality from "@/components/Landingpage/Quality";
 import Bestseller from "@/components/Landingpage/Bestseller";
 import HealthBenefits from "@/components/Landingpage/Benefits";
 import Citeskeyword from "@/components/Citieskeyword";
+import Ctaform from "@/components/Landingpage/Ctaform";
+import FeaturedProducts from "@/components/Landingpage/Featuredprod";
+
 
 
 export default function Home() {
@@ -24,6 +27,8 @@ export default function Home() {
       {/* <Popup></Popup>  */}
       <Hero />
         <Categories />
+        <Ctaform></Ctaform>
+        <FeaturedProducts></FeaturedProducts>
       <About />
            <Process></Process>
       <Countup />

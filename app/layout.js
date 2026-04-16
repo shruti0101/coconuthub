@@ -2,6 +2,7 @@ import { Poetsen_One, Poppins, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import SmoothScroll from "@/components/SmoothScroll";
+import Whatsapp from "@/components/Landingpage/Whatsapp";
 
 // Heading Font
 const poetsen = Poetsen_One({
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${poetsen.variable} ${poppins.variable} ${notoSerif.variable} antialiased`}>
         <LayoutWrapper>
+          <Whatsapp></Whatsapp>
           <SmoothScroll>
             {children}
           </SmoothScroll>

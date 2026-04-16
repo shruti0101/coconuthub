@@ -190,7 +190,7 @@ export default function DatesExplosion() {
               "/farddates.webp",
               "/mabroom.webp",
               "/mejdool.webp",
-              "/Single-Dates-PNG.png",
+              "/farddates.webp",
               "/ajwadates.webp",
               "/date.png",
               "/ajwadates.webp",

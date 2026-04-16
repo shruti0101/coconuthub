@@ -81,12 +81,13 @@ const blog = {
 
 
 export default defineConfig({
-  name: "sbs-studio",
-  title: "SBS Studio",
+  name: "coconuthub",
+  title: "coconuthub",
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
   apiVersion: "2024-06-01",
   basePath: "/studio",
+  useCdn: true,
   plugins: [structureTool(), visionTool()],
   schema: {
     types: [blog], // ✅ Blog now includes SEO fields

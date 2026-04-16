@@ -1,6 +1,6 @@
 export const dynamic = "force-dynamic";
 
-// import { serviceLocations } from "@/Data";
+import { serviceLocations } from "@/Data";
 
 import { categories } from "@/Data";
 import { client } from "@/lib/sanity";
@@ -13,7 +13,7 @@ async function getAllBlogs() {
 }
 
 export async function GET() {
-  const baseUrl = "https://coconuthub.in/"; 
+  const baseUrl = "https://coconuthub.in"; 
 
   // Flatten all products
   const allProducts = categories.flatMap((c) => c.products);
@@ -28,7 +28,7 @@ export async function GET() {
     { loc: `${baseUrl}/about`, priority: 0.8, changefreq: "yearly" },
     { loc: `${baseUrl}/contact`, priority: 0.8, changefreq: "yearly" },
     { loc: `${baseUrl}/products`, priority: 0.8, changefreq: "yearly" },
-    // { loc: `${baseUrl}/our-blogs`, priority: 0.9, changefreq: "weekly" },
+    { loc: `${baseUrl}/our-blogs`, priority: 0.9, changefreq: "weekly" },
   ]
     .map(
       (page) => `
@@ -80,37 +80,37 @@ export async function GET() {
     )
     .join("");
 
-  // Blogs
-  // const blogUrls = blogs
-  //   .map(
-  //     (blog) => `
-  //     <url>
-  //       <loc>${baseUrl}/blog/${blog.slug.current}</loc>
-  //       <lastmod>${
-  //         blog.date ? new Date(blog.date).toISOString() : new Date().toISOString()
-  //       }</lastmod>
-  //       <changefreq>monthly</changefreq>
-  //       <priority>0.6</priority>
-  //     </url>
-  //   `
-  //   )
-  //   .join("");
+  Blogs
+  const blogUrls = blogs
+    .map(
+      (blog) => `
+      <url>
+        <loc>${baseUrl}/blog/${blog.slug.current}</loc>
+        <lastmod>${
+          blog.date ? new Date(blog.date).toISOString() : new Date().toISOString()
+        }</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+    `
+    )
+    .join("");
 
 
 
 
-  //   const locationUrls = serviceLocations
-  // .map(
-  //   (loc) => `
-  //     <url>
-  //       <loc>${baseUrl}${loc.href}</loc>
-  //       <lastmod>${new Date().toISOString()}</lastmod>
-  //       <changefreq>weekly</changefreq>
-  //       <priority>0.7</priority>
-  //     </url>
-  //   `
-  // )
-  // .join("");
+    const locationUrls = serviceLocations
+  .map(
+    (loc) => `
+      <url>
+        <loc>${baseUrl}${loc.href}</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+      </url>
+    `
+  )
+  .join("");
 
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -119,6 +119,8 @@ export async function GET() {
       ${staticPages}
     ${categoryUrls}
     ${productUrls}
+    ${locationUrls}
+    ${blogUrls}
    
   
 

@@ -14,7 +14,7 @@ import Link from "next/link";
 
 export const categoryCityContent = {
     "dates-supplier": {
-        mainImg: "/xx.png",
+        mainImg: "/otherbg.webp",
         h2: (city) => `Your Trusted Dates Supplier in ${city}`,
         intro: (city) => (
             <>

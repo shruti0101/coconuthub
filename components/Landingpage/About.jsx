@@ -138,7 +138,7 @@ export default function AboutSection() {
       {/* ✅ STICKY SECTION */}
       <section
         // ref={sectionRef}
-        style={{ backgroundImage: "url(/aboutbg.png)" }}
+        style={{ backgroundImage: "url(/aboutbgimg.webp)" }}
         className="bg-[#f5efe5] bg-cover bg-center py-16 lg:py-24"
       >
         <div className="max-w-[1300px] mx-auto px-6">
@@ -160,7 +160,7 @@ export default function AboutSection() {
             <div className="w-full flex justify-center lg:justify-end">
               <div className="w-full max-w-md sm:max-w-lg lg:max-w-xl">
                 <Image
-                  src="/aboutimg2.png"
+                  src="/aboutimg.webp"
                   width={1200}
                   height={800}
                   className="object-cover w-full h-auto"

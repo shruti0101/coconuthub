@@ -89,7 +89,7 @@ export default function ProductPage({ params }) {
             </div>
 
             {/* MAIN IMAGE */}
-            <div className="flex-1 bg-[#efe3d6] p-4 rounded-xl">
+            <div className="flex-1  p-4 rounded-xl">
               <Image
                 src={activeImage.src}
                 alt=""

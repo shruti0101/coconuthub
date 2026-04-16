@@ -16,7 +16,7 @@ export default function Navbar() {
   const [scroll, setScroll] = useState(false);
 
   const pathname = usePathname();
-  const isProductPage = pathname.startsWith("/products");
+  const isProductPage = pathname.startsWith("/products/");
 
   const dropdownRef = useRef(null);
 
@@ -44,7 +44,7 @@ export default function Navbar() {
     { name: "HOME", link: "/" },
     { name: "ABOUT US", link: "/about" },
     { name: "PRODUCTS", link: "/products" },
-    { name: "BLOGS", link: "/" },
+    { name: "BLOGS", link: "/our-blogs" },
     { name: "CONTACT US", link: "/contact" },
   ];
 
@@ -59,6 +59,13 @@ export default function Navbar() {
       className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${scroll ? "bg-black/60 backdrop-blur-md" : "bg-black/30"
         }`}
     >
+
+
+
+
+
+
+      
       <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 py-2">
 
         {/* LOGO */}
@@ -118,25 +125,24 @@ export default function Navbar() {
         {/* RIGHT SIDE */}
         <div className={`flex items-center gap-5 ${textColor}`}>
 
-          <div className="hidden lg:flex items-center relative">
-            <Search
-              size={18}
-              className={`absolute left-3 ${scroll ? "text-white" : isProductPage ? "text-black" : "text-white"
-                }`}
-            />
+         {/* ✅ CONTACT + GST (Premium) */}
+<div className="hidden lg:flex items-center  gap-4">
 
-            <input
-              type="text"
-              placeholder="Search products..."
-              className={`pl-10 pr-4 py-2 rounded-full text-sm outline-none transition-all duration-300 
-    ${scroll
-                  ? "bg-white/10 text-white placeholder:text-white/70 border border-white/20"
-                  : isProductPage
-                    ? "bg-gray-400 text-black placeholder:text-white"
-                    : "bg-white/30 text-white placeholder:text-white/70 border border-white/20"
-                }`}
-            />
-          </div>
+  
+
+
+
+  {/* GST */}
+  <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#d8b066]/20 to-[#c79b47]/20 border border-[#d8b066]/40 backdrop-blur-md">
+    <span className="text-white text-sm font-semibold tracking-wider">
+      GSTIN
+    </span>
+    <span className="text-md font-medium tracking-wide">
+      07BONPG0167A1ZC
+    </span>
+  </div>
+
+</div>
 
           <button onClick={openCart} className="relative flex">
             <ShoppingCart size={20} />
@@ -156,12 +162,12 @@ export default function Navbar() {
             <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-white/20 blur-xl"></span>
 
             {/* Text */}
-            <span className="relative z-10 flex items-center gap-2">
-              Request a Quote
+            <a href="tel:+919818059818" className="relative z-10 flex items-center gap-2">
+            +919818059818
               <span className="transition-transform duration-300 group-hover:translate-x-1">
-                →
+          
               </span>
-            </span>
+            </a>
           </Link>
 
           <button
@@ -176,19 +182,26 @@ export default function Navbar() {
       {/* SEARCH */}
       {searchOpen && (
         <div className="fixed inset-0 bg-black/40 flex items-start justify-center pt-40 z-50">
-          <div className="bg-white p-6 rounded-xl w-[500px] flex gap-3">
-            <input
-              autoFocus
-              placeholder="Search products..."
-              className="flex-1 outline-none border p-3 rounded-md text-black"
-            />
-            <button
-              onClick={() => setSearchOpen(false)}
-              className="px-4 bg-black text-white rounded-md"
-            >
-              Close
-            </button>
-          </div>
+        {/* ✅ CONTACT + GST (Mobile Premium) */}
+<div className="pt-4 border-t space-y-3">
+
+  <a
+    href="tel:+919818059818"
+    className="flex items-center justify-between px-4 py-3 rounded-xl bg-gray-100 hover:bg-gray-200 transition"
+  >
+    <span className="flex items-center gap-2">
+      <span className="w-2 h-2 rounded-full bg-green-500"></span>
+      <span className="font-medium">Call Us</span>
+    </span>
+    <span className="text-sm font-semibold">+91 98180 59818</span>
+  </a>
+
+  <div className="flex items-center justify-between px-4 py-3 rounded-xl bg-gradient-to-r from-[#f3e7c3] to-[#e8d39a]">
+    <span className="font-medium">GSTIN</span>
+    <span className="text-sm font-semibold">07BONPG0167A1ZC</span>
+  </div>
+
+</div>
         </div>
       )}
 

@@ -38,24 +38,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* MORE SERVICES */}
-        <div>
-          <h3 className="text-lg font-semibold mb-5 border-b border-yellow-400 pb-2">
-            More Services
-          </h3>
-
-          <ul className="space-y-3 text-sm text-white">
-            <li><a href="/" className="hover:text-yellow-400">Home</a></li>
-            <li><a href="/about" className="hover:text-yellow-400">About Us</a></li>
-            <li><a href="/products" className="hover:text-yellow-400">Products</a></li>
-            <li><a href="/blog" className="hover:text-yellow-400">Blog</a></li>
-            <li><a href="/contact" className="hover:text-yellow-400">Contact Us</a></li>
-            <li><a href="/privacy-policy" className="hover:text-yellow-400">Privacy Policy</a></li>
-            <li><a href="/terms" className="hover:text-yellow-400">Terms & Conditions</a></li>
-            <li><a href="/return-policy" className="hover:text-yellow-400">Return & Refund Policy</a></li>
-            <li><a href="/shipping-policy" className="hover:text-yellow-400">Shipping Policy</a></li>
-          </ul>
-        </div>
+      
 
         {/* CATEGORIES */}
         <div>
@@ -73,6 +56,25 @@ const Footer = () => {
             <li><a href="#" className="hover:text-yellow-400">Zahidi Dates</a></li>
             <li><a href="#" className="hover:text-yellow-400">Ajwa Dates</a></li>
             <li><a href="#" className="hover:text-yellow-400">Dried Apricot</a></li>
+          </ul>
+        </div>
+
+          {/* MORE SERVICES */}
+        <div>
+          <h3 className="text-lg font-semibold mb-5 border-b border-yellow-400 pb-2">
+            More Services
+          </h3>
+
+          <ul className="space-y-3 text-sm text-white">
+            <li><a href="/" className="hover:text-yellow-400">Home</a></li>
+            <li><a href="/about" className="hover:text-yellow-400">About Us</a></li>
+            <li><a href="/products" className="hover:text-yellow-400">Products</a></li>
+            <li><a href="/our-blogs" className="hover:text-yellow-400">Blog</a></li>
+            <li><a href="/contact" className="hover:text-yellow-400">Contact Us</a></li>
+            {/* <li><a href="/privacy-policy" className="hover:text-yellow-400">Privacy Policy</a></li>
+            <li><a href="/terms" className="hover:text-yellow-400">Terms & Conditions</a></li>
+            <li><a href="/return-policy" className="hover:text-yellow-400">Return & Refund Policy</a></li>
+            <li><a href="/shipping-policy" className="hover:text-yellow-400">Shipping Policy</a></li> */}
           </ul>
         </div>
 

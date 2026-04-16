@@ -14,7 +14,7 @@ const page = () => {
     {
       title: "Wide Product Selection",
       text: "Our diverse product range includes Wet Dates, Seedless Dates, Premium Emirates Dates, Semi Husked Coconuts, Whole Husked Coconuts, Dry Figs, Dry Apricots, Mixed Dry Fruits, and Sweet Tamarind to meet customer needs.",
-      img: "/aboutimg.png",
+      img: "/aboutimg.webp",
     },
     {
       title: "Hygienic Handling & Storage",
@@ -137,7 +137,7 @@ const page = () => {
 
       {/* Background Palm Images */}
       <Image
-        src="/aboutpalm.png"
+        src="/aboutpalm.webp"
         width={300}
         height={300}
         alt=""
@@ -145,7 +145,7 @@ const page = () => {
       />
 
       <Image
-        src="/aboutpalm.png"
+        src="/aboutpalm.webp"
         width={300}
         height={300}
         alt=""

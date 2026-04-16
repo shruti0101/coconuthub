@@ -53,7 +53,7 @@ const ContactPage = () => {
   };
   return (
     <div className="bg-[#FBF7F1] text-[#2B1B12]">
-      <section style={{ backgroundImage: "url(/xx.png)" }} className="relative py-35 text-center bg-center bg-cover text-white overflow-hidden">
+      <section style={{ backgroundImage: "url(/otherbg.webp)" }} className="relative py-35 text-center bg-center bg-cover text-white overflow-hidden">
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}

@@ -69,9 +69,9 @@ export default function FormLayout() {
                     </form>
                 </div>
             </div>
-            <div className="md:w-160 md:h-120">
+            <div className="md:w-140 md:h-100">
                 <img
-                    src={"/aboutdateside.png"}
+                    src={"/dateside2.webp"}
                     alt="Key Features"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />

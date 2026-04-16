@@ -79,7 +79,7 @@ ${form.notes}
 
       {/* HERO */}
       <section
-        style={{ backgroundImage: "url(/xx.png)" }}
+        style={{ backgroundImage: "url(/otherbg.webp)" }}
         className="relative py-32 bg-cover bg-center text-white text-center"
       >
 

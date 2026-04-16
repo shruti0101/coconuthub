@@ -14,7 +14,7 @@ export default function CartPage() {
 
     <div className="bg-[#f5f5f5] min-h-screen">
  <section
-  style={{ backgroundImage: "url(/xx.png)" }}
+  style={{ backgroundImage: "url(/otherbg.webp)" }}
   className="relative py-40 text-center bg-center bg-cover text-white overflow-hidden"
 >
 

@@ -82,7 +82,7 @@ export default function Hero() {
         {/* DECORATIVE IMAGES (hide on mobile) */}
         <Image
           ref={leftDates}
-          src="/dateside.png"
+          src="/dateside.webp"
           alt=""
           width={500}
           height={300}
@@ -91,7 +91,7 @@ export default function Hero() {
 
         <Image
           ref={rightDates}
-          src="/dateside2.png"
+          src="/dateside2.webp"
           alt=""
           width={400}
           height={150}

@@ -93,7 +93,7 @@ useEffect(() => {
         className="hidden lg:block fixed left-0 top-40 z-10 pointer-events-none"
       >
         <Image
-          src="/tree-left.png"
+          src="/tree-left.webp"
           alt="Palm Tree"
           width={230}
           height={600}
@@ -107,7 +107,7 @@ useEffect(() => {
         className="hidden lg:block fixed right-0 top-40 z-10 pointer-events-none"
       >
         <Image
-          src="/tree-right.png"
+          src="/tree-right.webp"
           alt="Palm Tree"
           width={230}
           height={600}
