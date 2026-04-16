@@ -2,7 +2,7 @@ export const dynamic = "force-dynamic";
 
 import { serviceLocations } from "@/Data";
 
-import { categories } from "@/Data";
+import { CatCites, categories, serviceLocations } from "@/Data";
 import { client } from "@/lib/sanity";
 import { groq } from "next-sanity";
 
@@ -13,7 +13,11 @@ async function getAllBlogs() {
 }
 
 export async function GET() {
+<<<<<<< HEAD
   const baseUrl = "https://coconuthub.in"; 
+=======
+  const baseUrl = "https://coconuthub.in";
+>>>>>>> 334a9de9680e8128904f1d76aff75f9c11cc2a06
 
   // Flatten all products
   const allProducts = categories.flatMap((c) => c.products);
@@ -23,7 +27,7 @@ export async function GET() {
 
 
 
-    // Static pages (About, Contact, Blog Listing)
+  // Static pages (About, Contact, Blog Listing)
   const staticPages = [
     { loc: `${baseUrl}/about`, priority: 0.8, changefreq: "yearly" },
     { loc: `${baseUrl}/contact`, priority: 0.8, changefreq: "yearly" },
@@ -42,7 +46,7 @@ export async function GET() {
     )
     .join("");
 
-   // Homepage
+  // Homepage
   const homepage = `
     <url>
       <loc>${baseUrl}</loc>
@@ -99,9 +103,15 @@ export async function GET() {
 
 
 
+<<<<<<< HEAD
     const locationUrls = serviceLocations
   .map(
     (loc) => `
+=======
+  const locationUrls = serviceLocations
+    .map(
+      (loc) => `
+>>>>>>> 334a9de9680e8128904f1d76aff75f9c11cc2a06
       <url>
         <loc>${baseUrl}${loc.href}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
@@ -109,8 +119,26 @@ export async function GET() {
         <priority>0.7</priority>
       </url>
     `
+<<<<<<< HEAD
   )
   .join("");
+=======
+    )
+    .join("");
+
+  const locationUrls1 = CatCites
+    .map(
+      (loc) => `
+      <url>
+        <loc>${baseUrl}${loc.href}</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+      </url>
+    `
+    )
+    .join("");
+>>>>>>> 334a9de9680e8128904f1d76aff75f9c11cc2a06
 
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -120,8 +148,12 @@ export async function GET() {
     ${categoryUrls}
     ${productUrls}
     ${locationUrls}
+<<<<<<< HEAD
     ${blogUrls}
    
+=======
+       ${locationUrls1}
+>>>>>>> 334a9de9680e8128904f1d76aff75f9c11cc2a06
   
 
   </urlset>`;
