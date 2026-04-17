@@ -151,8 +151,8 @@ export default function Navbar() {
             </span>
           </button>
 
-          <Link
-            href="/contact"
+          <div
+           
             className="relative lg:inline-flex hidden items-center justify-center px-6 py-2.5 font-semibold text-black rounded-full overflow-hidden group"
           >
             {/* Gradient background */}
@@ -168,7 +168,7 @@ export default function Navbar() {
           
               </span>
             </a>
-          </Link>
+          </div>
 
           <button
             className="xl:hidden"
