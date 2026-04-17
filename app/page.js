@@ -16,7 +16,7 @@ import Quality from "@/components/Landingpage/Quality";
 import Bestseller from "@/components/Landingpage/Bestseller";
 import HealthBenefits from "@/components/Landingpage/Benefits";
 import Citeskeyword from "@/components/Citieskeyword";
-import Ctaform from "@/components/Landingpage/Ctaform";
+import Ctaform from "@/components/Landingpage/CtaForm";
 import FeaturedProducts from "@/components/Landingpage/Featuredprod";
 
 
