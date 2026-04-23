@@ -1,8 +1,8 @@
 import BlogClient from "./BlogClient";
 
 export const metadata = {
-  title: "Our Blogs - sbsmachinery.in",
-  description: "In a world shifting rapidly toward sustainability, paper cups are no longer just a convenience—they’re a statement. As single-use plastic bans tighten …",
+  title: "Dates Supplier Knowledge Hub | Vishal Enterprise",
+  description: "Discover blogs on dates by a trusted supplier. Learn about different types of dates, benefits, nutrition, recipes & storage tips from Vishal Enterprise.",
 };
 
 export default function AboutUsPage() {
