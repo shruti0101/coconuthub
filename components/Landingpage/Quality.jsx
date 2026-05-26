@@ -56,7 +56,7 @@ export default function Hero() {
         />
 
         {/* TEXT CONTENT */}
-        <div className="relative z-30 max-w-[1400px] mx-auto h-full flex items-center px-6 lg:px-20 py-16 lg:py-0">
+        <div className="relative z-30 max-w-[1400px] mx-auto h-full flex items-center px-6 lg:px-20 py-10 lg:py-0">
 
           <div className="text-white max-w-[600px] text-center lg:text-left mx-auto lg:mx-0">
 
@@ -113,7 +113,7 @@ export default function Hero() {
 
       {/* QUALITY PROCESS SECTION */}
 
-      <section className="py-24 bg-[#f7f7f7]">
+      <section className="py-10 md:py-24 bg-[#f7f7f7]">
 
         <div className="max-w-[1300px] mx-auto px-8">
 

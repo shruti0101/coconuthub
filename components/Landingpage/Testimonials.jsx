@@ -58,7 +58,7 @@ export default function TestimonialSection() {
 
   return (
 
-  <section className="relative w-full py-16 lg:py-24 px-4 lg:px-20 bg-[#faf7f2]">
+  <section className="relative w-full py-12 lg:py-24 px-4 lg:px-20 bg-[#faf7f2]">
 
   {/* ZIGZAG (hide on small screens to avoid overlap) */}
   <div className="hidden lg:flex absolute bottom-6 left-0 w-full h-[130px] z-10 justify-center items-start">

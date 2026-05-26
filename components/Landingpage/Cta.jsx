@@ -61,11 +61,11 @@ export default function TrustSection() {
     <section
       ref={sectionRef}
       style={{ backgroundImage: "url(/banner.webp)" }}
-      className="relative py-[110px] overflow-visible bg-cover bg-center px-4"
+      className="relative py-[50px] md:py-[110px] overflow-visible bg-cover bg-center px-4"
     >
 
       <div className="relative max-w-[1100px] mx-auto">
-        <div className="relative bg-[#d4a43a] rounded-[36px] px-[80px] py-[60px] text-center shadow-xl overflow-visible">
+        <div className="relative bg-[#d4a43a] rounded-[36px] p-7 md:px-[80px] md:py-[60px] text-center shadow-xl overflow-visible">
           {/* CASHEW */}
           <div
             ref={cashewRef}

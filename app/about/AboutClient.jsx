@@ -68,9 +68,9 @@ const page = () => {
 
 
 
-    <section className="bg-[#f5efe6] py-20">
+    <section className="bg-[#f5efe6] py-6 md:py-20">
 
-      <div className="w-full mx-auto px-13 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="w-full mx-auto px-5 md:px-13 grid lg:grid-cols-2 gap-16 items-center">
 
 
         {/* RIGHT CONTENT */}
@@ -96,7 +96,7 @@ const page = () => {
          
 
           {/* CTA */}
-          <div className="mt-auto">
+          <div className="mt-10  ">
             <Link href={"/products"} className="bg-[#137a74] text-white px-8 py-4 rounded-xl text-lg hover:bg-[#0f5f5a] transition">
               Explore Our Products
             </Link>
@@ -133,7 +133,7 @@ const page = () => {
 
 {/* why choose */}
 
-   <section className="relative py-20 bg-[#137a74] overflow-hidden">
+   <section className="relative py-9 md:py-20 bg-[#137a74] overflow-hidden">
 
       {/* Background Palm Images */}
       <Image
@@ -214,7 +214,7 @@ const page = () => {
       {mission.map((item, i) => (
         <div
           key={i}
-          className="relative rounded-[24px] p-10 h-[340px] flex flex-col justify-center overflow-hidden bg-[#ead7ad]/50"
+          className="relative rounded-[24px] p-5  md:p-10 h-[340px] flex flex-col justify-center overflow-hidden bg-[#ead7ad]/50"
         >
 
           {/* BACKGROUND IMAGE */}
@@ -251,7 +251,7 @@ const page = () => {
 
    {/* exp */}
 
-    <section className="h-screen relative">
+    <section className="h-[55vh] md:h-screen relative">
 
       {/* GIF Background */}
       <Image

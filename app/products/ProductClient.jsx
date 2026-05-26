@@ -21,7 +21,7 @@ const Page = () => {
       >
         {/* <div className="absolute inset-0 bg-black opacity-10"></div> */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <h2 className="text-white p-2 text-2xl md:text-7xl font-bold z-10">All Products</h2>
+          <h2 className="text-white p-2 text-4xl md:text-7xl font-bold mt-20 md:mt-0 z-10">All Products</h2>
         </div>
       </section>
 

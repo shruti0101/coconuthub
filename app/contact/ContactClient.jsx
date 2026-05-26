@@ -53,7 +53,7 @@ const ContactPage = () => {
   };
   return (
     <div className="bg-[#FBF7F1] text-[#2B1B12]">
-      <section style={{ backgroundImage: "url(/otherbg.webp)" }} className="relative py-35 text-center bg-center bg-cover text-white overflow-hidden">
+      <section style={{ backgroundImage: "url(/otherbg.webp)" }} className="relative pt-34 pb-20 md:py-35 text-center bg-center bg-cover text-white overflow-hidden">
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -73,7 +73,7 @@ const ContactPage = () => {
 
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-start">
+      <section className="max-w-7xl mx-auto px-6 py-8 md:py-24 grid lg:grid-cols-2 gap-16 items-start">
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -123,7 +123,7 @@ const ContactPage = () => {
           </div>
         </motion.div>
 
-        <motion.div  className="bg-white rounded-[32px] p-10 shadow-lg"
+        <motion.div  className="bg-white rounded-[32px] p-5 md:p-10 shadow-lg"
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
@@ -192,7 +192,7 @@ const ContactPage = () => {
         </motion.div>
       </section>
 
-      <section className="px-6 pb-20">
+      <section className="px-6 pb-10 md:pb-20">
         <div className="max-w-7xl mx-auto rounded-[30px] overflow-hidden shadow-2xl">
 
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.175959106896!2d77.172091!3d28.714287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d021fdf9f2583%3A0x3fd6abc7701b4d50!2sVishal%20Enterprise!5e0!3m2!1sen!2sin!4v1774511220598!5m2!1sen!2sin"

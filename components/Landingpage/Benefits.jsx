@@ -75,7 +75,7 @@ useEffect(() => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-28 bg-gradient-to-b from-white via-amber-50/40 to-white overflow-hidden"
+      className="relative py-15 md:py-28 bg-gradient-to-b from-white via-amber-50/40 to-white overflow-hidden"
     >
 
 {/* <div className="absolute inset-0 -top-30  pointer-events-none">
