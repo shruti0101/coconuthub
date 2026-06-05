@@ -131,12 +131,14 @@ const Footer = () => {
 
         <p>
           Website Designed By{" "}
-          <a
-            href="https://promozionebranding.com/"
-            className="text-yellow-400 hover:underline"
-          >
-            Promozione Branding Pvt. Ltd.
-          </a>
+            Inquiry Bazaar Pvt. Ltd.  {" "}
+        <a
+          target="_blank"
+          href="https://inquirybazaar.com/"
+          className="text-[#FAAC18] hover:underline"
+        >
+           B2B Marketplace
+        </a>
         </p>
       </div>
 
