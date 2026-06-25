@@ -1,12 +1,5 @@
-// data.js
 
-import {
-  CircleDollarSign,
-  Cog,
-  Earth,
-  Mountain,
-  ShieldCheck,
-} from "lucide-react";
+
 
 export const categories = [
   // category 1 ajwa
@@ -1376,109 +1369,113 @@ export const categories = [
     }
   ]
 },
-{
-  "id": "Fard-Dates-Jar-Barari",
-  "name": "Fard Dates Jar (Barari) (₹400Per Kg)",
-  "metaTitle": "Fard Dates Jar Barari 6kg Carton Pack | Premium Fard Dates | Vishal Enterprise",
-  "metaDescription": "Buy premium Fard Dates Jar (Barari) in 6kg carton packaging. Naturally sweet black Fard dates packed in convenient 500gm jars supplied by Vishal Enterprise.",
 
-  "description": [
-    { "type": "h2", "text": "Product Overview – Fard Dates Jar (Barari)" },
-    {
-      "type": "ul",
-      "items": [
-        "Fard Dates Jar (Barari) offered by Vishal Enterprise are a premium quality variety of dates known for their naturally rich taste, firm texture, and balanced sweetness that makes them highly preferred among dry fruit consumers.",
-        "These dates are carefully sourced from reliable farms and trusted suppliers to ensure authentic quality, freshness, and consistent product standards suitable for both retail and wholesale markets.",
-        "Fard dates are widely appreciated for their slightly firm yet chewy texture which makes them perfect for everyday snacking and for use in various traditional and modern recipes.",
-        "The product is hygienically packed in durable jar packaging which helps preserve the natural moisture, freshness, and taste of the dates for a longer duration.",
-        "The Barari Fard dates are suitable for daily consumption, festive gifting, and inclusion in premium dry fruit assortments.",
-        "Vishal Enterprise follows strict quality control and hygienic handling practices to deliver premium quality dates that meet customer expectations."
-      ]
-    },
 
-    { "type": "h2", "text": "Product Details" },
-    {
-      "type": "ul",
-      "items": [
-        "Variety – Fard Dates: A premium variety of dates known for its firm texture and naturally sweet taste.",
-        "Packaging Size – 6 Kg: Bulk carton packaging suitable for wholesalers, retailers, and commercial buyers.",
-        "Color – Black: Naturally black colored dates reflecting authentic quality and freshness.",
-        "Packaging Type – Carton: Durable carton packaging ensures safe storage and protection during transportation.",
-        "Shelf Life – 12 Months: Long shelf life when stored properly in a cool and dry environment.",
-        "Form – Packed: Hygienically packed to maintain freshness, safety, and consistent quality.",
-        "Type – With Seed: Whole natural dates containing seeds which preserve their authentic taste and texture."
-      ]
-    },
+// {
+//   "id": "Fard-Dates-Jar-Barari",
+//   "name": "Fard Dates Jar (Barari) (₹400Per Kg)",
+//   "metaTitle": "Fard Dates Jar Barari 6kg Carton Pack | Premium Fard Dates | Vishal Enterprise",
+//   "metaDescription": "Buy premium Fard Dates Jar (Barari) in 6kg carton packaging. Naturally sweet black Fard dates packed in convenient 500gm jars supplied by Vishal Enterprise.",
 
-    { "type": "h2", "text": "Packaging Details" },
-    {
-      "type": "ul",
-      "items": [
-        "6 Kg Carton – Each carton contains a total of 6 kilograms of premium Fard dates suitable for bulk supply.",
-        "500 g Jar Packs – Each carton contains 12 jar packs of 500 grams each.",
-        "Jar packaging helps maintain product freshness and makes storage convenient for consumers.",
-        "Retail-friendly packaging allows easy display and handling in stores, supermarkets, and retail outlets.",
-        "Secure carton packing ensures safe transportation and organized distribution for wholesalers and traders."
-      ]
-    },
+//   "description": [
+//     { "type": "h2", "text": "Product Overview – Fard Dates Jar (Barari)" },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Fard Dates Jar (Barari) offered by Vishal Enterprise are a premium quality variety of dates known for their naturally rich taste, firm texture, and balanced sweetness that makes them highly preferred among dry fruit consumers.",
+//         "These dates are carefully sourced from reliable farms and trusted suppliers to ensure authentic quality, freshness, and consistent product standards suitable for both retail and wholesale markets.",
+//         "Fard dates are widely appreciated for their slightly firm yet chewy texture which makes them perfect for everyday snacking and for use in various traditional and modern recipes.",
+//         "The product is hygienically packed in durable jar packaging which helps preserve the natural moisture, freshness, and taste of the dates for a longer duration.",
+//         "The Barari Fard dates are suitable for daily consumption, festive gifting, and inclusion in premium dry fruit assortments.",
+//         "Vishal Enterprise follows strict quality control and hygienic handling practices to deliver premium quality dates that meet customer expectations."
+//       ]
+//     },
 
-    { "type": "h2", "text": "Key Features" },
-    {
-      "type": "ul",
-      "items": [
-        "Premium Fard dates known for their naturally sweet taste and firm yet soft texture.",
-        "Carefully selected and sorted to maintain consistent quality, size, and appearance.",
-        "Naturally nutritious snack suitable for daily consumption by people of all age groups.",
-        "Convenient jar packaging that preserves freshness and allows easy storage.",
-        "Ideal for retail sale, festive gifting, and premium dry fruit assortments.",
-        "Versatile ingredient suitable for desserts, smoothies, bakery products, and traditional recipes."
-      ]
-    },
+//     { "type": "h2", "text": "Product Details" },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Variety – Fard Dates: A premium variety of dates known for its firm texture and naturally sweet taste.",
+//         "Packaging Size – 6 Kg: Bulk carton packaging suitable for wholesalers, retailers, and commercial buyers.",
+//         "Color – Black: Naturally black colored dates reflecting authentic quality and freshness.",
+//         "Packaging Type – Carton: Durable carton packaging ensures safe storage and protection during transportation.",
+//         "Shelf Life – 12 Months: Long shelf life when stored properly in a cool and dry environment.",
+//         "Form – Packed: Hygienically packed to maintain freshness, safety, and consistent quality.",
+//         "Type – With Seed: Whole natural dates containing seeds which preserve their authentic taste and texture."
+//       ]
+//     },
 
-    { "type": "h2", "text": "Health Benefits" },
-    {
-      "type": "ul",
-      "items": [
-        "Fard dates contain natural antioxidants that help protect the body from oxidative stress and support overall wellness.",
-        "They provide instant natural energy due to naturally occurring sugars such as glucose and fructose.",
-        "Rich in dietary fiber which helps support healthy digestion and improves gut function.",
-        "Contains essential minerals such as potassium and magnesium that contribute to heart health.",
-        "Regular consumption may help strengthen immunity and maintain overall body vitality.",
-        "A wholesome and nutritious snack that contributes to a balanced and healthy lifestyle."
-      ]
-    },
+//     { "type": "h2", "text": "Packaging Details" },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "6 Kg Carton – Each carton contains a total of 6 kilograms of premium Fard dates suitable for bulk supply.",
+//         "500 g Jar Packs – Each carton contains 12 jar packs of 500 grams each.",
+//         "Jar packaging helps maintain product freshness and makes storage convenient for consumers.",
+//         "Retail-friendly packaging allows easy display and handling in stores, supermarkets, and retail outlets.",
+//         "Secure carton packing ensures safe transportation and organized distribution for wholesalers and traders."
+//       ]
+//     },
 
-    { "type": "h2", "text": "Why Choose Vishal Enterprise for Dates" },
-    {
-      "type": "ul",
-      "items": [
-        "More than three decades of experience in supplying premium quality dates, coconuts, and dry fruits across wholesale and retail markets.",
-        "Trusted supplier for wholesalers, retailers, and traders who require consistent product quality and reliable supply.",
-        "Products sourced from reliable farms and international suppliers ensuring authenticity and premium standards.",
-        "Strict quality control and hygienic packaging practices followed throughout the sourcing and distribution process.",
-        "Strong distribution network ensuring timely delivery and consistent product availability.",
-        "Customer-focused approach offering competitive pricing and long-term business relationships."
-      ]
-    }
-  ],
+//     { "type": "h2", "text": "Key Features" },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Premium Fard dates known for their naturally sweet taste and firm yet soft texture.",
+//         "Carefully selected and sorted to maintain consistent quality, size, and appearance.",
+//         "Naturally nutritious snack suitable for daily consumption by people of all age groups.",
+//         "Convenient jar packaging that preserves freshness and allows easy storage.",
+//         "Ideal for retail sale, festive gifting, and premium dry fruit assortments.",
+//         "Versatile ingredient suitable for desserts, smoothies, bakery products, and traditional recipes."
+//       ]
+//     },
 
-  "specs": [
-    { "label": "Variety", "value": "Fard Dates" },
-    { "label": "Packaging Size", "value": "6 Kg" },
-    { "label": "Color", "value": "Black" },
-    { "label": "Packaging Type", "value": "Carton" },
-    { "label": "Shelf Life", "value": "12 Months" },
-    { "label": "Form", "value": "Packed" },
-    { "label": "Type", "value": "With Seed" }
-  ],
+//     { "type": "h2", "text": "Health Benefits" },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Fard dates contain natural antioxidants that help protect the body from oxidative stress and support overall wellness.",
+//         "They provide instant natural energy due to naturally occurring sugars such as glucose and fructose.",
+//         "Rich in dietary fiber which helps support healthy digestion and improves gut function.",
+//         "Contains essential minerals such as potassium and magnesium that contribute to heart health.",
+//         "Regular consumption may help strengthen immunity and maintain overall body vitality.",
+//         "A wholesome and nutritious snack that contributes to a balanced and healthy lifestyle."
+//       ]
+//     },
 
-  "image": [
-    {
-      "src": "/product/jarfard.webp",
-      "alt": "Fard Dates Jar Barari 6kg Carton Pack"
-    }
-  ]
-},
+//     { "type": "h2", "text": "Why Choose Vishal Enterprise for Dates" },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "More than three decades of experience in supplying premium quality dates, coconuts, and dry fruits across wholesale and retail markets.",
+//         "Trusted supplier for wholesalers, retailers, and traders who require consistent product quality and reliable supply.",
+//         "Products sourced from reliable farms and international suppliers ensuring authenticity and premium standards.",
+//         "Strict quality control and hygienic packaging practices followed throughout the sourcing and distribution process.",
+//         "Strong distribution network ensuring timely delivery and consistent product availability.",
+//         "Customer-focused approach offering competitive pricing and long-term business relationships."
+//       ]
+//     }
+//   ],
+
+//   "specs": [
+//     { "label": "Variety", "value": "Fard Dates" },
+//     { "label": "Packaging Size", "value": "6 Kg" },
+//     { "label": "Color", "value": "Black" },
+//     { "label": "Packaging Type", "value": "Carton" },
+//     { "label": "Shelf Life", "value": "12 Months" },
+//     { "label": "Form", "value": "Packed" },
+//     { "label": "Type", "value": "With Seed" }
+//   ],
+
+//   "image": [
+//     {
+//       "src": "/product/jarfard.webp",
+//       "alt": "Fard Dates Jar Barari 6kg Carton Pack"
+//     }
+//   ]
+// },
+
+
 {
   "id": "Fard-Dates-Loose-10kg",
   "name": "Fard Loose (₹210 Per Kg)",
@@ -2744,111 +2741,113 @@ export const categories = [
     }
   ]
 },
-{
-  "id": "Zahidi-Loose-Barari-10kg",
-  "name": "Zahidi Loose 10kg (Barari) (₹115rs per kg)",
-  "metaTitle": "Barari Zahidi Loose Dates 10kg Carton ₹115 Per Kg | A Grade Brown Zahidi Dates",
-  "metaDescription": "Buy Barari Zahidi Loose Dates 10kg carton at ₹115 per kg. A Grade brown Zahidi dates with natural sweetness, packed for wholesale supply and bulk distribution.",
 
-  "description": [
-    { "type": "h2", "text": "Product Overview – Barari Zahidi Loose Dates" },
-    {
-      "type": "ul",
-      "items": [
-        "Barari Zahidi Loose Dates are a popular dry date variety known for their natural sweetness, firm texture, and consistent quality.",
-        "These dates are carefully sourced and packed to maintain their authentic flavor, natural appearance, and freshness.",
-        "Zahidi dates are widely consumed as a healthy snack and are also commonly used in sweets, desserts, and traditional recipes.",
-        "The dates have a natural brown color and a mildly sweet taste which makes them suitable for everyday consumption.",
-        "Loose bulk packaging makes them ideal for wholesalers, retailers, and dry fruit traders who require larger quantities.",
-        "Barari brand dates are known for maintaining reliable quality standards and hygienic handling practices."
-      ]
-    },
 
-    { "type": "h2", "text": "Product Details" },
-    {
-      "type": "ul",
-      "items": [
-        "Quality Available – A Grade: Carefully selected dates offering good texture, taste, and visual quality.",
-        "Packaging Size – 10 Kg: Bulk quantity packaging suitable for wholesale and retail distribution.",
-        "Color – Brown: Natural brown colored dates that indicate authentic and natural processing.",
-        "Packaging Type – Carton: Strong carton packaging designed to protect the dates during transportation.",
-        "Shelf Life – 12 Months: Long storage life when kept in a cool and dry place.",
-        "Brand – Barari: A recognized brand supplying quality dates in wholesale markets.",
-        "Magnesium – 2 mg: Dates contain essential minerals that support overall health.",
-        "Sodium – 1 mg: Low sodium content makes them suitable for balanced dietary intake."
-      ]
-    },
+// {
+//   "id": "Zahidi-Loose-Barari-10kg",
+//   "name": "Zahidi Loose 10kg (Barari) (₹115rs per kg)",
+//   "metaTitle": "Barari Zahidi Loose Dates 10kg Carton ₹115 Per Kg | A Grade Brown Zahidi Dates",
+//   "metaDescription": "Buy Barari Zahidi Loose Dates 10kg carton at ₹115 per kg. A Grade brown Zahidi dates with natural sweetness, packed for wholesale supply and bulk distribution.",
 
-    { "type": "h2", "text": "Packaging Details" },
-    {
-      "type": "ul",
-      "items": [
-        "10 Kg Bulk Carton – Each carton contains 10 kilograms of loose Zahidi dates suitable for bulk supply.",
-        "Loose packaging allows easy repacking for retailers and distributors.",
-        "Durable carton packaging protects the dates from damage during storage and transportation.",
-        "Bulk packaging is suitable for wholesale markets, dry fruit traders, and large retailers.",
-        "Secure packing helps maintain freshness and product quality during logistics handling."
-      ]
-    },
+//   "description": [
+//     { "type": "h2", "text": "Product Overview – Barari Zahidi Loose Dates" },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Barari Zahidi Loose Dates are a popular dry date variety known for their natural sweetness, firm texture, and consistent quality.",
+//         "These dates are carefully sourced and packed to maintain their authentic flavor, natural appearance, and freshness.",
+//         "Zahidi dates are widely consumed as a healthy snack and are also commonly used in sweets, desserts, and traditional recipes.",
+//         "The dates have a natural brown color and a mildly sweet taste which makes them suitable for everyday consumption.",
+//         "Loose bulk packaging makes them ideal for wholesalers, retailers, and dry fruit traders who require larger quantities.",
+//         "Barari brand dates are known for maintaining reliable quality standards and hygienic handling practices."
+//       ]
+//     },
 
-    { "type": "h2", "text": "Key Features" },
-    {
-      "type": "ul",
-      "items": [
-        "Premium A Grade Zahidi dates with naturally sweet taste and firm texture.",
-        "Bulk packaging suitable for wholesalers and retailers.",
-        "Naturally brown colored dates indicating authentic quality.",
-        "Reliable Barari brand known for consistent date quality.",
-        "Long shelf life ensuring convenient storage and supply management.",
-        "Versatile usage in snacks, desserts, sweets, and traditional food preparations."
-      ]
-    },
+//     { "type": "h2", "text": "Product Details" },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Quality Available – A Grade: Carefully selected dates offering good texture, taste, and visual quality.",
+//         "Packaging Size – 10 Kg: Bulk quantity packaging suitable for wholesale and retail distribution.",
+//         "Color – Brown: Natural brown colored dates that indicate authentic and natural processing.",
+//         "Packaging Type – Carton: Strong carton packaging designed to protect the dates during transportation.",
+//         "Shelf Life – 12 Months: Long storage life when kept in a cool and dry place.",
+//         "Brand – Barari: A recognized brand supplying quality dates in wholesale markets.",
+//         "Magnesium – 2 mg: Dates contain essential minerals that support overall health.",
+//         "Sodium – 1 mg: Low sodium content makes them suitable for balanced dietary intake."
+//       ]
+//     },
 
-    { "type": "h2", "text": "Health Benefits" },
-    {
-      "type": "ul",
-      "items": [
-        "Zahidi dates provide natural energy due to their naturally occurring sugars.",
-        "Dietary fiber present in dates helps support digestion and gut health.",
-        "Dates contain minerals such as magnesium which supports muscle and nerve function.",
-        "Low sodium content helps maintain a balanced nutritional intake.",
-        "Dates also contain antioxidants that help protect the body from oxidative stress.",
-        "A naturally nutritious snack suitable for daily consumption."
-      ]
-    },
+//     { "type": "h2", "text": "Packaging Details" },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "10 Kg Bulk Carton – Each carton contains 10 kilograms of loose Zahidi dates suitable for bulk supply.",
+//         "Loose packaging allows easy repacking for retailers and distributors.",
+//         "Durable carton packaging protects the dates from damage during storage and transportation.",
+//         "Bulk packaging is suitable for wholesale markets, dry fruit traders, and large retailers.",
+//         "Secure packing helps maintain freshness and product quality during logistics handling."
+//       ]
+//     },
 
-    { "type": "h2", "text": "Why Choose Vishal Enterprise for Dates" },
-    {
-      "type": "ul",
-      "items": [
-        "More than three decades of experience in the dry fruits and dates trading industry.",
-        "Trusted supplier for wholesalers, retailers, and distributors across multiple markets.",
-        "Products sourced from reliable suppliers ensuring authentic quality.",
-        "Strict quality inspection and hygienic packaging practices.",
-        "Efficient logistics network ensuring timely delivery and consistent supply.",
-        "Competitive pricing with long-term business reliability."
-      ]
-    }
-  ],
+//     { "type": "h2", "text": "Key Features" },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Premium A Grade Zahidi dates with naturally sweet taste and firm texture.",
+//         "Bulk packaging suitable for wholesalers and retailers.",
+//         "Naturally brown colored dates indicating authentic quality.",
+//         "Reliable Barari brand known for consistent date quality.",
+//         "Long shelf life ensuring convenient storage and supply management.",
+//         "Versatile usage in snacks, desserts, sweets, and traditional food preparations."
+//       ]
+//     },
 
-  "specs": [
-    { "label": "Quality Available", "value": "A Grade" },
-    { "label": "Packaging Size", "value": "10 Kg" },
-    { "label": "Color", "value": "Brown" },
-    { "label": "Packaging Type", "value": "Carton" },
-    { "label": "Shelf Life", "value": "12 Months" },
-    { "label": "Brand", "value": "Barari" },
-    { "label": "Magnesium", "value": "2 mg" },
-    { "label": "Sodium", "value": "1 mg" }
-  ],
+//     { "type": "h2", "text": "Health Benefits" },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Zahidi dates provide natural energy due to their naturally occurring sugars.",
+//         "Dietary fiber present in dates helps support digestion and gut health.",
+//         "Dates contain minerals such as magnesium which supports muscle and nerve function.",
+//         "Low sodium content helps maintain a balanced nutritional intake.",
+//         "Dates also contain antioxidants that help protect the body from oxidative stress.",
+//         "A naturally nutritious snack suitable for daily consumption."
+//       ]
+//     },
 
-  "image": [
-    {
-      "src": "/product/zahidiLoose10kg.webp",
-      "alt": "Barari Zahidi Loose Dates 10kg Carton"
-    }
-  ]
-},
+//     { "type": "h2", "text": "Why Choose Vishal Enterprise for Dates" },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "More than three decades of experience in the dry fruits and dates trading industry.",
+//         "Trusted supplier for wholesalers, retailers, and distributors across multiple markets.",
+//         "Products sourced from reliable suppliers ensuring authentic quality.",
+//         "Strict quality inspection and hygienic packaging practices.",
+//         "Efficient logistics network ensuring timely delivery and consistent supply.",
+//         "Competitive pricing with long-term business reliability."
+//       ]
+//     }
+//   ],
+
+//   "specs": [
+//     { "label": "Quality Available", "value": "A Grade" },
+//     { "label": "Packaging Size", "value": "10 Kg" },
+//     { "label": "Color", "value": "Brown" },
+//     { "label": "Packaging Type", "value": "Carton" },
+//     { "label": "Shelf Life", "value": "12 Months" },
+//     { "label": "Brand", "value": "Barari" },
+//     { "label": "Magnesium", "value": "2 mg" },
+//     { "label": "Sodium", "value": "1 mg" }
+//   ],
+
+//   "image": [
+//     {
+//       "src": "/product/zahidiLoose10kg.webp",
+//       "alt": "Barari Zahidi Loose Dates 10kg Carton"
+//     }
+//   ]
+// },
   ]
 },
 
@@ -4225,122 +4224,126 @@ export const categories = [
   "metaTitle": "Kimia Dates Supplier | Premium Kimia Khajoor | Vishal Enterprise",
   "metaDescription": "Vishal Enterprise is a trusted dates supplier offering premium Kimia dates and Kimia khajoor for wholesale and bulk orders with rich taste and soft texture.",
   "products": [
-{
-  "id": "barari-dates-500gm",
-  "name": "Barari Dates (500gm) (₹270 Per Kg)",
-  "metaTitle": "Barari Dates 500gm ₹270 Per Kg | Premium Black Dates Carton Pack",
-  "metaDescription": "Buy Barari Dates 500gm pack at ₹270 per kg. Premium quality black dates with natural sweetness, soft texture, and hygienic carton packaging.",
 
-  "description": [
-    {
-      "type": "h2",
-      "text": "Product Overview – Barari Dates"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Barari Dates are premium quality dates known for their naturally sweet flavor, soft texture, and rich taste that makes them a popular choice among dry fruit consumers.",
-        "These dates have a natural black color and smooth outer skin which reflects their freshness and authentic quality.",
-        "Barari dates are commonly enjoyed as a healthy snack and are also widely used in desserts, sweets, bakery products, and traditional recipes.",
-        "Each batch of dates is carefully selected to ensure consistent taste, size, and overall product quality before packaging.",
-        "Hygienic packaging helps maintain freshness and protects the dates from moisture, dust, and external contamination.",
-        "Barari dates are suitable for households, retailers, and wholesalers due to their convenient packaging and reliable quality."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Product Details"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Variety – Barari Dates: A well-known variety appreciated for its natural sweetness and smooth chewy texture.",
-        "Packaging Size – 500 gm retail pack supplied in 7 kg carton packaging suitable for distribution and bulk supply.",
-        "Color – Black: Naturally black colored dates indicating good quality and proper ripening.",
-        "Packaging Type – Carton: Durable carton packaging helps protect the dates during transportation and storage.",
-        "Shelf Life – 12 Months: Long shelf life when stored properly in a cool and dry place.",
-        "Form – Packed: Hygienically packed to ensure safe handling and maintain product freshness.",
-        "Type – With Seed: Dates contain natural seeds which preserve their authentic flavor and natural texture."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Packaging Details"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "7 Kg Carton – Each carton contains 14 packs of 500 gm Barari dates.",
-        "Strong outer carton protects the dates from damage during transportation and storage.",
-        "Individual packs help maintain freshness and make the product convenient for retail sales.",
-        "Bulk carton packaging is suitable for wholesalers, retailers, and dry fruit distributors.",
-        "Secure packaging ensures the dates retain their natural taste and texture."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Key Features"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Premium Barari dates with naturally sweet flavor and soft chewy texture.",
-        "Authentic black colored dates indicating good quality and freshness.",
-        "Hygienically packed to maintain freshness and product safety.",
-        "Convenient 500 gm retail pack suitable for households and store sales.",
-        "Long shelf life which allows easy storage and distribution.",
-        "Versatile dry fruit suitable for snacks, desserts, sweets, and bakery recipes."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Health Benefits"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Dates provide natural energy because they contain natural sugars that help boost energy levels quickly.",
-        "They are rich in dietary fiber which supports healthy digestion and gut health.",
-        "Dates contain essential minerals and nutrients that contribute to overall body wellness.",
-        "Natural antioxidants present in dates help protect the body from oxidative stress.",
-        "Regular consumption of dates may support heart health and help maintain energy levels throughout the day.",
-        "A healthy and natural snack option compared to processed sugary foods."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Why Choose Vishal Enterprise for Dates"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "More than 30 years of experience in supplying premium dates and dry fruits in the Indian market.",
-        "Trusted supplier for wholesalers, retailers, and distributors across various regions.",
-        "Products sourced from reliable suppliers ensuring consistent quality and authentic taste.",
-        "Strict quality inspection and hygienic packaging standards followed.",
-        "Efficient logistics and supply chain ensuring timely delivery and product availability.",
-        "Competitive wholesale pricing along with dependable customer service."
-      ]
-    }
-  ],
 
-  "specs": [
-    { "label": "Variety", "value": "Barari Dates" },
-    { "label": "Packaging Size", "value": "500 gm" },
-    { "label": "Color", "value": "Black" },
-    { "label": "Packaging Type", "value": "Carton" },
-    { "label": "Shelf Life", "value": "12 Months" },
-    { "label": "Form", "value": "Packed" },
-    { "label": "Type", "value": "With Seed" }
-  ],
+// {
+//   "id": "barari-dates-500gm",
+//   "name": "Barari Dates (500gm) (₹270 Per Kg)",
+//   "metaTitle": "Barari Dates 500gm ₹270 Per Kg | Premium Black Dates Carton Pack",
+//   "metaDescription": "Buy Barari Dates 500gm pack at ₹270 per kg. Premium quality black dates with natural sweetness, soft texture, and hygienic carton packaging.",
 
-  "image": [
-    {
-      "src": "/product/barrariDates.webp",
-      "alt": "Barari Dates 500gm Premium Black Dates"
-    }
-  ]
-},
+//   "description": [
+//     {
+//       "type": "h2",
+//       "text": "Product Overview – Barari Dates"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Barari Dates are premium quality dates known for their naturally sweet flavor, soft texture, and rich taste that makes them a popular choice among dry fruit consumers.",
+//         "These dates have a natural black color and smooth outer skin which reflects their freshness and authentic quality.",
+//         "Barari dates are commonly enjoyed as a healthy snack and are also widely used in desserts, sweets, bakery products, and traditional recipes.",
+//         "Each batch of dates is carefully selected to ensure consistent taste, size, and overall product quality before packaging.",
+//         "Hygienic packaging helps maintain freshness and protects the dates from moisture, dust, and external contamination.",
+//         "Barari dates are suitable for households, retailers, and wholesalers due to their convenient packaging and reliable quality."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Product Details"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Variety – Barari Dates: A well-known variety appreciated for its natural sweetness and smooth chewy texture.",
+//         "Packaging Size – 500 gm retail pack supplied in 7 kg carton packaging suitable for distribution and bulk supply.",
+//         "Color – Black: Naturally black colored dates indicating good quality and proper ripening.",
+//         "Packaging Type – Carton: Durable carton packaging helps protect the dates during transportation and storage.",
+//         "Shelf Life – 12 Months: Long shelf life when stored properly in a cool and dry place.",
+//         "Form – Packed: Hygienically packed to ensure safe handling and maintain product freshness.",
+//         "Type – With Seed: Dates contain natural seeds which preserve their authentic flavor and natural texture."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Packaging Details"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "7 Kg Carton – Each carton contains 14 packs of 500 gm Barari dates.",
+//         "Strong outer carton protects the dates from damage during transportation and storage.",
+//         "Individual packs help maintain freshness and make the product convenient for retail sales.",
+//         "Bulk carton packaging is suitable for wholesalers, retailers, and dry fruit distributors.",
+//         "Secure packaging ensures the dates retain their natural taste and texture."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Key Features"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Premium Barari dates with naturally sweet flavor and soft chewy texture.",
+//         "Authentic black colored dates indicating good quality and freshness.",
+//         "Hygienically packed to maintain freshness and product safety.",
+//         "Convenient 500 gm retail pack suitable for households and store sales.",
+//         "Long shelf life which allows easy storage and distribution.",
+//         "Versatile dry fruit suitable for snacks, desserts, sweets, and bakery recipes."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Health Benefits"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Dates provide natural energy because they contain natural sugars that help boost energy levels quickly.",
+//         "They are rich in dietary fiber which supports healthy digestion and gut health.",
+//         "Dates contain essential minerals and nutrients that contribute to overall body wellness.",
+//         "Natural antioxidants present in dates help protect the body from oxidative stress.",
+//         "Regular consumption of dates may support heart health and help maintain energy levels throughout the day.",
+//         "A healthy and natural snack option compared to processed sugary foods."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Why Choose Vishal Enterprise for Dates"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "More than 30 years of experience in supplying premium dates and dry fruits in the Indian market.",
+//         "Trusted supplier for wholesalers, retailers, and distributors across various regions.",
+//         "Products sourced from reliable suppliers ensuring consistent quality and authentic taste.",
+//         "Strict quality inspection and hygienic packaging standards followed.",
+//         "Efficient logistics and supply chain ensuring timely delivery and product availability.",
+//         "Competitive wholesale pricing along with dependable customer service."
+//       ]
+//     }
+//   ],
+
+//   "specs": [
+//     { "label": "Variety", "value": "Barari Dates" },
+//     { "label": "Packaging Size", "value": "500 gm" },
+//     { "label": "Color", "value": "Black" },
+//     { "label": "Packaging Type", "value": "Carton" },
+//     { "label": "Shelf Life", "value": "12 Months" },
+//     { "label": "Form", "value": "Packed" },
+//     { "label": "Type", "value": "With Seed" }
+//   ],
+
+//   "image": [
+//     {
+//       "src": "/product/barrariDates.webp",
+//       "alt": "Barari Dates 500gm Premium Black Dates"
+//     }
+//   ]
+// },
+
+
 {
   "id": "borna-dates-275gm",
   "name": "Borna Dates (275gm) (₹185 Per Kg)",
@@ -5732,120 +5735,124 @@ export const categories = [
   "metaTitle": "Medjool Dates Supplier | Premium Medjool Khajoor | Vishal Enterprise",
   "metaDescription": "Vishal Enterprise is a trusted dates supplier offering premium Medjool dates and Medjool khajoor for wholesale and bulk orders with rich taste and natural sweetness.",
   "products": [
-{
-  "id": "barari-medjool-dates-500gm",
-  "name": "Barari Medjool Dates",
-  "price": "₹1100 Per Kg",
-  "metaTitle": "Barari Medjool Dates 500gm A Grade | Premium Medjool Dates Carton Pack",
-  "metaDescription": "Buy Barari Medjool Dates 500gm A Grade quality. Premium large Medjool dates with natural sweetness, rich texture and 15 months shelf life.",
 
-  "description": [
-    {
-      "type": "h2",
-      "text": "Product Overview – Barari Medjool Dates"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Barari Medjool Dates are one of the most premium and popular varieties of dates known for their large size, rich taste, and soft texture.",
-        "These dates are naturally sweet and juicy, making them an excellent healthy snack and a favorite among dry fruit lovers.",
-        "Medjool dates are often referred to as the 'king of dates' because of their superior quality and naturally caramel-like flavor.",
-        "They are widely used in desserts, smoothies, bakery items, and traditional sweets due to their rich sweetness and soft pulp.",
-        "Each pack is hygienically packed to maintain freshness, protect the dates from contamination, and ensure safe consumption.",
-        "Suitable for households, retailers, and premium dry fruit markets looking for high quality dates."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Product Details"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Brand – Barari: A well-known brand recognized for delivering premium quality dates.",
-        "Quality – A Grade: Carefully selected dates with superior taste, texture, and appearance.",
-        "Packaging Size – 500 g retail pack ideal for convenient use and household consumption.",
-        "Color – Black: Naturally dark colored dates indicating proper ripening and premium quality.",
-        "Packaging Type – Carton: Strong carton packaging ensures safe transportation and storage.",
-        "Shelf Life – 15 Months: Long shelf life when stored properly in recommended conditions."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Packaging Information"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Each carton contains 16 packs of 500 gm, making a total of 8 kg bulk packaging.",
-        "Secure carton packaging protects the dates from dust, moisture, and physical damage.",
-        "Proper sealing ensures freshness and preserves the natural taste and texture of the dates.",
-        "Convenient retail pack size suitable for supermarkets, dry fruit stores, and online sales.",
-        "Packaging is designed for safe storage and efficient distribution."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Key Features"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Premium Medjool dates known for their large size and soft juicy texture.",
-        "Naturally sweet flavor with a rich caramel-like taste.",
-        "A Grade quality dates selected for superior taste and appearance.",
-        "Convenient 500 gm retail pack suitable for daily consumption.",
-        "Hygienically packed to maintain freshness and quality.",
-        "Ideal for healthy snacks, desserts, smoothies, and baking."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Health Benefits"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Medjool dates are a natural source of energy due to their natural sugar content.",
-        "They help increase potassium intake which supports nervous system function and muscle health.",
-        "Dates contain dietary fiber that supports digestion and gut health.",
-        "They provide essential nutrients and antioxidants that contribute to overall wellness.",
-        "Regular consumption may help maintain energy levels throughout the day.",
-        "A healthy and natural alternative to refined sugar snacks."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Storage Instructions"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Store the dates in a cool and dry place away from direct sunlight.",
-        "Keep the carton sealed properly after opening to maintain freshness.",
-        "Avoid storing in humid environments to prevent moisture damage.",
-        "Refrigeration can help extend the freshness and shelf life of the dates.",
-        "Proper storage helps preserve the natural taste and texture of Medjool dates."
-      ]
-    }
-  ],
 
-  "specs": [
-    { "label": "Brand", "value": "Barari" },
-    { "label": "Quality Available", "value": "A Grade" },
-    { "label": "Packaging Size", "value": "500 g" },
-    { "label": "Color", "value": "Black" },
-    { "label": "Packaging Type", "value": "Carton" },
-    { "label": "Shelf Life", "value": "15 Months" }
-  ],
+// {
+//   "id": "barari-medjool-dates-500gm",
+//   "name": "Barari Medjool Dates",
+//   "price": "₹1100 Per Kg",
+//   "metaTitle": "Barari Medjool Dates 500gm A Grade | Premium Medjool Dates Carton Pack",
+//   "metaDescription": "Buy Barari Medjool Dates 500gm A Grade quality. Premium large Medjool dates with natural sweetness, rich texture and 15 months shelf life.",
 
-  "image": [
-    {
-      "src": "/product/medjoolBarrari.webp",
-      "alt": "Barari Medjool Dates Premium Large Medjool Dates"
-    }
-  ]
-},
+//   "description": [
+//     {
+//       "type": "h2",
+//       "text": "Product Overview – Barari Medjool Dates"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Barari Medjool Dates are one of the most premium and popular varieties of dates known for their large size, rich taste, and soft texture.",
+//         "These dates are naturally sweet and juicy, making them an excellent healthy snack and a favorite among dry fruit lovers.",
+//         "Medjool dates are often referred to as the 'king of dates' because of their superior quality and naturally caramel-like flavor.",
+//         "They are widely used in desserts, smoothies, bakery items, and traditional sweets due to their rich sweetness and soft pulp.",
+//         "Each pack is hygienically packed to maintain freshness, protect the dates from contamination, and ensure safe consumption.",
+//         "Suitable for households, retailers, and premium dry fruit markets looking for high quality dates."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Product Details"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Brand – Barari: A well-known brand recognized for delivering premium quality dates.",
+//         "Quality – A Grade: Carefully selected dates with superior taste, texture, and appearance.",
+//         "Packaging Size – 500 g retail pack ideal for convenient use and household consumption.",
+//         "Color – Black: Naturally dark colored dates indicating proper ripening and premium quality.",
+//         "Packaging Type – Carton: Strong carton packaging ensures safe transportation and storage.",
+//         "Shelf Life – 15 Months: Long shelf life when stored properly in recommended conditions."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Packaging Information"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Each carton contains 16 packs of 500 gm, making a total of 8 kg bulk packaging.",
+//         "Secure carton packaging protects the dates from dust, moisture, and physical damage.",
+//         "Proper sealing ensures freshness and preserves the natural taste and texture of the dates.",
+//         "Convenient retail pack size suitable for supermarkets, dry fruit stores, and online sales.",
+//         "Packaging is designed for safe storage and efficient distribution."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Key Features"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Premium Medjool dates known for their large size and soft juicy texture.",
+//         "Naturally sweet flavor with a rich caramel-like taste.",
+//         "A Grade quality dates selected for superior taste and appearance.",
+//         "Convenient 500 gm retail pack suitable for daily consumption.",
+//         "Hygienically packed to maintain freshness and quality.",
+//         "Ideal for healthy snacks, desserts, smoothies, and baking."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Health Benefits"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Medjool dates are a natural source of energy due to their natural sugar content.",
+//         "They help increase potassium intake which supports nervous system function and muscle health.",
+//         "Dates contain dietary fiber that supports digestion and gut health.",
+//         "They provide essential nutrients and antioxidants that contribute to overall wellness.",
+//         "Regular consumption may help maintain energy levels throughout the day.",
+//         "A healthy and natural alternative to refined sugar snacks."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Storage Instructions"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Store the dates in a cool and dry place away from direct sunlight.",
+//         "Keep the carton sealed properly after opening to maintain freshness.",
+//         "Avoid storing in humid environments to prevent moisture damage.",
+//         "Refrigeration can help extend the freshness and shelf life of the dates.",
+//         "Proper storage helps preserve the natural taste and texture of Medjool dates."
+//       ]
+//     }
+//   ],
+
+//   "specs": [
+//     { "label": "Brand", "value": "Barari" },
+//     { "label": "Quality Available", "value": "A Grade" },
+//     { "label": "Packaging Size", "value": "500 g" },
+//     { "label": "Color", "value": "Black" },
+//     { "label": "Packaging Type", "value": "Carton" },
+//     { "label": "Shelf Life", "value": "15 Months" }
+//   ],
+
+//   "image": [
+//     {
+//       "src": "/product/medjoolBarrari.webp",
+//       "alt": "Barari Medjool Dates Premium Large Medjool Dates"
+//     }
+//   ]
+// },
+
+
 {
   "id": "medjool-dates-jumbo-5kg",
   "name": "Medjool Dates (Jumbo) (₹1200 Per Kg)",
@@ -7958,111 +7965,117 @@ export const categories = [
   "metaTitle": "Tunisian Dates Supplier | Premium Tunisian Khajoor | Vishal Enterprise",
   "metaDescription": "Vishal Enterprise is a trusted dates supplier offering premium Tunisian dates and khajoor for wholesale and bulk orders with superior quality and taste.",
   "products": [
-{
-  "id": "barari-tunisian-dates-5kg",
-  "name": "Barari Tunisian Dates (₹210 Per Kg)",
-  "price": "₹210 Per Kg",
-  "metaTitle": "Barari Tunisian Dates 5kg Carton | A Grade Tunisian Dates FSSAI Certified",
-  "metaDescription": "Buy Barari Tunisian Dates 5kg carton pack containing 25 packs of 200g each. A Grade brown Tunisian dates with natural sweetness, FSSAI certified and 18 months shelf life.",
 
-  "description": [
-    {
-      "type": "h2",
-      "text": "Product Overview – Barari Tunisian Dates"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Barari Tunisian Dates are premium quality dates known for their balanced sweetness and smooth texture.",
-        "These dates originate from Tunisia, a region well known for producing high-quality date varieties with rich flavor.",
-        "The dates have a natural brown color and soft chewy pulp which makes them suitable for everyday snacking.",
-        "They are commonly consumed directly as a healthy snack and are also used in desserts, smoothies, energy bars, and traditional sweets.",
-        "The 5 kg carton packaging includes multiple smaller packs, making it convenient for retail distribution and bulk buyers.",
-        "Each pack is processed and packed under hygienic conditions to maintain freshness, quality, and product safety."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Product Details"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Variety – Tunisian Dates known for their naturally sweet taste and smooth texture.",
-        "Quality Available – A Grade quality ensuring premium taste, appearance, and consistent size.",
-        "Packaging Size – 5 kg carton pack suitable for wholesale supply and retail distribution.",
-        "Packaging Details – 5 kg carton containing 25 packs of 200 g each for convenient handling.",
-        "Color – Brown indicating properly ripened and processed dates.",
-        "Packaging Type – Carton packaging designed to protect the dates during storage and transportation.",
-        "Shelf Life – 18 months when stored under recommended conditions.",
-        "Certification – FSSAI Certified ensuring compliance with food safety standards."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Key Features"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Premium Tunisian dates with naturally rich sweetness.",
-        "A Grade quality ensuring good texture and consistent taste.",
-        "Convenient multi-pack packaging suitable for retail and distribution.",
-        "Naturally ripened dates with pleasant flavor and soft pulp.",
-        "Carefully packed to maintain freshness and hygiene.",
-        "Ideal for direct consumption, desserts, smoothies, and sweet recipes."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Nutritional Information"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Sodium – 1 mg which contributes to balanced mineral intake.",
-        "Magnesium – 1 mg which supports normal muscle and nerve function.",
-        "Dates naturally contain carbohydrates that provide quick and natural energy.",
-        "They also contain dietary fiber that helps support healthy digestion.",
-        "Dates include essential minerals that contribute to overall wellness."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Storage Instructions"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Store the dates in a cool and dry place away from direct sunlight.",
-        "Keep the carton sealed or store the smaller packs in airtight containers after opening.",
-        "Avoid exposure to humidity to maintain freshness and texture.",
-        "Refrigeration may help extend shelf life and preserve softness.",
-        "Proper storage helps retain the natural taste, aroma, and quality of the dates."
-      ]
-    }
-  ],
 
-  "specs": [
-    { "label": "Variety", "value": "Tunisian Dates" },
-    { "label": "Quality", "value": "A Grade" },
-    { "label": "Packaging Size", "value": "5 kg" },
-    { "label": "Packaging Details", "value": "25 Packs of 200 g each" },
-    { "label": "Color", "value": "Brown" },
-    { "label": "Packaging Type", "value": "Carton" },
-    { "label": "Shelf Life", "value": "18 Months" },
-    { "label": "Sodium", "value": "1 mg" },
-    { "label": "Magnesium", "value": "1 mg" },
-    { "label": "Certification", "value": "FSSAI Certified" }
-  ],
 
-  "image": [
-    {
-      "src": "/product/tunisianBarrai.webp",
-      "alt": "Barari Tunisian Dates 5kg A Grade Brown Dates"
-    }
-  ]
-},
+// {
+//   "id": "barari-tunisian-dates-5kg",
+//   "name": "Barari Tunisian Dates (₹210 Per Kg)",
+//   "price": "₹210 Per Kg",
+//   "metaTitle": "Barari Tunisian Dates 5kg Carton | A Grade Tunisian Dates FSSAI Certified",
+//   "metaDescription": "Buy Barari Tunisian Dates 5kg carton pack containing 25 packs of 200g each. A Grade brown Tunisian dates with natural sweetness, FSSAI certified and 18 months shelf life.",
+
+//   "description": [
+//     {
+//       "type": "h2",
+//       "text": "Product Overview – Barari Tunisian Dates"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Barari Tunisian Dates are premium quality dates known for their balanced sweetness and smooth texture.",
+//         "These dates originate from Tunisia, a region well known for producing high-quality date varieties with rich flavor.",
+//         "The dates have a natural brown color and soft chewy pulp which makes them suitable for everyday snacking.",
+//         "They are commonly consumed directly as a healthy snack and are also used in desserts, smoothies, energy bars, and traditional sweets.",
+//         "The 5 kg carton packaging includes multiple smaller packs, making it convenient for retail distribution and bulk buyers.",
+//         "Each pack is processed and packed under hygienic conditions to maintain freshness, quality, and product safety."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Product Details"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Variety – Tunisian Dates known for their naturally sweet taste and smooth texture.",
+//         "Quality Available – A Grade quality ensuring premium taste, appearance, and consistent size.",
+//         "Packaging Size – 5 kg carton pack suitable for wholesale supply and retail distribution.",
+//         "Packaging Details – 5 kg carton containing 25 packs of 200 g each for convenient handling.",
+//         "Color – Brown indicating properly ripened and processed dates.",
+//         "Packaging Type – Carton packaging designed to protect the dates during storage and transportation.",
+//         "Shelf Life – 18 months when stored under recommended conditions.",
+//         "Certification – FSSAI Certified ensuring compliance with food safety standards."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Key Features"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Premium Tunisian dates with naturally rich sweetness.",
+//         "A Grade quality ensuring good texture and consistent taste.",
+//         "Convenient multi-pack packaging suitable for retail and distribution.",
+//         "Naturally ripened dates with pleasant flavor and soft pulp.",
+//         "Carefully packed to maintain freshness and hygiene.",
+//         "Ideal for direct consumption, desserts, smoothies, and sweet recipes."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Nutritional Information"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Sodium – 1 mg which contributes to balanced mineral intake.",
+//         "Magnesium – 1 mg which supports normal muscle and nerve function.",
+//         "Dates naturally contain carbohydrates that provide quick and natural energy.",
+//         "They also contain dietary fiber that helps support healthy digestion.",
+//         "Dates include essential minerals that contribute to overall wellness."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Storage Instructions"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Store the dates in a cool and dry place away from direct sunlight.",
+//         "Keep the carton sealed or store the smaller packs in airtight containers after opening.",
+//         "Avoid exposure to humidity to maintain freshness and texture.",
+//         "Refrigeration may help extend shelf life and preserve softness.",
+//         "Proper storage helps retain the natural taste, aroma, and quality of the dates."
+//       ]
+//     }
+//   ],
+
+//   "specs": [
+//     { "label": "Variety", "value": "Tunisian Dates" },
+//     { "label": "Quality", "value": "A Grade" },
+//     { "label": "Packaging Size", "value": "5 kg" },
+//     { "label": "Packaging Details", "value": "25 Packs of 200 g each" },
+//     { "label": "Color", "value": "Brown" },
+//     { "label": "Packaging Type", "value": "Carton" },
+//     { "label": "Shelf Life", "value": "18 Months" },
+//     { "label": "Sodium", "value": "1 mg" },
+//     { "label": "Magnesium", "value": "1 mg" },
+//     { "label": "Certification", "value": "FSSAI Certified" }
+//   ],
+
+//   "image": [
+//     {
+//       "src": "/product/tunisianBarrai.webp",
+//       "alt": "Barari Tunisian Dates 5kg A Grade Brown Dates"
+//     }
+//   ]
+// },
+
+
+
 {
   "id": "brown-tunisian-dates-500g",
   "name": "Brown Tunisian Dates 500g (₹360Kg)",
@@ -9488,121 +9501,126 @@ export const categories = [
     }
   ]
 },
-{
-  "id": "tunisian-dates-3kg-barari",
-  "name": "Tunisian Dates 3kg (360rs per kg)",
-  "price": "₹360 Per Kg",
-  "metaTitle": "Tunisian Dates 3kg Barari | A Grade Brown Tunisian Dates",
-  "metaDescription": "Buy Barari Tunisian Dates 3kg pack. Premium A Grade brown Tunisian dates packed in carton packaging with natural sweetness and 12 months shelf life.",
 
-  "description": [
-    {
-      "type": "h2",
-      "text": "Product Overview – Tunisian Dates 3kg"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Tunisian Dates are known for their naturally sweet taste, soft chewy texture, and rich nutritional profile.",
-        "These dates are carefully sourced and processed to ensure premium quality and freshness in every pack.",
-        "The naturally brown colored fruit offers a smooth pulp and balanced sweetness that makes it perfect for daily consumption.",
-        "This 3 kg pack is ideal for families, regular consumers, and retailers looking for quality dates in bulk packaging.",
-        "Tunisian dates can be enjoyed directly as a snack or used in desserts, milkshakes, bakery products, and traditional sweet recipes.",
-        "Hygienically packed to maintain freshness, taste, and nutritional value throughout the storage period."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Packaging Details"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Pack Size – 3 kg consumer pack suitable for family use and retail distribution.",
-        "Packaging Type – Strong carton packaging designed to protect the product during handling and transport.",
-        "Secure Packing – Carefully sealed packaging helps retain freshness and product quality.",
-        "Convenient Bulk Size – Ideal for households, stores, and regular date consumers."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Product Details"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Quality Available – A Grade ensuring consistent size, taste, and premium quality.",
-        "Brand – Barari, known for reliable quality date products.",
-        "Packaging Size – 3 kg pack suitable for bulk household consumption.",
-        "Color – Brown indicating naturally ripened dates.",
-        "Packaging Type – Carton packaging for safe storage and transport.",
-        "Shelf Life – 12 months when stored under recommended conditions.",
-        "Form – Packed hygienically to maintain freshness and product integrity."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Nutritional Information"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Magnesium – 2 mg which helps support bone and muscle health.",
-        "Sodium – 1 mg making it a naturally low sodium food option.",
-        "Dates provide natural sugars that help deliver quick and sustained energy.",
-        "They also contain dietary fiber that supports healthy digestion."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Key Features"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Premium A Grade Tunisian dates with consistent taste and texture.",
-        "Naturally sweet fruit suitable for healthy snacking.",
-        "Convenient 3 kg pack for families and frequent consumers.",
-        "Trusted Barari brand packaging ensures quality and reliability.",
-        "Versatile ingredient for desserts, snacks, smoothies, and cooking.",
-        "Carefully packed to maintain freshness and hygiene."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Storage Instructions"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Store the dates in a cool and dry place away from direct sunlight.",
-        "Keep the carton sealed or transfer dates to an airtight container after opening.",
-        "Avoid moisture or humid conditions to maintain the texture and freshness.",
-        "Refrigeration can help extend shelf life and preserve the natural softness of the dates.",
-        "Proper storage ensures the dates retain their flavor, aroma, and nutritional quality."
-      ]
-    }
-  ],
 
-  "specs": [
-    { "label": "Product Name", "value": "Tunisian Dates 3kg" },
-    { "label": "Brand", "value": "Barari" },
-    { "label": "Quality", "value": "A Grade" },
-    { "label": "Packaging Size", "value": "3 kg" },
-    { "label": "Color", "value": "Brown" },
-    { "label": "Packaging Type", "value": "Carton" },
-    { "label": "Shelf Life", "value": "12 Months" },
-    { "label": "Magnesium", "value": "2 mg" },
-    { "label": "Sodium", "value": "1 mg" }
-  ],
 
-  "image": [
-    {
-      "src": "/product/tunisian3kg.webp",
-      "alt": "Barari Tunisian Dates 3kg A Grade Brown Dates"
-    }
-  ]
-},
+// {
+//   "id": "tunisian-dates-3kg-barari",
+//   "name": "Tunisian Dates 3kg (360rs per kg)",
+//   "price": "₹360 Per Kg",
+//   "metaTitle": "Tunisian Dates 3kg Barari | A Grade Brown Tunisian Dates",
+//   "metaDescription": "Buy Barari Tunisian Dates 3kg pack. Premium A Grade brown Tunisian dates packed in carton packaging with natural sweetness and 12 months shelf life.",
+
+//   "description": [
+//     {
+//       "type": "h2",
+//       "text": "Product Overview – Tunisian Dates 3kg"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Tunisian Dates are known for their naturally sweet taste, soft chewy texture, and rich nutritional profile.",
+//         "These dates are carefully sourced and processed to ensure premium quality and freshness in every pack.",
+//         "The naturally brown colored fruit offers a smooth pulp and balanced sweetness that makes it perfect for daily consumption.",
+//         "This 3 kg pack is ideal for families, regular consumers, and retailers looking for quality dates in bulk packaging.",
+//         "Tunisian dates can be enjoyed directly as a snack or used in desserts, milkshakes, bakery products, and traditional sweet recipes.",
+//         "Hygienically packed to maintain freshness, taste, and nutritional value throughout the storage period."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Packaging Details"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Pack Size – 3 kg consumer pack suitable for family use and retail distribution.",
+//         "Packaging Type – Strong carton packaging designed to protect the product during handling and transport.",
+//         "Secure Packing – Carefully sealed packaging helps retain freshness and product quality.",
+//         "Convenient Bulk Size – Ideal for households, stores, and regular date consumers."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Product Details"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Quality Available – A Grade ensuring consistent size, taste, and premium quality.",
+//         "Brand – Barari, known for reliable quality date products.",
+//         "Packaging Size – 3 kg pack suitable for bulk household consumption.",
+//         "Color – Brown indicating naturally ripened dates.",
+//         "Packaging Type – Carton packaging for safe storage and transport.",
+//         "Shelf Life – 12 months when stored under recommended conditions.",
+//         "Form – Packed hygienically to maintain freshness and product integrity."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Nutritional Information"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Magnesium – 2 mg which helps support bone and muscle health.",
+//         "Sodium – 1 mg making it a naturally low sodium food option.",
+//         "Dates provide natural sugars that help deliver quick and sustained energy.",
+//         "They also contain dietary fiber that supports healthy digestion."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Key Features"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Premium A Grade Tunisian dates with consistent taste and texture.",
+//         "Naturally sweet fruit suitable for healthy snacking.",
+//         "Convenient 3 kg pack for families and frequent consumers.",
+//         "Trusted Barari brand packaging ensures quality and reliability.",
+//         "Versatile ingredient for desserts, snacks, smoothies, and cooking.",
+//         "Carefully packed to maintain freshness and hygiene."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Storage Instructions"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Store the dates in a cool and dry place away from direct sunlight.",
+//         "Keep the carton sealed or transfer dates to an airtight container after opening.",
+//         "Avoid moisture or humid conditions to maintain the texture and freshness.",
+//         "Refrigeration can help extend shelf life and preserve the natural softness of the dates.",
+//         "Proper storage ensures the dates retain their flavor, aroma, and nutritional quality."
+//       ]
+//     }
+//   ],
+
+//   "specs": [
+//     { "label": "Product Name", "value": "Tunisian Dates 3kg" },
+//     { "label": "Brand", "value": "Barari" },
+//     { "label": "Quality", "value": "A Grade" },
+//     { "label": "Packaging Size", "value": "3 kg" },
+//     { "label": "Color", "value": "Brown" },
+//     { "label": "Packaging Type", "value": "Carton" },
+//     { "label": "Shelf Life", "value": "12 Months" },
+//     { "label": "Magnesium", "value": "2 mg" },
+//     { "label": "Sodium", "value": "1 mg" }
+//   ],
+
+//   "image": [
+//     {
+//       "src": "/product/tunisian3kg.webp",
+//       "alt": "Barari Tunisian Dates 3kg A Grade Brown Dates"
+//     }
+//   ]
+// },
+
+
   ]
 },
 
@@ -11566,92 +11584,97 @@ export const categories = [
     }
   ]
 },
-{
-  "id": "milk-chocolate-dates-barari",
-  "name": "Chocolate Dates (₹710 Per Kg)",
-  "price": "₹710 Per Kg",
-  "metaTitle": "Milk Chocolate Dates Barari | Premium Chocolate Coated Dates",
-  "metaDescription": "Buy Milk Chocolate Dates by Barari. Premium round-shaped dates coated with smooth milk chocolate, offering rich taste and high quality.",
 
-  "description": [
-    {
-      "type": "h2",
-      "text": "Product Overview – Chocolate Dates (Milk Chocolate)"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Chocolate Dates (Milk Chocolate) by Barari, supplied through Vishal Enterprise, are a premium treat combining natural dates with smooth milk chocolate coating.",
-        "Carefully crafted to ensure consistent taste, quality, and freshness in every piece.",
-        "These dates feature a round shape and rich brown color, making them visually appealing and perfect for gifting or snacking.",
-        "Hygienically packed in cartons to preserve flavor, texture, and shelf life.",
-        "Ideal for desserts, snacking, special occasions, and culinary creations.",
-        "Vishal Enterprise ensures every pack delivers high-quality, indulgent, and nutritious chocolate dates."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Key Features"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Premium milk chocolate-coated dates with a soft, chewy texture.",
-        "Carefully selected and crafted for consistent taste and quality.",
-        "Attractive round shape and rich brown color for premium presentation.",
-        "Hygienically packed in durable cartons to maintain freshness and integrity.",
-        "Ideal for snacking, gifting, desserts, and special occasions.",
-        "Suitable for retail and wholesale distribution."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Health Benefits"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Provides natural energy from the date’s carbohydrates.",
-        "Contains dietary fiber that supports healthy digestion.",
-        "Includes essential minerals that support overall wellness.",
-        "Offers a delicious alternative to processed sugary snacks.",
-        "Helps maintain balanced energy and sustained vitality.",
-        "Combines the benefits of dates with antioxidants from milk chocolate."
-      ]
-    },
-    {
-      "type": "h2",
-      "text": "Why Choose Vishal Enterprise for Dates"
-    },
-    {
-      "type": "ul",
-      "items": [
-        "Over 10 years of experience in supplying premium dates and dry fruits.",
-        "Trusted wholesaler serving retailers, traders, and bulk buyers.",
-        "Products are carefully sourced from reliable suppliers for consistent quality.",
-        "We follow strict quality inspections and hygienic storage practices.",
-        "Strong distribution network ensures timely delivery and consistent supply.",
-        "Committed to premium quality products, competitive pricing, and long-term customer satisfaction."
-      ]
-    }
-  ],
 
-  "specs": [
-    { "label": "Product Name", "value": "Chocolate Dates" },
-    { "label": "Type", "value": "Milk Chocolate" },
-    { "label": "Brand", "value": "Barari" },
-    { "label": "Packaging Type", "value": "Carton" },
-    { "label": "Shape", "value": "Round" },
-    { "label": "Color", "value": "Brown" }
-  ],
 
-  "image": [
-    {
-      "src": "/product/chocolateDates.webp",
-      "alt": "Milk Chocolate Dates Barari Premium Round Chocolate Coated Dates"
-    }
-  ]
-},
+// {
+//   "id": "milk-chocolate-dates-barari",
+//   "name": "Chocolate Dates (₹710 Per Kg)",
+//   "price": "₹710 Per Kg",
+//   "metaTitle": "Milk Chocolate Dates Barari | Premium Chocolate Coated Dates",
+//   "metaDescription": "Buy Milk Chocolate Dates by Barari. Premium round-shaped dates coated with smooth milk chocolate, offering rich taste and high quality.",
+
+//   "description": [
+//     {
+//       "type": "h2",
+//       "text": "Product Overview – Chocolate Dates (Milk Chocolate)"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Chocolate Dates (Milk Chocolate) by Barari, supplied through Vishal Enterprise, are a premium treat combining natural dates with smooth milk chocolate coating.",
+//         "Carefully crafted to ensure consistent taste, quality, and freshness in every piece.",
+//         "These dates feature a round shape and rich brown color, making them visually appealing and perfect for gifting or snacking.",
+//         "Hygienically packed in cartons to preserve flavor, texture, and shelf life.",
+//         "Ideal for desserts, snacking, special occasions, and culinary creations.",
+//         "Vishal Enterprise ensures every pack delivers high-quality, indulgent, and nutritious chocolate dates."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Key Features"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Premium milk chocolate-coated dates with a soft, chewy texture.",
+//         "Carefully selected and crafted for consistent taste and quality.",
+//         "Attractive round shape and rich brown color for premium presentation.",
+//         "Hygienically packed in durable cartons to maintain freshness and integrity.",
+//         "Ideal for snacking, gifting, desserts, and special occasions.",
+//         "Suitable for retail and wholesale distribution."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Health Benefits"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Provides natural energy from the date’s carbohydrates.",
+//         "Contains dietary fiber that supports healthy digestion.",
+//         "Includes essential minerals that support overall wellness.",
+//         "Offers a delicious alternative to processed sugary snacks.",
+//         "Helps maintain balanced energy and sustained vitality.",
+//         "Combines the benefits of dates with antioxidants from milk chocolate."
+//       ]
+//     },
+//     {
+//       "type": "h2",
+//       "text": "Why Choose Vishal Enterprise for Dates"
+//     },
+//     {
+//       "type": "ul",
+//       "items": [
+//         "Over 10 years of experience in supplying premium dates and dry fruits.",
+//         "Trusted wholesaler serving retailers, traders, and bulk buyers.",
+//         "Products are carefully sourced from reliable suppliers for consistent quality.",
+//         "We follow strict quality inspections and hygienic storage practices.",
+//         "Strong distribution network ensures timely delivery and consistent supply.",
+//         "Committed to premium quality products, competitive pricing, and long-term customer satisfaction."
+//       ]
+//     }
+//   ],
+
+//   "specs": [
+//     { "label": "Product Name", "value": "Chocolate Dates" },
+//     { "label": "Type", "value": "Milk Chocolate" },
+//     { "label": "Brand", "value": "Barari" },
+//     { "label": "Packaging Type", "value": "Carton" },
+//     { "label": "Shape", "value": "Round" },
+//     { "label": "Color", "value": "Brown" }
+//   ],
+
+//   "image": [
+//     {
+//       "src": "/product/chocolateDates.webp",
+//       "alt": "Milk Chocolate Dates Barari Premium Round Chocolate Coated Dates"
+//     }
+//   ]
+// },
+
+
   ]
 },
 
