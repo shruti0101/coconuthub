@@ -12,7 +12,7 @@ const bestsellers = [
   {
     id: 2,
     name: "Chocolate Hazelnut Dates",
-    images: ["/test/6.png", "/test/7.png", "/product/CaliforniaAlmondsRoasted250g.webp", "/product/chocolateDates.webp", "/test/10.png"]
+    images: ["/test/6.png", "/test/7.png", "/product/CaliforniaAlmondsRoasted250g.webp", "/taj.png", "/test/10.png"]
   },
   // {
   //   id: 3,
