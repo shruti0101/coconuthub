@@ -4,19 +4,20 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Image from "next/image"
+import Link from "next/link"
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function AboutSection() {
 
-  const products = [
-    { name: "Ajwa Dates", img: "/product/ajwaJar.webp", },
-    { name: "Fard Dates", img: "/product/fardDates1.webp" },
-    { name: "Kimia Gold", img: "/product/kimiaKgold.webp" },
-    { name: "California Almonds", img: "/product/CaliforniaAlmondsRoasted.webp" },
-    { name: "Apricot", img: "/product/apricotDiredTurkel.webp" },
-    { name: "Chocolate Dates", img: "/product/chocolateAlRaiqa.webp" },
-    { name: "Cashew Nuts", img: "/product/cashewNut500g.webp" },
+   const products = [
+    { name: "Ajwa Dates", img: "/product/ajwaJar.webp",href:"/categories/ajwa-dates" },
+    { name: "Fard Dates", img: "/product/fardDates1.webp",href:"/categories/fard-dates" },
+    { name: "Kimia Dates", img: "/product/kimiaKgold.webp",href:"/categories/kimia-dates" },
+    { name: "California Almonds", img: "/product/CaliforniaAlmondsRoasted.webp",href:"/categories/california-almonds" },
+    { name: "Apricot", img: "/product/apricotDiredTurkel.webp",href:"/categories/dried-apricot" },
+    { name: "Chocolate Dates", img: "/product/chocolateAlRaiqa.webp",href:"/categories/chocolates-dates" },
+    { name: "Cashew Nuts", img: "/product/cashewNut500g.webp",href:"/categories/cashew-nuts" },
   ]
 
   const cardsRef = useRef([])
@@ -193,8 +194,9 @@ export default function AboutSection() {
 
             <div ref={sliderRef} className="flex gap-10 w-max">
               {loopProducts.map((item, i) => (
-                <div
+                <Link
                   key={i}
+                  href={item.href}
                   ref={(el) => (cardsRef.current[i] = el)}
                   onMouseMove={(e) => magneticMove(e, e.currentTarget)}
                   onMouseLeave={(e) => resetMagnet(e.currentTarget)}
@@ -207,7 +209,7 @@ export default function AboutSection() {
                   <p className="mt-2 text-[22px] font-medium text-[#333]">
                     {item.name}
                   </p>
-                </div>
+                </Link>
               ))}
             </div>
 

@@ -20,8 +20,7 @@ const Footer = () => {
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/40"></div>
 
-      <div className="relative z-10 container mx-auto px-6 py-10 md:py-25 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10">
-
+      <div className="relative z-10 container mx-auto px-6 py-10 md:py-25 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10 md:gap-7">
         {/* ABOUT */}
         <div>
           <h3 className="text-lg font-semibold mb-5 border-b border-yellow-400 pb-2">
@@ -38,8 +37,6 @@ const Footer = () => {
           </p>
         </div>
 
-      
-
         {/* CATEGORIES */}
         <div>
           <h3 className="text-lg font-semibold mb-5 border-b border-yellow-400 pb-2">
@@ -47,30 +44,106 @@ const Footer = () => {
           </h3>
 
           <ul className="space-y-3 text-sm text-white">
-            <li><a href="#" className="hover:text-yellow-400">Kalmi Dates</a></li>
-            <li><a href="#" className="hover:text-yellow-400">Kimia Dates</a></li>
-            <li><a href="#" className="hover:text-yellow-400">Medjoul Dates</a></li>
-            <li><a href="#" className="hover:text-yellow-400">Dried Figs</a></li>
-            <li><a href="#" className="hover:text-yellow-400">Dry Fruits</a></li>
-            <li><a href="#" className="hover:text-yellow-400">Tunisian Dates</a></li>
-            <li><a href="#" className="hover:text-yellow-400">Zahidi Dates</a></li>
-            <li><a href="#" className="hover:text-yellow-400">Ajwa Dates</a></li>
-            <li><a href="#" className="hover:text-yellow-400">Dried Apricot</a></li>
+            <li>
+              <a
+                href="/categories/kalmi-dates"
+                className="hover:text-yellow-400"
+              >
+                Kalmi Dates
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/categories/chocolates-dates"
+                className="hover:text-yellow-400"
+              >
+                Chocolate Dates
+              </a>
+            </li>
+            <li>
+              <a
+                href="/categories/medjool-dates"
+                className="hover:text-yellow-400"
+              >
+                Medjoul Dates
+              </a>
+            </li>
+            <li>
+              <a
+                href="/categories/afgan-dry-figs"
+                className="hover:text-yellow-400"
+              >
+                Afgani Dried Figs
+              </a>
+            </li>
+            <li>
+              <a
+                href="/categories/tunisian-dates"
+                className="hover:text-yellow-400"
+              >
+                Tunisian Dates
+              </a>
+            </li>
+            <li>
+              <a
+                href="/categories/fresh-zahidi-dates"
+                className="hover:text-yellow-400"
+              >
+                Fresh Zahidi Dates
+              </a>
+            </li>
+            <li>
+              <a
+                href="/categories/ajwa-dates"
+                className="hover:text-yellow-400"
+              >
+                Ajwa Dates
+              </a>
+            </li>
+            <li>
+              <a
+                href="/categories/dried-apricot"
+                className="hover:text-yellow-400"
+              >
+                Dried Apricot
+              </a>
+            </li>
           </ul>
         </div>
 
-          {/* MORE SERVICES */}
+        {/* MORE SERVICES */}
         <div>
           <h3 className="text-lg font-semibold mb-5 border-b border-yellow-400 pb-2">
             More Services
           </h3>
 
           <ul className="space-y-3 text-sm text-white">
-            <li><a href="/" className="hover:text-yellow-400">Home</a></li>
-            <li><a href="/about" className="hover:text-yellow-400">About Us</a></li>
-            <li><a href="/products" className="hover:text-yellow-400">Products</a></li>
-            <li><a href="/our-blogs" className="hover:text-yellow-400">Blog</a></li>
-            <li><a href="/contact" className="hover:text-yellow-400">Contact Us</a></li>
+            <li>
+              <a href="/" className="hover:text-yellow-400">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/about" className="hover:text-yellow-400">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="/products" className="hover:text-yellow-400">
+                Products
+              </a>
+            </li>
+            <li>
+              <a href="/our-blogs" className="hover:text-yellow-400">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="hover:text-yellow-400">
+                Contact Us
+              </a>
+            </li>
             {/* <li><a href="/privacy-policy" className="hover:text-yellow-400">Privacy Policy</a></li>
             <li><a href="/terms" className="hover:text-yellow-400">Terms & Conditions</a></li>
             <li><a href="/return-policy" className="hover:text-yellow-400">Return & Refund Policy</a></li>
@@ -84,24 +157,54 @@ const Footer = () => {
             Contact Info
           </h3>
 
-          <p className="text-sm flex items-start gap-3 mb-3 text-white">
+          <p className="text-sm flex  items-start gap-2 mb-3 text-white">
             <FaMapMarkerAlt className="mt-1 text-yellow-400" />
-            Ground Floor, Azadpur Block-B 133,
-            New Sabzi Mandi, Delhi 110033
+            Ground Floor, Azadpur Block-B 133,New Sabzi Mandi,
+            <br className="hidden md:block" /> Delhi 110033
           </p>
 
           <p className="text-sm flex items-center gap-2 mb-2">
-            <FaPhoneAlt className="text-yellow-400" /> +91 98180 59818
+            <FaPhoneAlt className="text-yellow-400" />
+            <a
+              href="tel:+919818059818"
+              className="hover:text-yellow-400 transition"
+            >
+              +91 98180 59818
+            </a>
           </p>
 
           <p className="text-sm flex items-center gap-2 mb-4">
-            <FaEnvelope className="text-yellow-400" /> support@datesuppliers.com
+            <FaEnvelope className="text-yellow-400  " />
+            <a
+              href="mailto:support@datesuppliers.com"
+              className="hover:text-yellow-400 transition"
+            >
+              support@datesuppliers.com
+            </a>
           </p>
 
           <div className="flex gap-3">
-            <a href="https://www.youtube.com/@VExoticdaily" target="blank" className="p-2 bg-white/10 rounded hover:bg-red-600"><FaYoutube /></a>
-            <a href="https://www.facebook.com/exooticcrate/" target="blank" className="p-2 bg-white/10 rounded hover:bg-blue-600"><FaFacebookF /></a>
-            <a href="https://www.instagram.com/exoticcrate/" target="blank" className="p-2 bg-white/10 rounded hover:bg-pink-500"><FaInstagram /></a>
+            <a
+              href="https://www.youtube.com/@VExoticdaily"
+              target="blank"
+              className="p-2 bg-white/10 rounded hover:bg-red-600"
+            >
+              <FaYoutube />
+            </a>
+            <a
+              href="https://www.facebook.com/exooticcrate/"
+              target="blank"
+              className="p-2 bg-white/10 rounded hover:bg-blue-600"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://www.instagram.com/exoticcrate/"
+              target="blank"
+              className="p-2 bg-white/10 rounded hover:bg-pink-500"
+            >
+              <FaInstagram />
+            </a>
           </div>
         </div>
 
@@ -112,7 +215,10 @@ const Footer = () => {
           </h3>
 
           <p className="text-sm text-white mb-4">
-            We are proud to present the TrustElite Certificate of Excellence to Vishal Enterprise, recognizing their commitment to exceptional customer service, outstanding business practices, and a dedication to building trust with their customers.
+            We are proud to present the TrustElite Certificate of Excellence to
+            Vishal Enterprise, recognizing their commitment to exceptional
+            customer service, outstanding business practices, and a dedication
+            to building trust with their customers.
           </p>
 
           <img
@@ -122,7 +228,6 @@ const Footer = () => {
             onClick={() => setIsModalOpen(true)}
           />
         </div>
-
       </div>
 
       {/* BOTTOM BAR */}
@@ -130,25 +235,24 @@ const Footer = () => {
         <p>© 2024-25 Vishal Enterprises. All rights reserved.</p>
 
         <p>
-          Website Designed By{" "}
-            Inquiry Bazaar Pvt. Ltd.  {" "}
-        <a
-          target="_blank"
-          href="https://inquirybazaar.com/"
-          className="text-[#FAAC18] hover:underline"
-        >
-           B2B Marketplace
-        </a>
+          Website Designed By Inquiry Bazaar Pvt. Ltd.{" "}
+          <a
+            target="_blank"
+            href="https://inquirybazaar.com/"
+            className="text-[#FAAC18] hover:underline"
+          >
+            B2B Marketplace
+          </a>
         </p>
       </div>
 
       {/* MODAL */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50" onClick={() => setIsModalOpen(false)}>
-          <div
-            className="relative"
-            onClick={(e) => e.stopPropagation()}
-          ></div>
+        <div
+          className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div className="relative" onClick={(e) => e.stopPropagation()}></div>
           <div className="relative">
             <button
               className="absolute top-4 right-4 text-white text-2xl"
