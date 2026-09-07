@@ -148,9 +148,9 @@ export default function AboutSection() {
 
             {/* TEXT */}
             <div className="text-center lg:text-left">
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-heading mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-6xl font-heading mb-6 leading-tight">
                 Premium Quality Dry Fruits & Dates Supplier
-              </h1>
+              </h2>
 
               <p className="text-base sm:text-lg text-black leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Established in 1991, Vishal Enterprise has grown into a trusted name in the wholesale and retail trading of Semi Husked Coconuts, Whole Husked Coconuts, Wet Dates, Seedless Dates, Premium Emirates Dates, Mixed Dry Fruits, Dry Figs, Dry Apricots, and Sweet Tamarind. With over three decades of experience, we are committed to delivering premium quality products, ensuring superior freshness, taste, and consistency. Our strong focus on quality assurance and customer satisfaction has helped us build long-lasting business relationships, making Vishal Enterprise a reliable destination for dates, dry fruits, and coconuts.
