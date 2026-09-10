@@ -27,6 +27,7 @@ const EnquiryForm = () => {
         "https://brandbnalo.com/api/form/add",
         {
           platform: "SBS Machinery Enquiry Form",
+          supplierToken: "6a2cda030dd27bd1398dee8c",
           platformEmail: "machinerysbs@gmail.com",
           name,
           phone,

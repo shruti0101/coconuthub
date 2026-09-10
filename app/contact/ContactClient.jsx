@@ -13,6 +13,7 @@ const ContactPage = () => {
     const formData = new FormData(e.target);
     const data = {
       platform: "Coconuthub Website Contact Us",
+      supplierToken: "6a2cda030dd27bd1398dee8c",
       platformEmail: "support@datesuppliers.com",
       name: formData.get("contactPerson"),
       email: formData.get("email"),

@@ -30,6 +30,7 @@ export default function ContactForm() {
     try {
       const formData = {
         platform: "SBS Machinery Popup Form",
+        supplierToken: "6a2cda030dd27bd1398dee8c",
         platformEmail: "machinerysbs@gmail.com",
         name,
         phone,

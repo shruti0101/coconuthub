@@ -13,6 +13,7 @@ export default function Popup({ showPopup, setShowPopup }) {
     const formData = new FormData(e.target);
     const data = {
       platform: "Coconuthub Popup Form",
+      supplierToken: "6a2cda030dd27bd1398dee8c",
       platformEmail: "support@vishalenterprises.com",
       name: formData.get("contactPerson"),
       email: formData.get("email"),
